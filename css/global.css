@@ -81,6 +81,9 @@ ul, li {
 .btn span {
   padding: 0 5px;
 }
+.btn.active {
+  box-shadow: none;
+}
 
 .btn-xs, .btn-group-xs > .btn {
   padding: 3px 6px;
@@ -265,17 +268,6 @@ footer {
 .table span:nth-of-type(1):after {
   content: '\002F';
   padding: 0 3px;
-}
-
-span.live {
-  background: #f8c91c;
-  color: #fff;
-  text-align: center;
-  padding: 0 10px;
-  border-radius: 10px;
-  line-height: 20px;
-  font-size: 10px;
-  display: inline-block !important;
 }
 
 .athlete {
@@ -840,21 +832,124 @@ span.live {
 .top a {
   display: block;
   color: #fff;
+  font-size: 1em;
   line-height: 36px;
   text-align: center;
 }
 
-.more {
-  display: inline-block;
-  float: right;
-  margin: 0 10px 10px;
-  text-align: center;
-}
-.more a {
-  font-size: 0.9em;
+.btn-custom {
   display: block;
-  padding: 3px 10px;
+  text-align: center;
+  margin: 0 auto;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.6), 0 0 4px rgba(255, 255, 255, 0.6);
+}
+.btn-custom a {
+  font-size: 1em;
+  display: block;
+  padding: 6px 10px;
   border-radius: 4px;
   color: #fff;
   background: #22c3b8;
+}
+
+.track {
+  display: block;
+  float: right;
+  text-align: center;
+  margin: 2px -8px 0 0;
+}
+.track a {
+  font-size: 0.9em;
+  display: block;
+  padding: 0 6px;
+  line-height: 24px;
+  border-radius: 2px;
+  color: #fff;
+  background: #ef4130;
+}
+
+p.results {
+  color: #fff;
+  font-size: 1.125em;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.result-info {
+  border-top: 1px solid #ffcf89;
+  padding-top: 10px;
+  padding-bottom: 40px;
+}
+.result-info .sport-info {
+  padding-top: 0;
+}
+.result-info h5 {
+  color: #fff;
+  margin-bottom: 2px;
+}
+.result-info h5.live:after {
+  content: "live";
+  background: #22c3b8;
+  color: #fff;
+  padding: 0 10px;
+  border-radius: 10px;
+  line-height: 16px;
+  font-size: 10px;
+  margin-left: 5px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.6), 0 0 4px rgba(255, 255, 255, 0.6);
+  display: inline-block;
+}
+.result-info .col-xs-4 {
+  text-align: right;
+}
+
+.search h3 {
+  text-align: center;
+  color: #fff;
+}
+.search h4 {
+  margin-top: 0;
+  text-align: center;
+}
+.search .sport-info {
+  padding: 20px 20px 30px;
+}
+.search .radio-style {
+  margin-bottom: 20px;
+}
+.search .radio-style label.btn {
+  text-align: left;
+}
+.search .radio-style label.btn span {
+  font-size: 1.125em;
+}
+.search .radio-style label input[type="radio"] ~ i.fa.fa-circle-o {
+  color: #c8c8c8;
+  display: inline;
+}
+.search .radio-style label input[type="radio"] ~ i.fa.fa-dot-circle-o {
+  display: none;
+}
+.search .radio-style label input[type="radio"]:checked ~ i.fa.fa-circle-o {
+  display: none;
+}
+.search .radio-style label input[type="radio"]:checked ~ i.fa.fa-dot-circle-o {
+  color: #ef4130;
+  display: inline;
+}
+.search .radio-style label:hover input[type="radio"] ~ i.fa {
+  color: #ef4130;
+}
+.search .radio-style .fa-2x {
+  font-size: 1.5em;
+}
+.search p {
+  font-size: 1.125em;
+  color: #6f6f6f;
+}
+.search .captcha {
+  margin: 10px 0;
+  border: 1px solid #f2f2f2;
+  display: inline-block;
+  color: #6f6f6f;
 }

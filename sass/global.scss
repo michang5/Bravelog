@@ -68,6 +68,9 @@ ul, li {
 	span {
 		padding: 0 5px;
 	}
+	&.active {
+		box-shadow: none;
+	}
 }
 .btn-xs, .btn-group-xs > .btn {
 	padding: 3px 6px;
@@ -256,16 +259,16 @@ footer {
 	}
 }
 //style
-span.live {
-	background: $yellow;
-	color: $white;
-	text-align: center;
-	padding: 0 10px;
-	border-radius: 10px;
-	line-height: 20px;
-	font-size: 10px;
-	display: inline-block!important;
-}
+//span.live {
+//	background: $yellow;
+//	color: $white;
+//	text-align: center;
+//	padding: 0 10px;
+//	border-radius: 10px;
+//	line-height: 20px;
+//	font-size: 10px;
+//	display: inline-block!important;
+//}
 
 ///////----------------athlete
 .athlete {
@@ -843,27 +846,124 @@ span.live {
 	a {
 		display: block;
 		color: $white;
-		
+		font-size: $m-font;
 		line-height: 36px;
 		text-align: center;
 	}
 }
-.more {
-	display: inline-block;
-	float: right;
-	margin: 0 10px 10px;
+.btn-custom {
+	display: block;
 	text-align: center;
+	margin: 0 auto;
+	box-shadow: 0 0 10px rgba($white,.6), 0 0 4px rgba($white,.6);
 	a {
-		font-size: $s-font;
+		font-size: $m-font;
 		display: block;
-		padding: 3px 10px;
+		padding: 6px 10px;
 		border-radius: 4px;
 		color: $white;
 		background: $DarkTurquoise;
 	}
-	
-	
-	
-	
 }
-
+.track {
+	display: block;
+	float: right;
+	text-align: center;
+	margin: 2px -8px 0 0;
+	a {
+		font-size: $s-font;
+		display: block;
+		padding: 0 6px;
+		line-height: 24px;
+		border-radius: 2px;
+		color: $white;
+		background: $primary-color;
+	}
+}
+p.results {
+	color: $white;
+	font-size: $l-font;
+	margin-bottom: 15px;
+	font-weight: bold;
+}
+.result-info {
+	border-top: 1px solid $peach;
+	padding-top: 10px;
+	padding-bottom: 40px;
+	.sport-info {
+		padding-top: 0;
+	}
+	h5 {
+		color: $white;
+		margin-bottom: 2px;
+		&.live {
+			&:after {
+				content: ('live');
+				background: $DarkTurquoise;
+				color: $white;
+				padding: 0 10px;
+				border-radius: 10px;
+				line-height: 16px;
+				font-size: 10px;
+				margin-left: 5px;
+				box-shadow: 0 0 10px rgba($white,.6), 0 0 4px rgba($white,.6);
+				display: inline-block;
+			}
+		}
+	}
+	.col-xs-4 {
+		text-align: right;
+	}
+}
+.search {
+	h3 {
+		text-align: center;
+		color: $white;
+	}
+	h4 {
+		margin-top: 0;
+		text-align: center;
+	}
+	.sport-info {
+		padding: 20px 20px 30px;
+	}
+	.radio-style {
+		margin-bottom: 20px;
+		label.btn {
+			text-align: left;
+			span {
+				font-size: $l-font;
+			}
+		}
+		label input[type="radio"] ~ i.fa.fa-circle-o{
+			color: #c8c8c8;
+			display: inline;
+		}
+		label input[type="radio"] ~ i.fa.fa-dot-circle-o{
+			display: none;
+		}
+		label input[type="radio"]:checked ~ i.fa.fa-circle-o{
+			display: none;
+		}
+		label input[type="radio"]:checked ~ i.fa.fa-dot-circle-o{
+			color: $primary-color;
+			display: inline;
+		}
+		label:hover input[type="radio"] ~ i.fa {
+			color: $primary-color;
+		}
+		.fa-2x {
+			font-size: $xxl-font;
+		}
+	}
+	p {
+		font-size: $l-font;
+		color: $gray;
+	}
+	.captcha {
+		margin: 10px 0;
+		border: 1px solid $light-gray;
+		display: inline-block;
+		color: $gray;
+	}
+}
