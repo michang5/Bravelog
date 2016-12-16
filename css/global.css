@@ -769,6 +769,7 @@ footer {
 .history {
   border-bottom: 1px solid #f1d0cc;
   margin-bottom: 30px;
+  clear: both;
 }
 .history:nth-last-of-type(1) {
   margin-bottom: 0;
@@ -822,7 +823,7 @@ footer {
 .top {
   background: #22c3b8;
   position: fixed;
-  right: 1px;
+  right: 6px;
   bottom: 50px;
   width: 36px;
   height: 36px;
@@ -901,6 +902,10 @@ p.results {
 }
 .result-info .col-xs-4 {
   text-align: right;
+}
+
+#search .back {
+  visibility: hidden;
 }
 
 .search h3 {
