@@ -224,7 +224,7 @@ ul, li {
   position: relative;
   display: block;
   text-align: center;
-  margin: 0 auto;
+  margin: 10px auto;
   border-radius: 5px;
   -webkit-backface-visibility: hidden;
   z-index: 1;
@@ -326,7 +326,7 @@ ul, li {
 
 .wrapper {
   min-height: 100%;
-  padding: 80px 0 100px;
+  padding: 70px 0 100px;
 }
 #search .wrapper {
   padding-top: 50px;
@@ -471,7 +471,7 @@ footer span:nth-last-of-type(1) {
 .table {
   display: table;
   width: 100%;
-  margin: 0 0 12px;
+  margin: 0;
   font-size: 0.9em;
   color: #4C4A48;
   border-bottom: 1px solid #f6f6f6;
@@ -496,6 +496,29 @@ footer span:nth-last-of-type(1) {
 .table span:nth-of-type(1):after {
   content: '\002F';
   padding: 0 3px;
+}
+
+.tab-container {
+  padding: 5px;
+  border: 1px solid #ccc;
+  background: white;
+  border-radius: 4px;
+}
+
+.table-responsive {
+  color: #6f6f6f;
+  border: 0;
+  margin-bottom: 0 !important;
+  font-size: 15px;
+}
+.table-responsive .table thead, .table-responsive .table tr, .table-responsive .table th {
+  border: 0;
+}
+.table-responsive .table th {
+  background: #f6f6f6;
+}
+.table-responsive .table th, .table-responsive .table td {
+  text-align: center;
 }
 
 a.card-link {
@@ -703,7 +726,7 @@ a.card-link .card {
 .card {
   background: #fff;
   margin-bottom: 20px;
-  padding-bottom: 16px;
+  padding-bottom: 6px;
   border-radius: 4px;
   overflow: hidden;
   box-shadow: 0 5px 10px rgba(111, 111, 111, 0.1), 0 5px 20px rgba(111, 111, 111, 0.15);
@@ -752,6 +775,7 @@ a.card-link .card {
 .result-info h5 {
   font-size: 1.5em;
   text-align: center;
+  color: #ef4130;
 }
 .result-info h5.live:after {
   content: "live";
@@ -914,18 +938,27 @@ a.card-link .card {
   }
 }
 
-.info-card {
-  background: #fff;
-  margin-bottom: 20px;
-  padding-bottom: 16px;
-  border-radius: 4px;
-  overflow: hidden;
-  box-shadow: 0 5px 10px rgba(111, 111, 111, 0.1), 0 5px 20px rgba(111, 111, 111, 0.15);
+.info-card .col-xs-12 {
+  padding-left: 4px;
+  padding-right: 4px;
+}
+.info-card .col-xs-4 p, .info-card .col-xs-8 p {
+  font-size: 14px;
+}
+.info-card .col-xs-8 p {
+  line-height: 1.8;
+}
+.info-card .col-xs-8 p span:nth-of-type(1):after {
+  content: '\002F';
+  padding-left: 5px;
+  padding-right: 5px;
 }
 .info-card h3 {
   margin-top: 5px;
   margin-bottom: 5px;
   line-height: 1;
+  color: #6f6f6f;
+  font-size: 1.5em;
 }
 .info-card h4, .info-card h5, .info-card h6 {
   margin: 0;
@@ -940,7 +973,6 @@ a.card-link .card {
 }
 .info-card h5 {
   font-size: 1.25em;
-  color: #ef4130;
 }
 .info-card h5.margin {
   margin-bottom: 10px;
@@ -952,10 +984,6 @@ a.card-link .card {
 .info-card p {
   line-height: 1.5em;
 }
-.info-card .col-xs-9 p span:nth-of-type(1):after {
-  content: "/";
-  padding: 0 5px;
-}
 .info-card .weather-icon {
   width: 36px;
   height: 32px;
@@ -965,9 +993,9 @@ a.card-link .card {
   width: 100%;
 }
 .info-card .row .col-xs-9, .info-card .row .col-xs-8 {
-  padding-left: 10px;
+  padding-left: 4px;
   padding-right: 4px;
-  color: #ef4130;
+  color: #6f6f6f;
 }
 .info-card .row .col-xs-3, .info-card .row .col-xs-4 {
   padding-left: 4px;
@@ -1023,14 +1051,18 @@ a.card-link .card {
   }
 }
 @media only screen and (max-width: 320px) {
-  .info-card .col-xs-9 {
-    width: 72%;
+  .info-card .col-xs-4 p, .info-card .col-xs-8 p {
+    font-size: 12px;
   }
-  .info-card .col-xs-3 {
-    width: 28%;
+  .info-card .col-xs-8 h4 {
+    font-size: 15px;
   }
-  .info-card .row .col-xs-3 h4 {
-    font-size: 1.25em;
+  .info-card .col-xs-8 p span:nth-of-type(1):after {
+    padding-left: 3px;
+    padding-right: 3px;
+  }
+  .info-card .col-xs-8 p:nth-of-type(1) {
+    font-size: 15px;
   }
 }
 
@@ -1221,10 +1253,16 @@ a.card-link .card {
   padding: 6px 0 0;
   background: #fff;
   margin-bottom: 20px;
-  padding-bottom: 16px;
+  padding-bottom: 6px;
   border-radius: 4px;
   overflow: hidden;
   box-shadow: 0 5px 10px rgba(111, 111, 111, 0.1), 0 5px 20px rgba(111, 111, 111, 0.15);
+}
+#live-sport .sport-info {
+  border: 1px solid #ccc;
+  box-shadow: none;
+  padding-bottom: 0;
+  font-size: 15px;
 }
 .sport-info .sport-title {
   padding: 10px 0;
@@ -1233,7 +1271,7 @@ a.card-link .card {
   color: #6f6f6f;
 }
 .sport-info .sport-achievement, .sport-info h6.sport-name {
-  color: #ef4130;
+  color: #6f6f6f;
   font-size: 1.25em;
 }
 .sport-info .sport-achievement {
@@ -1242,10 +1280,12 @@ a.card-link .card {
 .sport-info .sport-achievement span {
   padding: 0 6px;
 }
+.sport-info .col-xs-12 h6.sport-name {
+  line-height: 1.1;
+}
 .sport-info h6.sport-name {
   font-weight: bold;
   margin: 0;
-  line-height: 1.125em;
 }
 .sport-info.sport-1 h6.sport-name:before, .sport-info.sport-2 h6.sport-name:before, .sport-info.sport-3 h6.sport-name:before {
   content: "";
@@ -1294,10 +1334,10 @@ a.card-link .card {
 }
 .sport-info .split {
   clear: both;
-  border-top: 1px solid #f1d0cc;
+  border-top: 1px solid #22c3b8;
 }
 .sport-info .split h5 {
-  color: #ff9473;
+  color: #22c3b8;
   padding-left: 14px;
   font-size: 1em;
   margin: 5px 0;
@@ -1342,27 +1382,26 @@ a.card-link .card {
 .table-btn {
   width: 100%;
   text-align: center;
-  color: #ef4130;
-  background-color: transparent;
-  background: rgba(255, 148, 115, 0.3);
+  color: #FB6C48;
+  background: #FFF3E1;
   border: 0;
   outline: 0;
   border-top: 1px solid #f1d0cc;
   line-height: 30px;
 }
 .table-btn i {
-  padding-left: 6px;
+  padding-left: 10px;
 }
 .table-btn:focus {
   outline: 0;
 }
 .table-btn.open-close.collapsed:after {
   font-family: FontAwesome;
-  content: "展開分段成績\f107";
+  content: "展開分段成績 \f107";
 }
 .table-btn.open-close:after {
   font-family: FontAwesome;
-  content: "收合分段成績\f106";
+  content: "收合分段成績 \f106";
 }
 
 .select-style {

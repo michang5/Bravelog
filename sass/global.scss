@@ -208,7 +208,7 @@ ul, li {
 	position: relative;
 	display: block;
 	text-align: center;
-	margin: 0 auto;
+	margin: 10px auto;
 	border-radius: 5px;
 	-webkit-backface-visibility: hidden;
 	z-index: 1;
@@ -303,7 +303,7 @@ ul, li {
 //basic
 .wrapper {
 	min-height: 100%;
-	padding: 80px 0 100px;
+	padding: 70px 0 100px;
 	#search & {
 		padding-top: 50px;
 	}
@@ -451,10 +451,11 @@ footer {
 .table {
 	display: table;
 	width: 100%;
-	margin: 0 0 12px;
+	margin: 0;
 	font-size: $s-font;
 	color: $dark;
 	border-bottom: 1px solid $light-gray;
+
 	div {
 		padding: 6px;
 		text-align: center;
@@ -479,6 +480,36 @@ footer {
 		}
 	}
 }
+.tab-container {
+	padding: 5px;
+	border: 1px solid $medium-gray;
+	background: white;
+	border-radius: 4px;
+}
+.table-responsive {
+	color: $gray;
+	border: 0;
+	margin-bottom: 0!important;
+	font-size: 15px;
+	
+	.table {
+		thead, tr, th  {
+			border: 0;
+			
+		}
+		> thead > tr > th {
+		}
+		th {
+			background: $light-gray;
+			
+		}
+		th, td {
+			text-align: center;
+		}
+	}
+}
+
+
 a.card-link {
 	display: block;
 }
@@ -776,6 +807,7 @@ a.card-link .card {
 	h5 {
 		font-size: $xxl-font;
 		text-align: center;
+		color: $primary-color;
 		&.live {
 			&:after {
 				content: ('live');
@@ -981,11 +1013,35 @@ a.card-link .card {
 //	padding: 10px 0 0;
 //	border-radius: 0 0 4px 4px;
 //	overflow: hidden;
-	@include card-style;
+//	@include card-style;
+//	border-bottom: 1px solid $medium-gray;
+	.col-xs-12 {
+		padding-left: 4px;
+		padding-right: 4px;
+	}
+	.col-xs-4, .col-xs-8 {
+		p {
+			font-size: 14px;
+		}
+	}
+	.col-xs-8 {
+		p {
+			line-height: 1.8;
+			span {
+				&:nth-of-type(1):after {
+					content: '\002F';
+					padding-left: 5px;
+					padding-right: 5px;
+				}
+			}
+		}
+	}
 	h3 {
 		margin-top: 5px;
 		margin-bottom: 5px;
 		line-height: 1;
+		color: $gray;
+		font-size: $xxl-font;
 	}
 	h4, h5, h6 {
 		margin: 0;
@@ -1002,7 +1058,7 @@ a.card-link .card {
 	}
 	h5 {
 		font-size: $xl-font;
-		color: $primary-color;
+//		color: $primary-color;
 		&.margin {
 			margin-bottom: 10px;
 		}
@@ -1015,16 +1071,16 @@ a.card-link .card {
 	p {
 		line-height: $xxl-font;
 	}
-	.col-xs-9 p {
-		span {
-			&:nth-of-type(1) {
-				&:after {
-					content: ('\002F');
-					padding: 0 5px;
-				}
-			}
-		}
-	}
+//	.col-xs-9 p {
+//		span {
+//			&:nth-of-type(1) {
+//				&:after {
+//					content: ('\002F');
+//					padding: 0 5px;
+//				}
+//			}
+//		}
+//	}
 	.weather-icon {
 		width: 36px;
 		height: 32px;
@@ -1035,9 +1091,9 @@ a.card-link .card {
 	}
 	.row {
 		.col-xs-9, .col-xs-8 {
-			padding-left: 10px;
+			padding-left: 4px;
 			padding-right: 4px;
-			color: $primary-color;
+			color: $gray;
 		}
 		.col-xs-3, .col-xs-4 {
 			padding-left: 4px;
@@ -1093,16 +1149,26 @@ a.card-link .card {
 		}
 	}
 	@include respond-to (xxs-mobile){
-		.col-xs-9 {
-			width: 72%;
+		.col-xs-4, .col-xs-8 {
+			p {
+				font-size: 12px;
+			}
+			
 		}
-		.col-xs-3 {
-			width: 28%;
-		}
-		.row {
-			.col-xs-3 {
-				h4 {
-					font-size: $xl-font;
+		
+		.col-xs-8 {
+			h4 {
+				font-size: 15px;
+			}
+			p {
+				span {
+					&:nth-of-type(1):after {
+						padding-left: 3px;
+						padding-right: 3px;
+					}
+				}
+				&:nth-of-type(1) {
+					font-size: 15px;
 				}
 			}
 		}
@@ -1291,6 +1357,12 @@ a.card-link .card {
 	padding: 6px 0 0;
 //	border: 1px solid $light-gray;
 	@include card-style;
+	#live-sport & {
+		border: 1px solid $medium-gray;
+		box-shadow: none;
+		padding-bottom: 0;
+		font-size: 15px;
+	}
 	.sport-title {
 		padding: 10px 0;
 	}
@@ -1298,7 +1370,7 @@ a.card-link .card {
 		color: $gray;
 	}
 	.sport-achievement, h6.sport-name {
-		color: $primary-color;
+		color: $gray;
 		font-size: $xl-font;
 	}
 	.sport-achievement {
@@ -1307,10 +1379,15 @@ a.card-link .card {
 			padding: 0 6px;
 		}
 	}
+	.col-xs-12 {
+		h6.sport-name {
+			line-height: 1.1;
+		}
+	}
 	h6.sport-name {
 		font-weight: bold;
 		margin: 0;
-		line-height: $l-font;
+//		line-height: 2;
 	}
 	&.sport-1, &.sport-2, &.sport-3 {
 		h6.sport-name {
@@ -1357,9 +1434,9 @@ a.card-link .card {
 	}
 	.split {
 		clear: both;
-		border-top: 1px solid #f1d0cc;
+		border-top: 1px solid $DarkTurquoise;
 		h5 {
-			color: $rose;
+			color: $DarkTurquoise;
 			padding-left: 14px;
 			font-size: $m-font;
 			margin: 5px 0;
@@ -1405,15 +1482,15 @@ a.card-link .card {
 .table-btn {
 	width: 100%;
 	text-align: center;
-	color: $primary-color;
-	background-color: transparent;
-	background: rgba($thirdary-color,.3);
+	color: $orange;
+//	background-color: transparent;
+	background: $skin;
 	border: 0;
 	outline: 0;
 	border-top: 1px solid #f1d0cc;
 	line-height: 30px;
 	i {
-		padding-left: 6px;
+		padding-left: 10px;
 	}
 	&:focus {
 		outline: 0;
@@ -1425,11 +1502,11 @@ a.card-link .card {
 	&.open-close {
 		&.collapsed:after {
 			font-family: FontAwesome;
-			content: "展開分段成績\f107";
+			content: "展開分段成績 \f107";
 		}
 		&:after {
 			font-family: FontAwesome;
-			content: "收合分段成績\f106";
+			content: "收合分段成績 \f106";
 		}
 	}
 }
