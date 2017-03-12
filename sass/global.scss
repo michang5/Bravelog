@@ -17,13 +17,14 @@ body {
 	word-wrap: break-word;
 	word-break: normal;
 	line-height: 1.85;
-	@include background-image(linear-gradient(160deg,$primary-color, $rose, $secondary-color));
-	background-attachment: fixed;
+//	@include background-image(linear-gradient(160deg,$primary-color, $rose, $secondary-color));
+//	background-attachment: fixed;
+	background: #FFFDFB;
 }
 
 //basic style
 h1, h2, h3, h4, h5, h6 {
-	letter-spacing: 0;
+	letter-spacing: 1px;
 	line-height: 1.8;
 	margin-top: 10px;
 	margin-bottom: 10px;
@@ -32,9 +33,7 @@ h1, h2, h3, h4, h5, h6 {
 	@include transition(color, .5s, ease-in);
 }
 h1 {}
-h2 {
-	color: $white;
-}
+h2 {}
 h3 {
 	color: $primary-color;
 	font-size: $xxl-font;
@@ -49,6 +48,7 @@ a {
 	@include transition(color, .5s, ease-in);
 	&:hover, &:focus { 
 		text-decoration: none;
+		color: $primary-color;
 	}
 }
 hr {
@@ -89,30 +89,40 @@ ul, li {
     outline: none;
 }
 .btn-primary {
-	background-color: transparent;
-	border: 0;
-	color: $white;
+	@include background-image(linear-gradient(160deg,$primary-color, $rose, $secondary-color));
 	&:hover, &:active, &:focus, &.active, &.dropdown-toggle, &.disabled {
 		border: 0;
-		color: $white;
+//		background-color: transparent;
+	}
+}
+.btn-default {
+	border: 0;
+	border-radius: 0;
+	width: 56px;
+	text-align: center;
+	&:hover, &:active, &:focus, &.active, &.dropdown-toggle, &.disabled {
+		border: 0;
+		color: $primary-color;
 		background-color: transparent;
 	}
 	&:active {
 		&:hover, &:focus {
 			border: 0;
-			color: $white;
+			color: $primary-color;
 			background-color: transparent;
+			box-shadow: none;
 		}
 	}
 	&.dropdown-toggle {
 		.open & {
+			width: 56px;
 			border: 0;
 			color: $white;
-			background-color: transparent;
+			background: rgba($thirdary-color,.95);
 			&:hover, &:focus, &.focus {
 				border: 0;
 				color: $white;
-				background-color: transparent;
+				background: rgba($thirdary-color,.95);
 			}
 		}
 	}
@@ -124,19 +134,32 @@ ul, li {
 			background-color: transparent;
 		}
 	}
+	@include respond-to (normal-mobile){
+		font-size: 12px;
+	}
 }
 .dropdown-menu {
 	min-width: 0;
 	border: 0;
+	padding: 0;
 	background: rgba($thirdary-color,.95);
+	border-radius: 0 0 4px 4px;
+	margin: 0;
+	overflow: hidden;
+	width: 56px;
+	text-align: center;
 	> li {
 		> a {
 			color: $white;
+			padding: 6px 20px;
 			&:hover, &:focus {
 				color: $white;
-				background: rgba($yellow,.8);
+				background: rgba($primary-color,.8);
 			}
 		}
+	}
+	@include respond-to (normal-mobile){
+		font-size: 12px;
 	}
 }
 .btn-sm {
@@ -151,72 +174,269 @@ ul, li {
 	}
 }
 //input
-header {
+.radio-style {
+	margin-bottom: 20px;
+	label.btn {
+		text-align: left;
+		span {
+			font-size: $l-font;
+		}
+	}
+	label input[type="radio"] ~ i.fa.fa-circle-o {
+		color: #c8c8c8;
+		display: inline;
+	}
+	label input[type="radio"] ~ i.fa.fa-dot-circle-o {
+		display: none;
+	}
+	label input[type="radio"]:checked ~ i.fa.fa-circle-o {
+		display: none;
+	}
+	label input[type="radio"]:checked ~ i.fa.fa-dot-circle-o {
+		color: $primary-color;
+		display: inline;
+	}
+	label:hover input[type="radio"] ~ i.fa {
+		color: $primary-color;
+	}
+	.fa-2x {
+		font-size: $xxl-font;
+	}
+}
+.btn-custom {
+	cursor: pointer;
+	position: relative;
+	display: block;
 	text-align: center;
-	padding-top: 12px;
-	background: rgba($primary-color,.8);
-	border-bottom: 1px solid $primary-color;
-	height: 50px;
-	position: fixed;
-	top: 0;
-	left: 0;
-	h2.logo {
-		font-size: $xxxl-font;
-		line-height: $xl-font;
-		margin: 0 auto;
-	}
-	.back, h2.logo, .dropdown, .search {
-		display: inline-block;
-		vertical-align: top;
-	}
-	.back {
-		float: left;
-		line-height: 30px;
-		i {
-			padding-right: 6px;
-		}
-	}
+	margin: 0 auto;
+	border-radius: 5px;
+	-webkit-backface-visibility: hidden;
+	z-index: 1;
+	@include background-image(linear-gradient(220deg,$primary-color, $rose, $secondary-color));
+	@include box-light-shadow;
+	@include text-primary-shadow;
 	a {
+		font-size: $m-font;
+		display: block;
+		padding: 6px 10px;
+		border-radius: 4px;
 		color: $white;
-		&:hover, &:focus { 
-			color: $white; 
+	}
+	&:hover {
+		&:after {
+			opacity: 1;
 		}
 	}
-	.right-nav {
-		float: right;
+	&:after {
+		position: absolute;
+		content: '';
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		border-radius: 0.3em;
+		@include background-image(linear-gradient(140deg,$primary-color, $rose, $secondary-color));
+		transition: opacity 0.5s ease-out;
+		z-index: 2;
+		opacity: 0;
 	}
-	.dropdown, .search {
-		width: 30px;
-		height: 30px;
+	span {
+		position: relative;
+		z-index: 3;
 	}
-	.dropdown {
-		.btn {
-			padding: 3px;
+	.card & {
+		padding: 6px 10px;
+		border-radius: 4px;
+		color: $white;
+		width: 220px;
+		box-shadow: none;
+		clear: both;
+		@include respond-to (only-desktop){
+			position: absolute;
+			width: 120px;
+			top: 15px;
+			right: 15px;
 		}
 	}
-	.search {
-		font-size: $l-font;
-		line-height: 27px;
-		i {
-			
+	
+}
+.btn-custom-sm {
+	line-height: 20px;
+	box-shadow: none;
+	cursor: pointer;
+	position: relative;
+	display: block;
+	text-align: center;
+	margin: 0 auto;
+//	background: $DarkTurquoise;
+	border: 2px solid $orange;
+	background: white;
+	border-radius: 5px;
+	padding: 4px;
+	box-shadow: 0 2px 0 $rose;
+	a {
+		padding: 2px 4px;
+		color: $orange;
+//		text-shadow: 0 0 3px #009086;
+	}
+	@include respond-to (normal-mobile){
+		font-size: $s-font;
+		a {
+			padding: 2px;
 		}
+	}
+}
+.input-group {
+	.btn-secondary {
+		height: 40px;
+		width: 40px;
+		background: $orange url('../images/icon-search.png') no-repeat 8px 7px;
+		background-size: 22px;
+	}
+	.form-control {
+		height: 40px;
+		line-height: 40px;
+		border: 1px solid $orange;
+		box-shadow: none!important;
 	}
 }
 //basic
 .wrapper {
 	min-height: 100%;
-	padding-top: 70px;
-	> .container {
-		padding-bottom: 100px;
+	padding: 80px 0 100px;
+	#search & {
+		padding-top: 50px;
+	}
+	@media screen and (min-width: 1336px) {
+		padding-top: 70px;
+	}
+//	> .container {
+//		padding-bottom: 100px;
+//	}
+}
+header {
+	background: rgba($light-skin,.8);
+	text-align: center;
+	height: 50px;
+	border-bottom: 1px solid $skin;
+	.container {
+		position: relative;
+	}
+	h2.logo {
+		margin: 0 auto;
+		line-height: 0;
+		img {
+			width: 160px;
+			padding: 10px 0;
+		}
+	}
+	.back, h2.logo, .dropdown, .search {
+		display: inline-block;
+		vertical-align: top;
+		a {
+			display: block;
+		}
+	}
+	.back {
+		position: absolute;
+		line-height: 50px;
+		left: 8px;
+		top: 0;
+		a {
+			padding: 0 8px;
+		}
+		i {
+			padding-right: 6px;
+		}
+	}
+	.right-nav {
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+	.dropdown, .search {
+		height: 50px;
+		line-height: 50px;
+		vertical-align: top;
+	}
+	.search {
+		width: 40px;
+		font-size: 1.3em;
+		margin-right: 6px;
+		a {
+			line-height: 48px;
+		}
+	}
+	.dropdown {
+		.btn {
+			vertical-align: top;
+			padding: 0 6px;
+			line-height: 50px;
+			color: $primary-color;
+			font-size: $m-font;
+			i {
+				padding-left: 5px;
+			}
+		}
+	}
+	.btn-default {
+		border: 0;
+	}
+	@include respond-to (normal-mobile){
+		.back {
+			font-size: 12px;
+			left: 0;
+		}
+		h2.logo {
+			img {
+				width: 130px;
+			}
+		}
+	}
+	@include respond-to (xxs-mobile){
+		.dropdown {
+			.btn {
+				width: 40px;
+			}
+		}
+		h2.logo {
+			img {
+				width: 110px;
+			}
+		}
 	}
 }
 footer {
 	text-align: center;
 	font-size: $xs-font;
-	color: $white;
-	@include text-primary-shadow;
-	line-height: 56px;
-	margin-top: -56px;
+	color: $gray;
+	margin-top: 0;
+	line-height: 20px;
+	background: $light-skin;
+	height: 60px;
+	margin-top: -60px;
+	.container {
+		border-top: 1px solid $light-gray;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+	a {
+		color: $gray;
+		text-decoration: underline;
+	}
+	span {
+		margin: 0 5px;
+		&:nth-last-of-type(1) {
+			display: block;
+		}
+	}
+	@include respond-to (normal-mobile){
+		height: 80px;
+		margin-top: -80px;
+		span {
+			display: block;
+		}
+	}
 }
 .container {
 	@media screen and (max-width: 413px) {
@@ -231,9 +451,10 @@ footer {
 .table {
 	display: table;
 	width: 100%;
-	margin: 0;
+	margin: 0 0 12px;
 	font-size: $s-font;
 	color: $dark;
+	border-bottom: 1px solid $light-gray;
 	div {
 		padding: 6px;
 		text-align: center;
@@ -245,8 +466,8 @@ footer {
 		}
 	}
 	&.main > div:nth-of-type(odd) {
-		background: $thirdary-color;
-		color: white;
+		background: $light-gray;
+		color: $dark;
 	}
 	&.sub > div:nth-of-type(odd) {
 		background: WhiteSmoke;
@@ -258,38 +479,375 @@ footer {
 		}
 	}
 }
-//style
-//span.live {
-//	background: $yellow;
-//	color: $white;
-//	text-align: center;
-//	padding: 0 10px;
-//	border-radius: 10px;
-//	line-height: 20px;
-//	font-size: 10px;
-//	display: inline-block!important;
-//}
+a.card-link {
+	display: block;
+}
+a.card-link .card {
+	color: $dark-gray;
+	display: block;
+}
+.line {
+	width: 100%;
+	background: url(../images/line.png) no-repeat center center;
+	height: 40px;
+	margin: 20px auto 20px;
+}
 
-///////----------------athlete
-.athlete {
-	color: $white;
-	line-height: $xl-font;
-//	padding-bottom: 6px;
-	.col-xs-8 {
-		padding-left: 0;
+//////---index search
+//#section1
+.top-banner {
+	position: relative;
+	padding: 0;
+	@include box-primary-shadow;
+	img {
+		width: 100%;
 	}
-	h3 {
-		color: $white;
-		border-bottom: 1px solid $rose;
-		i {
-			margin-right: 5px;
+	.search-container {
+		width: 100%;
+		z-index: 3;
+		background: $light-gray;
+		h3 {
+			margin: 0;
+			color: $gray;
+//			@include text-primary-shadow;
+			text-align: center;
+		}
+		.single-match {
+			width: 60%;
+			margin: 0 auto;
+			padding: 10px;
+			.input-group {
+//				@include box-light-shadow;
+			}
+			h5 {
+				text-align: center;
+			}
 		}
 	}
-	h4, h5 {
-		margin: 0;
+	.match-info {
+		margin-top: -32px;
+		width: 100%;
+		color: $red;
+		height: 32px;
+		padding: 4px 10px;
+		font-weight: bold;
+		.countdown {
+			line-height: 20px;
+			width: 65%;
+			display: inline-block;
+//			@include text-light-shadow;
+			span {
+				font-size: $xl-font;
+				&.live {
+					border-radius: 10px;
+					background: $red;
+					color: white;
+					padding: 0 10px;
+					margin-right: 4px;
+					font-size: $s-font;
+					
+				}
+//				@include text-light-shadow;
+			}
+		}
+		.btn-container {
+			width: 80px;
+			float: right; 
+			display: inline-block;
+			.btn-custom-sm {
+				margin-top: -6px;
+			}
+		}
 	}
+	@include respond-to (only-device){
+		.search-container {
+			h3 {
+				font-size: $l-font;
+			}
+			.single-match {
+				width: 100%;
+				padding: 10px 10px 14px;
+			}
+		}
+	}
+	@media screen and (max-width: 767px) {
+		.match-info {
+//			margin-top: 0;
+			
+			.countdown {
+//				width: 100%;
+//				text-align: center;
+			}
+			.btn-container {
+//				position: absolute;
+//				bottom: 100px;
+//				right: 0;
+//				width: 70px;
+//				float: none; 
+//				display: inline-block;
+			}
+		}
+	}
+	@include respond-to (normal-mobile){
+		.search-container {
+			h3 {
+			}
+			.single-match {
+				width: 100%;
+			}
+		}
+		.match-info {
+//			padding: 8px 10px;
+			.countdown {
+				span {
+					font-size: $s-font;
+				}
+			}
+			.btn-container {
+//				width: 70px;
+			}
+		}
+	}
+	@include respond-to (xxs-mobile){
+		.match-info {
+			margin-top: 0;
+			background: #f9f9f9;
+			border-bottom: 1px solid #fff;
+			height: 36px;
+			.btn-container {
+				.btn-custom-sm {
+					margin-top: 0;
+				}
+			}
+		}
+	}
+	@media screen and (min-width: 1336px) {
+		&.container {
+			width: 1336px;
+		}
+	}
+	@media screen and (max-width: 1336px) {
+		&.container {
+			width: 100%;
+		}
+	}
+}
+.arrow {
+	width: 60px;
+	height: 60px;
+	cursor: pointer;
+	.arrow-right , .arrow-left  {
+		-webkit-transform: rotate(135deg);
+		-moz-transform: rotate(135deg);
+		-ms-transform: rotate(135deg);
+		-o-transform: rotate(135deg);
+		transform: rotate(135deg);
+		width: 30px;
+		height: 30px;
+		display: block;
+		position: relative;
+	}
+	.arrow-right {
+		border-top: 2px solid $primary-color;
+		border-left: 2px solid $primary-color;
+		top: 14px;
+		left: 6px;
+	}
+	.arrow-left {
+		top: 14px;
+		left: 20px;
+		border-bottom: 2px solid $primary-color;
+		border-right: 2px solid $primary-color;
+	}
+	@include respond-to (normal-mobile){
+		width: 40px;
+		height: 40px;
+		.arrow-right , .arrow-left  {
+			width: 20px;
+			height: 20px;
+			top: 10px;
+			left: 10px;
+		}
+	}
+}
+.carousel-control {
+	opacity: 1;
+	height: 60px;
+	width: 60px;
+	top: 30%;	
+	&.left, &.right {
+		background-image: none;
+	}
+	@include respond-to (normal-mobile){
+		top: 30px;
+		height: 40px;
+		width: 40px;
+	}
+}
+//#section2
+#section2 {
+	margin-top: 40px;
+	.container {
+//		padding-bottom: 100px;
+		h2 {
+			font-size: $xl-font;
+			text-align: center;
+			font-weight: 900;
+			color: $gray;
+		}
+	}
+	@include respond-to (normal-mobile){
+		margin-top: 20px;
+		margin-bottom: 30px;
+	}
+}
+
+///single-match-results
+#single-match-results {
+	h2 {
+		font-size: $xxxl-font;
+		text-align: center;
+		line-height: $xl-font;
+		color: $dark;
+		span {
+			display: block;
+			font-size: 20px;
+		}
+	}
+	p.results {
+		margin: 20px auto 10px;
+		border-top: 1px solid $medium-gray;
+	}
+}
+.card {
+	@include card-style;
+	@include box-primary-shadow;
+	text-align: center;
+	position: relative;
+	.name {
+		background: $light-gray;
+		font-size: 1.35em;
+		padding: 6px 20px;
+		font-weight: bold;
+		padding: 10px;
+		width: 100%;
+		span {
+			&:nth-of-type(1) {
+				&:after {
+					content: '|';
+					padding: 0 10px;
+					color: #aaa;
+				}
+			}
+		}
+	}
+	.other-info {
+		font-size: $l-font;
+		padding: 6px 20px;
+		line-height: 1.2;
+		padding: 10px;
+		line-height: 1.6;
+		.col-md-6 {
+			padding-left: 2px;
+			padding-right: 2px;
+		}
+		span {
+			margin-right: 10px;
+		}
+	}
+}
+
+///////----------------results
+#results {
+	p.results {
+		padding: 0;
+	}
+	.athlete {
+		border-bottom: 1px solid $peach;
+	}
+	
+}
+.result-info {
+//	padding-top: 10px;
+//	padding-bottom: 40px;
+	.sport-info {
+		padding-top: 0;
+	}
+	h5 {
+		font-size: $xxl-font;
+		text-align: center;
+		&.live {
+			&:after {
+				content: ('live');
+				background: $red;
+				color: $white;
+				padding: 0 10px;
+				border-radius: 10px;
+				line-height: 16px;
+				font-size: 10px;
+				margin-left: 5px;
+				box-shadow: 0 0 10px rgba($white,.6), 0 0 4px rgba($white,.6);
+				display: inline-block;
+			}
+		}
+	}
+	.col-xs-4 {
+		text-align: right;
+	}
+	@media screen and (max-width: 413px) {
+		.col-xs-4 {
+			padding-left: 6px;
+			padding-right: 6px;
+		}
+		.col-xs-8 {
+			padding-left: 6px;
+			padding-right: 6px;
+		}
+	}
+	@media screen and (max-width: 320px) {
+		.col-xs-4 {
+			padding-left: 2px;
+			padding-right: 2px;
+		}
+		.col-xs-8 {
+			padding-left: 2px;
+			padding-right: 2px;
+		}
+	}
+}
+///////----------------athlete
+.athlete {
+	width: 96%;
+	margin: 0 auto;
+	padding-bottom: 20px;
+	color: $gray;
+	line-height: $xl-font;
+	.col-xs-8, .col-xs-12 {
+		padding-left: 0;
+		line-height: 30px;
+	}
+	.col-xs-4 {
+		text-align: right;
+		padding-right: 0;
+		line-height: 30px;
+//		h5 {
+//			margin-top: 5px;
+//			line-height: 1.6;
+//			.fraction {
+//				font-size: $xxl-font;
+//			}
+//		}
+	}
+//	h3 {
+//		color: $primary-color;
+//		border-bottom: 1px solid $rose;
+//		i {
+//			margin-right: 5px;
+//		}
+//	}
 	h4 {
 		font-size: $xl-font;
+		margin: 0;
 	}
 	.gender {
 		&:after {
@@ -297,51 +855,50 @@ footer {
 			padding-left: 5px;
 		}
 	}
-	.col-xs-4 {
-		text-align: right;
-		padding-right: 0;
-		h5 {
-			margin-top: 5px;
-			line-height: 1.6;
-			.fraction {
-				font-size: $xxl-font;
-			}
-		}
-		span {
-			display: block;
-		}
-	}
+	
 	@include respond-to (xxs-mobile){
 		h4 {
 			font-size: $l-font;
 		}
-		h5 {
-			font-size: $s-font;
-		}
-		.col-xs-4 {
-			h5 {
-				.fraction {
-					font-size: $xl-font;
-				}
-			}
-		}
+//		h5 {
+//			font-size: $s-font;
+//		}
+//		.col-xs-4 {
+//			h5 {
+//				.fraction {
+//					font-size: $xl-font;
+//				}
+//			}
+//		}
 	}
 }
 .nav-tabs {
 	text-align: center;
+	display: table;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	border-collapse: separate;
+	border-spacing: 0;
+//	margin-left: -1px;
+//	margin-right: -1px;
+	border-bottom: 2px solid $DarkTurquoise;
 	> li {
-		width: 33.16%;
+		display: table-cell;
+//		width: 33.16%;
+//		display: inline-block;
 		text-align: center;
 		margin: 0;
-		margin-left: -2px;
+//		margin-left: -2px;
 		float: none;
-		display: inline-block;
 		font-size: 14px;
+		border-right: 1px solid $light-skin;
+//		margin-left: -1px;
 		&.live {
 			position: relative;
 			&:after {
 				content: ('live');
-				background: $DarkTurquoise;
+				background: $red;
 				color: $white;
 				padding: 0 10px;
 				border-radius: 10px;
@@ -351,40 +908,51 @@ footer {
 				top: -6px;
 				right: 2px;
 				display: inline-block;
+				box-shadow: 0 0 0 2px white;
 			}
 		}
 		&:nth-of-type(1) {
 			margin-left: 0;
 		}
 		> a {
-			border-radius: 1px 1px 0 0;
+			border-radius: 4px 4px 0 0;
 			line-height: $xl-font;
 			padding: 10px 6px 12px 6px;
-			background: rgba($white,.8);
+			box-shadow: inset 0 0 2px rgba(#009086,.6);
+			background: rgba($DarkTurquoise,.2);
 			color: $gray;
 			margin: 0;
 			border: 0!important;
 			&:hover, &:focus {
-				background: $white;
+				background: $DarkTurquoise;
+				color: white;
 				border: 0;
 				box-shadow: none;
 			}
 		}
 		&.active {
 			border: 0;
+			border-right: 1px solid $light-skin;
 			> a {
-				background: $white;
+				background: $DarkTurquoise;
+				color: white;
 				border: 0;
-				box-shadow: inset 0 -4px 0 $rose;
+//				box-shadow: inset 0 -4px 0 $orange;
 				&:hover, &:focus {
-					background: $white;
+					background: $DarkTurquoise;
+					color: white;
 				}
 			}
 		}
+		&:nth-last-of-type(1) {
+			border-right: 0;
+		}
 	}
 	@media screen and (max-width: 590px) {
+//		margin-left: -1px;
+//		margin-right: -1px;
 		> li {
-			width: 33%;
+//			width: 33%;
 		}
 	}
 	@include respond-to (xxs-mobile){
@@ -393,12 +961,27 @@ footer {
 		}
 	}
 }
+.tab-content {
+	padding-top: 20px;	
+}
+.select-container {
+	width: 100%;
+	height: 60px;
+}
+.transcripts-print {
+	margin: 20px auto;
+	width: 50%;
+	@include respond-to (normal-mobile){
+		width: 100%;
+	}
+}
+
 .info-card {
-	background: $white;
-	padding: 10px 0 0;
-	border-radius: 0 0 4px 4px;
-	overflow: hidden;
-	@include box-light-shadow;
+//	background: $white;
+//	padding: 10px 0 0;
+//	border-radius: 0 0 4px 4px;
+//	overflow: hidden;
+	@include card-style;
 	h3 {
 		margin-top: 5px;
 		margin-bottom: 5px;
@@ -419,6 +1002,10 @@ footer {
 	}
 	h5 {
 		font-size: $xl-font;
+		color: $primary-color;
+		&.margin {
+			margin-bottom: 10px;
+		}
 	}
 	h6 {
 		font-size: $m-font;
@@ -490,6 +1077,9 @@ footer {
 		border-radius: 4px;
 		margin-bottom: 20px;
 	}
+	#history-sport & {
+    	margin-bottom: 20px;
+	}
 	@media screen and (max-width: 413px) {
 		h3 {
 			font-size: $xl-font;
@@ -518,6 +1108,19 @@ footer {
 		}
 	}
 }
+#match .athlete-info {
+	.table.main {
+		&:nth-of-type(2), &:nth-of-type(3) {
+			> div {
+				> div {
+					width: 50%;
+				}
+
+			}
+		}
+	}
+	
+}
 .category {
 	text-align: center;
 	margin: 16px auto;
@@ -529,21 +1132,21 @@ footer {
 		width: 112px;
 		height: 112px;
 		border-radius: 50%;
-		&:nth-of-type(1) {
+		&.sport-1 {
 			.icon {
 				background: url('../images/sport1.png');
 				@include image-2x("../images/sport1x2.png", 40px, 76px);
 				background-position: center bottom;
 			}
 		}
-		&:nth-of-type(2) {
+		&.sport-2 {
 			.icon {
 				background: url('../images/sport2.png');
 				@include image-2x("../images/sport2x2.png", 40px, 76px);
 				background-position: center bottom;
 			}
 		}
-		&:nth-of-type(3) {
+		&.sport-3 {
 			.icon {
 				background: url('../images/sport3.png');
 				@include image-2x("../images/sport3x2.png", 40px, 76px);
@@ -573,7 +1176,7 @@ footer {
 		&.live {
 			&:after {
 				content: ('live');
-				background: $DarkTurquoise;
+				background: $red;
 				color: $white;
 				padding: 0 10px;
 				border-radius: 10px;
@@ -680,15 +1283,19 @@ footer {
 		}
 	}
 }
+
 .sport-info {
 	background: $white;
 	margin-bottom: 20px;
 	border-radius: 4px;
 	padding: 6px 0 0;
-	@include box-light-shadow;
+//	border: 1px solid $light-gray;
+	@include card-style;
 	.sport-title {
-		line-height: $xxxxl-font;
-		padding-top: 6px;
+		padding: 10px 0;
+	}
+	p {
+		color: $gray;
 	}
 	.sport-achievement, h6.sport-name {
 		color: $primary-color;
@@ -703,6 +1310,7 @@ footer {
 	h6.sport-name {
 		font-weight: bold;
 		margin: 0;
+		line-height: $l-font;
 	}
 	&.sport-1, &.sport-2, &.sport-3 {
 		h6.sport-name {
@@ -755,6 +1363,12 @@ footer {
 			padding-left: 14px;
 			font-size: $m-font;
 			margin: 5px 0;
+		}
+	}
+	@media screen and (min-width: 1024px) {
+		.sport-title {
+			text-align: left;
+			height: 60px;
 		}
 	}
 	@media screen and (max-width: 413px) {
@@ -821,9 +1435,10 @@ footer {
 }
 
 .select-style {
-	margin: 10px;
-	width: 150px;
-	float: right;
+	margin: 10px auto;
+	width: 50%;
+//	float: right;
+	
 	position: relative;
 	color: $gray;
 //	&:after {
@@ -835,42 +1450,34 @@ footer {
 //		top: 5px;
 //	}
 }
-.top {
+#top-btn {
 	background: $DarkTurquoise;
 	position: fixed;
-	right: 6px;
-	bottom: 50px;
+	right: -50px;
+	bottom: 70px;
 	width: 36px;
 	height: 36px;
+	z-index: 9;
 	border-radius: 50%;
 	@include box-dark-shadow;
+	@include transition(color, .5s, ease-in);
 	a {
 		display: block;
 		color: $white;
-		font-size: $m-font;
-		line-height: 36px;
+		font-size: 30px;
+		line-height: 32px;
 		text-align: center;
 	}
-}
-.btn-custom {
-	display: block;
-	text-align: center;
-	margin: 0 auto;
-	box-shadow: 0 0 10px rgba($white,.6), 0 0 4px rgba($white,.6);
-	a {
-		font-size: $m-font;
-		display: block;
-		padding: 6px 10px;
-		border-radius: 4px;
-		color: $white;
-		background: $DarkTurquoise;
+	&.fixed {
+		right: 6px;
+		bottom: 70px;
 	}
 }
 .track {
 	display: block;
 	float: right;
 	text-align: center;
-	margin: 2px -8px 0 0;
+	margin: 2px 2px 3px 0;
 	a {
 		font-size: $s-font;
 		display: block;
@@ -882,49 +1489,26 @@ footer {
 	}
 }
 p.results {
-	color: $white;
+	text-align: center;
+	color: $gray;
 	font-size: $l-font;
-	margin-bottom: 15px;
-	font-weight: bold;
-}
-.result-info {
-	border-top: 1px solid $peach;
-	padding-top: 10px;
-	padding-bottom: 40px;
-	.sport-info {
-		padding-top: 0;
-	}
-	h5 {
-		color: $white;
-		margin-bottom: 2px;
-		&.live {
-			&:after {
-				content: ('live');
-				background: $DarkTurquoise;
-				color: $white;
-				padding: 0 10px;
-				border-radius: 10px;
-				line-height: 16px;
-				font-size: 10px;
-				margin-left: 5px;
-				box-shadow: 0 0 10px rgba($white,.6), 0 0 4px rgba($white,.6);
-				display: inline-block;
-			}
-		}
-	}
-	.col-xs-4 {
-		text-align: right;
-	}
+	padding: 20px 0;
+	width: 90%;
+	margin: 10px auto;
 }
 #search {
 	.back {
-		visibility: hidden;
 	}
 }
 .search {
 	h3 {
 		text-align: center;
-		color: $white;
+		color: $primary-color;
+		font-size: $xxl-font;
+		span {
+			display: block;
+			font-size: $xs-font;
+		}
 	}
 	h4 {
 		margin-top: 0;
@@ -933,35 +1517,7 @@ p.results {
 	.sport-info {
 		padding: 20px 20px 30px;
 	}
-	.radio-style {
-		margin-bottom: 20px;
-		label.btn {
-			text-align: left;
-			span {
-				font-size: $l-font;
-			}
-		}
-		label input[type="radio"] ~ i.fa.fa-circle-o{
-			color: #c8c8c8;
-			display: inline;
-		}
-		label input[type="radio"] ~ i.fa.fa-dot-circle-o{
-			display: none;
-		}
-		label input[type="radio"]:checked ~ i.fa.fa-circle-o{
-			display: none;
-		}
-		label input[type="radio"]:checked ~ i.fa.fa-dot-circle-o{
-			color: $primary-color;
-			display: inline;
-		}
-		label:hover input[type="radio"] ~ i.fa {
-			color: $primary-color;
-		}
-		.fa-2x {
-			font-size: $xxl-font;
-		}
-	}
+	
 	p {
 		font-size: $l-font;
 		color: $gray;

@@ -34,24 +34,26 @@
 	<div id="top" class="wrapper">
 		<header class="navbar-fixed-top">
 			<div class="container">
-				<div class="back"><a href="results.html"><i class="fa fa-angle-left" aria-hidden="true"></i>回搜尋結果</a></div>
-				<h2 class="logo"><a href="index.html">Bravelog</a></h2>
+				<div class="back"><a href="index.html"><i class="fa fa-angle-left" aria-hidden="true"></i>回搜尋頁</a></div>
+				<h2 class="logo"><a href="index.html"><img src="images/logo_bravelog.png" alt=""></a></h2>
 				<nav class="right-nav">
 					<div class="dropdown">
-						<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">繁<i class="fa fa-caret-down" aria-hidden="true"></i></button>
+						<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">TC<i class="fa fa-caret-down" aria-hidden="true"></i></button>
 						<ul class="dropdown-menu">
-							<li><a href="#">簡</a></li>
+							<li><a href="#">SC</a></li>
 							<li><a href="#">EN</a></li>
 						</ul>
 					</div>
-					<div class="search"><a href="index.html"><i class="fa fa-search" aria-hidden="true"></i></a></div>
+<!--					<div class="search"><a href="index.html"><i class="fa fa-search" aria-hidden="true"></i></a></div>-->
 				</nav>
 			</div>
 		</header>
 		<div class="container">
 			<p class="results">搜尋：李夏新，共計 2 筆</p>
+			
 			<!--result-1-->
 			<div class="result-info">
+				<div class="line"></div>
 				<!--athlete info card-->
 				<div class="athlete row">
 					<div class="col-xs-8">
@@ -59,106 +61,105 @@
 							<span class="name">李夏新</span>
 							<span class="eng-name">HSIA-HSIN, LI</span>
 						</h4>
-						<h5>
-							<span class="gender">男</span>
-							<span class="nationality">臺灣</span>
-						</h5>
 					</div>
 					<div class="col-xs-4">
-						<h5>
+						<div class="athlete-info">
+							<span class="gender">男</span>
+							<span class="nationality">臺灣</span>
+						</div>
+					</div>
+					<div class="col-xs-8">
+						<div class="athlete-info">
 							<span>鐵咖年度積分</span>
 							<span class="fraction">1245</span>
-						</h5>
+						</div>
+					</div>
+					<div class="col-xs-4">
+						<div class="btn-custom-sm"><a href="athlete.html#"><span>前往選手專頁</span></a></div>
 					</div>
 				</div>
 				<!--athlete sports-->
 				<div class="live-sport">
 					<h5 class="live">正在進行賽事</h5>
-					<div class="sport-info">
-						<div class="sport-title row">
-							<div class="col-xs-8">
-								<h6 class="sport-name"><span>2017 LAVA 屏東大鵬灣 </span></h6>
+					<a class="card-link" href="match.html">
+						<div class="card sport-info">
+							<div class="sport-title row">
+								<div class="col-xs-12">
+									<h6 class="sport-name"><span>5150 & IRONMAN Taiwan, Penghu (2016)</span></h6>
+									<p>2017/01/07</p>
+								</div>
 							</div>
-							<div class="col-xs-4">
-								<div class="track"><a href="athlete.html">追蹤實況</a></div>
+							<div class="table main">
+								<div>
+									<div>參賽項目</div>
+									<div>組別</div>
+								</div>
+								<div>
+									<div>三鐵個人</div>
+									<div>40~44</div>
+								</div>
 							</div>
+							<div class="btn-custom"><span>觀看即時成績</span></div>
 						</div>
-						<div class="table main">
-							<div>
-								<div>日期</div>
-								<div>參賽項目</div>
-								<div>組別</div>
-							</div>
-							<div>
-								<div>2017/01/07</div>
-								<div>三鐵個人</div>
-								<div>40~44</div>
-							</div>
-						</div>
-<!--
-						<button class="table-btn" data-toggle="collapse" data-target="#split-1" onClick="parent.location='match.html'">查看更多<i class="fa fa-angle-right" aria-hidden="true"></i>
-						</button>
--->
-					</div>
+					</a>
 				</div>
 				<div class="history-sport">
 					<h5>最近歷史成績</h5>
-					<div class="sport-info">
-						<div class="sport-title row">
-							<div class="col-xs-8">
-								<h6 class="sport-name"><span>2017 LAVA 屏東大鵬灣 </span></h6>
+					<a class="card-link" href="match.html">
+						<div class="card sport-info">
+							<div class="sport-title row">
+								<div class="col-xs-12">
+									<h6 class="sport-name"><span>2017 LAVA 屏東大鵬灣 </span></h6>
+									<p>2017/01/07</p>
+								</div>
 							</div>
-							<div class="col-xs-4">
-								成績：03:00:28
+							<div class="table main">
+								<div>
+									<div>成績</div>
+									<div>參賽項目</div>
+									<div>組別</div>
+								</div>
+								<div>
+									<div>03:00:28</div>
+									<div>226 Triathlon – Solo</div>
+									<div>M40~44</div>
+								</div>
 							</div>
+							<div class="btn-custom"><span>觀看成績</span></div>
 						</div>
-						<div class="table main">
-							<div>
-								<div>日期</div>
-								<div>參賽項目</div>
-								<div>組別</div>
-							</div>
-							<div>
-								<div>2017/01/07</div>
-								<div>三鐵個人</div>
-								<div>40~44</div>
-							</div>
-						</div>
-						<button class="table-btn" data-toggle="collapse" data-target="#split-1" onClick="parent.location='match.html'">查看更多<i class="fa fa-angle-right" aria-hidden="true"></i>
-						</button>
-					</div>
+					</a>
 				</div>
 				<div class="best-sport">
 					<h5>生涯最佳成績</h5>
-					<div class="sport-info">
-						<div class="sport-title row">
-							<div class="col-xs-8">
-								<h6 class="sport-name"><span>2017 LAVA 屏東大鵬灣 </span></h6>
+					<a class="card-link" href="match.html">
+						<div class="card sport-info">
+							<div class="sport-title row">
+								<div class="col-xs-12">
+									<h6 class="sport-name"><span>2017 LAVA 屏東大鵬灣 </span></h6>
+									<p>2017/01/07</p>
+								</div>
 							</div>
-							<div class="col-xs-4">
-								成績：03:00:28
+							<div class="table main">
+								<div>
+									<div>成績</div>
+									<div>參賽項目</div>
+									<div>組別</div>
+								</div>
+								<div>
+									<div>03:00:28</div>
+									<div>226 Triathlon – Solo</div>
+									<div>M40~44</div>
+								</div>
 							</div>
+							<div class="btn-custom"><span>觀看成績</span></div>
 						</div>
-						<div class="table main">
-							<div>
-								<div>日期</div>
-								<div>參賽項目</div>
-								<div>組別</div>
-							</div>
-							<div>
-								<div>2017/01/07</div>
-								<div>三鐵個人</div>
-								<div>40~44</div>
-							</div>
-						</div>
-						<button class="table-btn" data-toggle="collapse" data-target="#split-1" onClick="parent.location='match.html'">查看更多<i class="fa fa-angle-right" aria-hidden="true"></i>
-						</button>
-					</div>
+					</a>
 				</div>
-				<div class="btn-custom"><a href="athlete.html">前往選手專頁</a></div>
 			</div>
+			
 			<!--result-2-->
 			<div class="result-info">
+				<div class="line"></div>
 				<!--athlete info card-->
 				<div class="athlete row">
 					<div class="col-xs-8">
@@ -166,116 +167,123 @@
 							<span class="name">李夏新</span>
 							<span class="eng-name">HSIA-HSIN, LI</span>
 						</h4>
-						<h5>
-							<span class="gender">男</span>
-							<span class="nationality">臺灣</span>
-						</h5>
 					</div>
 					<div class="col-xs-4">
-						<h5>
+						<div class="athlete-info">
+							<span class="gender">男</span>
+							<span class="nationality">臺灣</span>
+						</div>
+					</div>
+					<div class="col-xs-8">
+						<div class="athlete-info">
 							<span>鐵咖年度積分</span>
 							<span class="fraction">1245</span>
-						</h5>
+						</div>
+					</div>
+					<div class="col-xs-4">
+						<div class="btn-custom-sm"><a href="athlete.html#"><span>前往選手專頁</span></a></div>
 					</div>
 				</div>
 				<!--athlete sports-->
 				<div class="live-sport">
 					<h5 class="live">正在進行賽事</h5>
-					<div class="sport-info">
-						<div class="sport-title row">
-							<div class="col-xs-8">
-								<h6 class="sport-name"><span>2017 LAVA 屏東大鵬灣 </span></h6>
+					<a class="card-link" href="match.html">
+						<div class="card sport-info">
+							<div class="sport-title row">
+								<div class="col-xs-12">
+									<h6 class="sport-name"><span>5150 & IRONMAN Taiwan, Penghu (2016)</span></h6>
+								</div>
 							</div>
-							<div class="col-xs-4">
-								<div class="track"><a href="match.html">追蹤實況</a></div>
+							<div class="table main">
+								<div>
+									<div>成績</div>
+									<div>參賽項目</div>
+									<div>組別</div>
+								</div>
+								<div>
+									<div>03:00:28</div>
+									<div>三鐵個人</div>
+									<div>40~44</div>
+								</div>
 							</div>
+							<div class="btn-custom"><span>觀看即時成績</span></div>
 						</div>
-						<div class="table main">
-							<div>
-								<div>日期</div>
-								<div>參賽項目</div>
-								<div>組別</div>
-							</div>
-							<div>
-								<div>2017/01/07</div>
-								<div>三鐵個人</div>
-								<div>40~44</div>
-							</div>
-						</div>
-<!--
-						<button class="table-btn" data-toggle="collapse" data-target="#split-1" onClick="parent.location='match.html'">查看更多<i class="fa fa-angle-right" aria-hidden="true"></i>
-						</button>
--->
-					</div>
+					</a>
 				</div>
 				<div class="history-sport">
 					<h5>最近歷史成績</h5>
-					<div class="sport-info">
-						<div class="sport-title row">
-							<div class="col-xs-8">
-								<h6 class="sport-name"><span>2017 LAVA 屏東大鵬灣 </span></h6>
+					<a class="card-link" href="match.html">
+						<div class="card sport-info">
+							<div class="sport-title row">
+								<div class="col-xs-12">
+									<h6 class="sport-name"><span>2017 LAVA 屏東大鵬灣 </span></h6>
+									<p>2017/01/07</p>
+								</div>
 							</div>
-							<div class="col-xs-4">
-								成績：03:00:28
+							<div class="table main">
+								<div>
+									<div>成績</div>
+									<div>參賽項目</div>
+									<div>組別</div>
+								</div>
+								<div>
+									<div>03:00:28</div>
+									<div>226 Triathlon – Solo</div>
+									<div>M40~44</div>
+								</div>
 							</div>
+							<div class="btn-custom"><span>觀看成績</span></div>
 						</div>
-						<div class="table main">
-							<div>
-								<div>日期</div>
-								<div>參賽項目</div>
-								<div>組別</div>
-							</div>
-							<div>
-								<div>2017/01/07</div>
-								<div>三鐵個人</div>
-								<div>40~44</div>
-							</div>
-						</div>
-						<button class="table-btn" data-toggle="collapse" data-target="#split-1" onClick="parent.location='match.html'">查看更多<i class="fa fa-angle-right" aria-hidden="true"></i>
-						</button>
-					</div>
+					</a>
 				</div>
 				<div class="best-sport">
 					<h5>生涯最佳成績</h5>
-					<div class="sport-info">
-						<div class="sport-title row">
-							<div class="col-xs-8">
-								<h6 class="sport-name"><span>2017 LAVA 屏東大鵬灣 </span></h6>
+					<a class="card-link" href="match.html">
+						<div class="card sport-info">
+							<div class="sport-title row">
+								<div class="col-xs-12">
+									<h6 class="sport-name"><span>2017 LAVA 屏東大鵬灣 </span></h6>
+									<p>2017/01/07</p>
+								</div>
 							</div>
-							<div class="col-xs-4">
-								成績：03:00:28
+							<div class="table main">
+								<div>
+									<div>成績</div>
+									<div>參賽項目</div>
+									<div>組別</div>
+								</div>
+								<div>
+									<div>03:00:28</div>
+									<div>226 Triathlon – Solo</div>
+									<div>M40~44</div>
+								</div>
 							</div>
+							<div class="btn-custom"><span>觀看成績</span></div>
 						</div>
-						<div class="table main">
-							<div>
-								<div>日期</div>
-								<div>參賽項目</div>
-								<div>組別</div>
-							</div>
-							<div>
-								<div>2017/01/07</div>
-								<div>三鐵個人</div>
-								<div>40~44</div>
-							</div>
-						</div>
-						<button class="table-btn" data-toggle="collapse" data-target="#split-1" onClick="parent.location='match.html'">查看更多<i class="fa fa-angle-right" aria-hidden="true"></i>
-						</button>
-					</div>
+					</a>
 				</div>
-				<div class="btn-custom"><a href="athlete.html">前往選手專頁</a></div>
 			</div>
 			
 			<!--result-3-->
 		</div>		
 	</div>
-	<div class="top">
-		<a href="#top">TOP</a>
+	
+	<div id="top-btn" class="top">
+		<a href="#top"><i class="fa fa-angle-up" aria-hidden="true"></i></a>
 	</div>
-	<footer>詳情請洽 富邦育樂 <a href="tel:02-89110302"></a>02 8911-0302 ｜ <a href="http://support@bravelog.tw" target="_blank"></a>support@bravelog.tw</footer>
+	
+	<footer>
+		<div class="container">
+			<span>地址：台北市大安區安和路一段27號11F</span>
+			<span>信箱：<a href="mailto:itri454135@itri.org.tw">itri454135@itri.org.tw</a></span>
+			<span>版權所有©2017 台灣鐵人三項有限公司</span>
+		</div>
+	</footer>
 	
 	<!--jQuery--> 
 	<script type="text/javascript" src="js/jquery-2.2.4.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js" ></script>
+	<script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
 	<script type="text/javascript" src="js/script.js" ></script>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="zh-tw">
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 	<meta name="description" content="">
 
 	<!--og info-->
@@ -34,53 +34,122 @@
 	<div id="top" class="wrapper">
 		<header class="navbar-fixed-top">
 			<div class="container">
-				<div class="back"><a href="results.html"><i class="fa fa-angle-left" aria-hidden="true"></i>回搜尋結果</a></div>
-				<h2 class="logo"><a href="index.html">Bravelog</a></h2>
+<!--				<div class="back"><a href="results.html"><i class="fa fa-angle-left" aria-hidden="true"></i>回搜尋結果</a></div>-->
+				<h2 class="logo"><a href="index.html"><img src="images/logo_bravelog.png" alt=""></a></h2>
 				<nav class="right-nav">
 					<div class="dropdown">
-						<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">繁<i class="fa fa-caret-down" aria-hidden="true"></i></button>
+						<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">TC<i class="fa fa-caret-down" aria-hidden="true"></i></button>
 						<ul class="dropdown-menu">
-							<li><a href="#">簡</a></li>
+							<li><a href="#">SC</a></li>
 							<li><a href="#">EN</a></li>
 						</ul>
 					</div>
-					<div class="search"><a href="index.html"><i class="fa fa-search" aria-hidden="true"></i></a></div>
+<!--					<div class="search"><a href="index.html"><i class="fa fa-search" aria-hidden="true"></i></a></div>-->
 				</nav>
 			</div>
 		</header>
-		<div class="search container">
-			<h3>富邦勇紀 Bravelog 三鐵選手</h3>
-			<div class="sport-info">
-				<h4>成績搜尋系統</h4>
-				<div class="form-group">
-					<input type="text" class="form-control" id="" placeholder="請輸入選手本國名、英文名，或 BIB 號">
+		
+		<div id="section1" class="top-banner container">
+			<div id="carousel-match" class="carousel slide" data-ride="carousel" data-interval="false">
+				<div class="carousel-inner" role="listbox">
+					<div class="item active">
+						<img src="images/topbanner2.png" alt="5i50 Triathlon Taitung" title="5i50 Triathlon Taitung">
+						<div class="match-info">
+							<div class="countdown">
+								<span class="live">LIVE</span>
+								<span>剩餘 00 天 00 時 00 分</span>
+							</div>
+							<div class="btn-container">
+								<div class="btn-custom-sm"><a href="match-detail-1.html"><span>賽事詳情</span></a></div>
+							</div>
+						</div>
+						<div class="search-container">
+							<div class="single-match">
+								<h3>搜尋本場賽事選手即時成績</h3>
+								<div class="input-group">
+									<input type="text" class="form-control" placeholder="請輸入選手本國名、英文名或 BIB 號" aria-describedby="sizing-addon2">
+									<span class="input-group-btn">
+										<button class="btn btn-secondary" type="button" onclick="location.href='single-match-results.html'" ></button>
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<img src="images/topbanner1.png" alt="Iron Man 70.3" title="Iron Man 70.3">
+						<div class="match-info">
+							<div class="countdown">
+								<span class="live">LIVE</span>
+								<span>剩餘 00 天 00 時 00 分</span>
+							</div>
+							<div class="btn-container">
+								<div class="btn-custom-sm"><a href="match-detail-1.html"><span>賽事詳情</span></a></div>
+							</div>
+						</div>
+						<div class="search-container">
+							<div class="single-match">
+								<h3>搜尋本場賽事選手即時成績</h3>
+								<div class="input-group">
+									<input type="text" class="form-control" placeholder="請輸入選手本國名、英文名或 BIB 號" aria-describedby="sizing-addon2">
+									<span class="input-group-btn">
+										<button class="btn btn-secondary" type="button" onclick="location.href='single-match-results.html'" ></button>
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
-				<p>設定搜尋範圍</p>
-				<div class="btn-group btn-group-vertical radio-style" data-toggle="buttons">
-					<label class="btn active">
-						<input type="radio" name='sports' checked><i class="fa fa-circle-o fa-2x"></i><i class="fa fa-dot-circle-o fa-2x"></i><span>包含所有已知賽事</span>
-					</label>
-					<label class="btn">
-						<input type="radio" name='sports'><i class="fa fa-circle-o fa-2x"></i><i class="fa fa-dot-circle-o fa-2x"></i><span>僅包含 2017 LAVA 屏東大鵬灣</span>
-					</label>
-				</div>
-				<input type="text" class="form-control" id="" placeholder="請輸入驗證碼">
-				<div class="captcha">驗證碼放這邊</div>
-				<div class="btn-custom"><a href="results.html">開始搜尋</a></div>
+
+				<!-- Controls -->
+				<a class="left carousel-control" href="#carousel-match" role="button" data-slide="prev">
+					<div class="arrow"><span class="arrow-left"></span></div>
+				</a>
+				<a class="right carousel-control" href="#carousel-match" role="button" data-slide="next">
+					<div class="arrow" style="float: right;"><i class="arrow-right"></i></div>
+				</a>
 			</div>
-			
-			
-			<!--result-3-->
-		</div>		
+		</div>
+		<div id="section2">
+			<div class="container">
+				<div class="search-container col-sm-6 col-sm-offset-3">
+					<div class="line"></div>
+					<h2>搜尋過往賽事選手成績</h2>
+					<div class="form-group">
+						<select class="form-control">
+							<option selected disabled>所有賽事</option>
+							<optgroup label="--2017--">
+								<option>Match 1</option>
+								<option>Match 2</option>
+								<option>Match 3</option>
+							</optgroup>
+							<optgroup label="--2016--">
+								<option>Match 1</option>
+								<option>Match 2</option>
+								<option>Match 3</option>
+								<option>Match 4</option>
+							</optgroup>
+						</select>
+					</div>
+					<div class="form-group">
+						<input type="text" class="form-control" id="" placeholder="請輸入選手本國名、英文名，或 BIB 號">
+					</div>
+					<div class="btn-custom"><a href="results.html"><span>開始搜尋</span></a></div>
+				</div>
+			</div>
+		</div>
 	</div>
-	<div class="top">
-		<a href="#top">TOP</a>
-	</div>
-	<footer>詳情請洽 富邦育樂 <a href="tel:02-89110302"></a>02 8911-0302 ｜ <a href="http://support@bravelog.tw" target="_blank"></a>support@bravelog.tw</footer>
+	<footer>
+		<div class="container">
+			<span>地址：台北市大安區安和路一段27號11F</span>
+			<span>信箱：<a href="mailto:itri454135@itri.org.tw">itri454135@itri.org.tw</a></span>
+			<span>版權所有©2017 台灣鐵人三項有限公司</span>
+		</div>
+	</footer>
 	
 	<!--jQuery--> 
 	<script type="text/javascript" src="js/jquery-2.2.4.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js" ></script>
+	<script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
 	<script type="text/javascript" src="js/script.js" ></script>
 </body>
 </html>

@@ -3,17 +3,21 @@ $primary-color: #ef4130;
 $secondary-color: #ffcf89;
 $thirdary-color: #ff9473;
 
-$orange: #ef4130;
+$orange: #FB6C48;
 $peach: #ffcf89;
 $rose: #ff9473;
 $yellow: #f8c91c;
 $DarkTurquoise: #22c3b8;
 $Green: #adcc00;
 $white: #fff;
-$light-gray: #f2f2f2;
+$light-gray: #f6f6f6;
+$medium-gray: #ccc;
 $gray: #6f6f6f;
 $dark-gray: #4f4f4f;
 $dark: #4C4A48;
+$light-skin: #FFFDFB;
+$skin: #FFF3E1;
+$red: #D21F2A;
 
 //font style
 $xxs-font: .75em;
@@ -67,15 +71,29 @@ $xxxxxl-font: 2.5em;
 @mixin text-dark-shadow {
 	text-shadow: 0 0 4px rgba($dark,.6), 0 0 10px rgba($dark,.6);
 }
+@mixin text-light-shadow {
+	text-shadow: 0 0 2px rgba($white,.8), 0 0 4px rgba($white,.6), 0 0 10px rgba($white,.6);
+}
 @mixin text-primary-shadow {
 	text-shadow: 0 0 4px rgba($primary-color,.6), 0 0 10px rgba($primary-color,.6);
 }
+@mixin box-primary-shadow {
+	box-shadow: 0 0 10px rgba($primary-color,.2), 0 10px 20px rgba($primary-color,.3);
+}
 @mixin box-light-shadow {
-	box-shadow: 0 5px 30px rgba($primary-color,.6),0 5px 20px rgba($primary-color,.35),0 2px 4px rgba($primary-color,.12),0 3px 16px rgba($primary-color,.1);
+	box-shadow: 0 5px 10px rgba($gray,.1),0 5px 20px rgba($gray,.15);
 }
 @mixin box-dark-shadow {
 	box-shadow: 0 0 4px rgba($dark,.6), 0 5px 15px rgba($dark,.3);
 }
 @mixin box-dark-shadow-spread {
 	box-shadow: 0 0 4px rgba($dark,.6), 0 0 10px rgba($dark,.6), 0 10px 30px rgba($dark,.6);
+}
+@mixin card-style {
+	background: $white;
+	margin-bottom: 20px;
+	padding-bottom: 16px;
+	border-radius: 4px;
+	overflow: hidden;
+	@include box-light-shadow;
 }
