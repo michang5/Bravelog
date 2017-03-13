@@ -279,8 +279,14 @@ ul, li {
   .card .btn-custom {
     position: absolute;
     width: 120px;
-    top: 15px;
+    top: 5px;
     right: 15px;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  #single-match-results .btn-custom {
+    position: static;
   }
 }
 
@@ -291,7 +297,7 @@ ul, li {
   position: relative;
   display: block;
   text-align: center;
-  margin: 0 auto;
+  margin: 6px auto;
   border: 2px solid #FB6C48;
   background: white;
   border-radius: 5px;
@@ -692,6 +698,56 @@ a.card-link .card {
   }
 }
 
+.modal-body {
+  padding: 20px;
+}
+
+.close {
+  position: absolute;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  opacity: 1;
+  overflow: hidden;
+  display: inline-block;
+  z-index: 9999;
+  cursor: pointer;
+  top: 12px;
+  right: 12px;
+  background: #f6f6f6;
+}
+.close:hover {
+  background-color: transparent;
+  background-color: rgba(79, 79, 79, 0.2);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#334F4F4F,endColorstr=#334F4F4F);
+  zoom: 1;
+}
+.close:hover::before, .close:hover::after {
+  background: #4f4f4f;
+}
+.close::before, .close::after {
+  content: '';
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  margin-top: -1px;
+  background: #4f4f4f;
+}
+.close::before {
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.close::after {
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
 #section2 {
   margin-top: 40px;
 }
@@ -837,6 +893,9 @@ a.card-link .card {
   content: '\002F';
   padding-left: 5px;
 }
+#match .athlete {
+  padding-bottom: 0;
+}
 @media only screen and (max-width: 320px) {
   .athlete h4 {
     font-size: 1.125em;
@@ -922,6 +981,20 @@ a.card-link .card {
 .tab-content {
   padding-top: 20px;
 }
+.tab-content .row {
+  text-align: center;
+}
+.tab-content .row .col-sm-4 {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+  margin-left: -4px;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+.tab-content .btn-custom-sm {
+  width: 120px;
+}
 
 .select-container {
   width: 100%;
@@ -930,12 +1003,19 @@ a.card-link .card {
 
 .transcripts-print {
   margin: 20px auto;
-  width: 50%;
+  width: 220px;
 }
-@media only screen and (max-width: 480px) {
-  .transcripts-print {
-    width: 100%;
-  }
+
+#live-map {
+  width: 100%;
+  min-height: 400px;
+  border: 1px solid #ccc;
+  margin: 20px auto;
+}
+
+#match .info-card .row {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ccc;
 }
 
 .info-card .col-xs-12 {
@@ -944,6 +1024,9 @@ a.card-link .card {
 }
 .info-card .col-xs-4 p, .info-card .col-xs-8 p {
   font-size: 14px;
+}
+.info-card .col-xs-8 {
+  text-align: left;
 }
 .info-card .col-xs-8 p {
   line-height: 1.8;
@@ -959,6 +1042,7 @@ a.card-link .card {
   line-height: 1;
   color: #6f6f6f;
   font-size: 1.5em;
+  text-align: left;
 }
 .info-card h4, .info-card h5, .info-card h6 {
   margin: 0;
@@ -1025,8 +1109,8 @@ a.card-link .card {
 }
 .info-card .athlete-info {
   *zoom: 1;
-  margin-top: 10px;
   clear: both;
+  margin-bottom: 10px;
 }
 .info-card .athlete-info:after, .info-card .athlete-info:before {
   content: "";
@@ -1078,10 +1162,11 @@ a.card-link .card {
   display: inline-block;
   vertical-align: top;
   margin: 6px;
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(111, 111, 111, 0.15);
   width: 112px;
   height: 112px;
   border-radius: 50%;
+  box-shadow: 0 0 0 1px #ccc;
 }
 .category > div.sport-1 .icon {
   background: url("../images/sport1.png");
@@ -1125,10 +1210,6 @@ a.card-link .card {
   height: 40px;
   background-repeat: no-repeat;
 }
-.category > div span.distance, .category > div span.time {
-  color: #fff;
-  text-shadow: 0 0 4px rgba(239, 65, 48, 0.6), 0 0 10px rgba(239, 65, 48, 0.6);
-}
 .category > div span.distance {
   line-height: 1em;
 }
@@ -1150,7 +1231,7 @@ a.card-link .card {
 }
 .category > div.finished {
   background: #fff;
-  box-shadow: 0 5px 10px rgba(111, 111, 111, 0.1), 0 5px 20px rgba(111, 111, 111, 0.15);
+  box-shadow: 0 0 0 3px #ff9473;
 }
 .category > div.finished span.icon {
   background-position: center top;
@@ -1167,6 +1248,7 @@ a.card-link .card {
 .category > div a {
   padding: 10px 4px 0;
   display: block;
+  color: #ccc;
 }
 @media screen and (max-width: 413px) {
   .category > div {
@@ -1229,12 +1311,15 @@ a.card-link .card {
 .achievement {
   margin-bottom: 20px;
   text-align: center;
-  text-shadow: 0 0 4px rgba(239, 65, 48, 0.6), 0 0 10px rgba(239, 65, 48, 0.6);
-  color: #fff;
+  color: #ef4130;
+  padding-top: 20px;
+}
+.achievement > span {
+  font-size: 1.5em;
 }
 .achievement .time {
   font-size: 48px;
-  line-height: 1.25em;
+  line-height: 1;
 }
 .achievement .total-ranking {
   font-size: 1.125em;
@@ -1244,6 +1329,20 @@ a.card-link .card {
 }
 .achievement .total-ranking span, .achievement .ranking span {
   padding: 0 10px;
+}
+
+.category ~ .achievement {
+  color: #6f6f6f;
+}
+
+#live-sport .col-md-4, #match .col-md-4 {
+  padding-right: 0;
+}
+@media only screen and (max-width: 768px) {
+  #live-sport .col-md-4, #match .col-md-4 {
+    padding-left: 4px;
+    padding-right: 4px;
+  }
 }
 
 .sport-info {
@@ -1258,7 +1357,7 @@ a.card-link .card {
   overflow: hidden;
   box-shadow: 0 5px 10px rgba(111, 111, 111, 0.1), 0 5px 20px rgba(111, 111, 111, 0.15);
 }
-#live-sport .sport-info {
+#live-sport .sport-info, #match .sport-info {
   border: 1px solid #ccc;
   box-shadow: none;
   padding-bottom: 0;
@@ -1286,6 +1385,13 @@ a.card-link .card {
 .sport-info h6.sport-name {
   font-weight: bold;
   margin: 0;
+  text-align: left;
+}
+.sport-info .col-xs-4 {
+  padding-right: 0;
+}
+.sport-info .col-md-4 {
+  padding-right: 0;
 }
 .sport-info.sport-1 h6.sport-name:before, .sport-info.sport-2 h6.sport-name:before, .sport-info.sport-3 h6.sport-name:before {
   content: "";
@@ -1407,6 +1513,7 @@ a.card-link .card {
 .select-style {
   margin: 10px auto;
   width: 50%;
+  float: right;
   position: relative;
   color: #6f6f6f;
 }

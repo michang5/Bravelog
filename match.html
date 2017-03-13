@@ -38,9 +38,9 @@
 				<h2 class="logo"><a href="index.html"><img src="images/logo_bravelog.png" alt=""></a></h2>
 				<nav class="right-nav">
 					<div class="dropdown">
-						<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">繁<i class="fa fa-caret-down" aria-hidden="true"></i></button>
+						<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">TC<i class="fa fa-caret-down" aria-hidden="true"></i></button>
 						<ul class="dropdown-menu">
-							<li><a href="#">簡</a></li>
+							<li><a href="#">SC</a></li>
 							<li><a href="#">EN</a></li>
 						</ul>
 					</div>
@@ -49,79 +49,78 @@
 			</div>
 		</header>
 		<div class="container">
-
+			<!--athlete info card-->
+			<div class="athlete row">
+				<div class="col-xs-8">
+					<h4>
+						<span class="name">李夏新</span>
+						<span class="eng-name">HSIA-HSIN, LI</span>
+					</h4>
+				</div>
+				<div class="col-xs-4">
+					<div class="athlete-info">
+						<span class="gender">男</span>
+						<span class="nationality">臺灣</span>
+					</div>
+				</div>
+				<div class="col-xs-8">
+					<div class="athlete-info">
+						<span>鐵咖年度積分</span>
+						<span class="fraction">1245</span>
+					</div>
+				</div>
+			</div>
 			<!--match info card-->
 			<div class="info-card">
+				<div class="athlete-info">
+					<div class="tab-container">   
+						<div class="table-responsive">
+							<table class="table">
+								<thead>
+									<tr>
+										<th>BIB號碼</th>
+										<th>參賽項目</th>
+										<th>狀態</th>
+										<th>組別</th>
+										<th>團名</th>
+										<th>隊名</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr v-for="record in records">
+										<td>#123</td>
+										<td>226 Triathlon – Solo</td>
+										<td>已完賽</td>
+										<td>M40-44</td>
+										<td>鐵馬牧場</td>
+										<td>--</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>     
+				</div>
 				<div class="row">
-					<div class="col-xs-9">
-						<h3>2017 LAVA 屏東大鵬灣</h3>
+					<div class="col-xs-12">
+						<h3>5150 & IRONMAN Taiwan, Penghu</h3>
+					</div>
+					<div class="col-xs-8">
 						<h4><span>臺灣</span><span>屏東</span></h4>
 						<p>2016/00/00</p>
 						<p><span>開始時間：00:00</span><span>結束時間：00:00</span></p>
+						<p><span>參賽人數：123</span><span>完賽人數：123</span></p>
 					</div>
-					<div class="col-xs-3">
+					<div class="col-xs-4">
 						<div class="weather-icon"><img src="images/weather_icon1.png" alt="晴時多雲" title="晴時多雲"></div>
 						<h4>22-28°C</h4>
 						<p><span>風速</span><span>6.6m/s</span></p>
 						<p><span>濕度</span><span>23%</span></p>
 					</div>
 				</div>
-				<div class="athlete-info">
-					<div class="table main">
-						<div>
-							<div>BIB號碼</div>
-							<div>參賽項目</div>
-							<div>狀態</div>
-							<div>組別</div>
-						</div>
-						<div>
-							<div>#123</div>
-							<div>鐵人三項</div>
-							<div>已完賽</div>
-							<div>男子</div>
-						</div>
-					</div>
-					<div class="table main">
-						<div>
-							<div>參賽人數</div>
-							<div>未完賽人數</div>
-						</div>
-						<div>
-							<div>677</div>
-							<div>1</div>
-						</div>
-					</div>  
-					<div class="table main">
-						<div>
-							<div>團名</div>
-							<div>隊名</div>
-						</div>
-						<div>
-							<div>團名名稱</div>
-							<div>隊名名稱</div>
-						</div>
-					</div>            
-				</div>
 			</div>
-			<!--athlete info card-->
-   			<div class="athlete row">
-				<!--<h3><i class="fa fa-address-card" aria-hidden="true"></i>選手資料</h3>-->
-				<div class="col-xs-8">
-					<h4>
-						<span class="name">李夏新</span>
-						<span class="eng-name">HSIA-HSIN, LI</span>
-					</h4>
-					<h5>
-						<span class="gender">男</span>
-						<span class="nationality">臺灣</span>
-					</h5>
-				</div>
-				<div class="col-xs-4">
-					<h5>
-						<span>鐵咖年度積分</span>
-						<span class="fraction">1245</span>
-					</h5>
-				</div>
+  			<div class="achievement">
+    			<span>總成績</span>
+				<div class="time">00:00:00</div>
 			</div>
    			<!--sport dashboard-->
 			<div class="category">
@@ -148,336 +147,353 @@
 				</div>
 			</div>
 			<div class="achievement">
-				<span>總成績</span>
-				<div class="time">01:23:45</div>
 				<div class="total-ranking">第<span></span>名，共<span></span>人參賽 </div>
 				<div class="ranking">分組排名：第<span>&#45&#32&#45</span>名，共<span>&#45&#32&#45</span>人參賽 </div>
 				<div class="ranking">性別排名：第<span>&#45&#32&#45</span>名，共<span>&#45&#32&#45</span>人參賽 </div>
 			</div>
-    		<!--sport-1-->
-			<div id="sport-1" class="sport-info sport-1">
-				<div class="sport-title row">
-					<div class="col-xs-5">
-						<h6 class="sport-name"><span>游泳</span></h6>
-					</div>
-					<div class="col-xs-7 sport-achievement">
-						<span class="distance">1.50KM</span>
-						<span class="time">00:19:15</span>
-					</div>
-				</div>
-				<div class="table main">
-					<div>
-						<div>總排名</div>
-						<div>分組排名</div>
-						<div>性別排名</div>
-						<div>速度/配速</div>
-					</div>
-					<div>
-						<div>284</div>
-						<div>243</div>
-						<div>243</div>
-						<div><span>--</span><span>--</span></div>
-					</div>
-				</div>
-				<div id="split-1" class="collapse split in">
-					<div class="split">
-						<h5>分段名稱</h5>
-						<div class="table sub">
-							<div>
-								<div>時間</div>
-								<div>距離</div>
-								<div>速度/配速</div>
-								<div>累計時間</div>
+    		<div class="row">
+   						<div class="col-md-4">
+   							<!--sport-1-->
+							<div id="sport-1" class="sport-info sport-1">
+								<div class="sport-title row">
+									<div class="col-xs-4">
+										<h6 class="sport-name"><span>游泳</span></h6>
+									</div>
+									<div class="col-xs-8 sport-achievement">
+										<span class="distance">1.50KM</span>
+										<span class="time">00:19:15</span>
+									</div>
+								</div>
+								<div class="table main">
+									<div>
+										<div>總排名</div>
+										<div>分組排名</div>
+										<div>性別排名</div>
+										<div>速度/配速</div>
+									</div>
+									<div>
+										<div>284</div>
+										<div>243</div>
+										<div>243</div>
+										<div><span>--</span><span>--</span></div>
+									</div>
+								</div>
+								<div id="split-1" class="collapse split">
+									<div class="split">
+										<h5>分段名稱</h5>
+										<div class="table sub">
+											<div>
+												<div>時間</div>
+												<div>距離</div>
+												<div>速度/配速</div>
+												<div>累計時間</div>
+											</div>
+											<div>
+												<div>00:19:15</div>
+												<div>0.0km</div>
+												<div><span>--</span><span>--</span></div>
+												<div>00:19:15</div>
+											</div>
+										</div>
+										<div class="table sub">
+											<div>
+												<div>總排名</div>
+												<div>分組排名</div>
+												<div>性別排名</div>
+											</div>
+											<div>
+												<div>123</div>
+												<div>123</div>
+												<div>123</div>
+											</div>
+										</div>
+									</div>
+									<div class="split">
+										<h5>分段名稱</h5>
+										<div class="table sub">
+											<div>
+												<div>時間</div>
+												<div>距離</div>
+												<div>速度/配速</div>
+												<div>累計時間</div>
+											</div>
+											<div>
+												<div>00:19:15</div>
+												<div>0.0km</div>
+												<div><span>--</span><span>--</span></div>
+												<div>00:19:15</div>
+											</div>
+										</div>
+										<div class="table sub">
+											<div>
+												<div>總排名</div>
+												<div>分組排名</div>
+												<div>性別排名</div>
+											</div>
+											<div>
+												<div>123</div>
+												<div>123</div>
+												<div>123</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<button class="table-btn open-close" data-toggle="collapse" data-target="#split-1"></button>
+							</div>	
+							<!--T1-->
+							<div id="T1" class="sport-info">
+								<div class="sport-title row">
+									<div class="col-xs-4 sport-name">
+										<h6 class="sport-name"><span>T1</span></h6>
+									</div>
+									<div class="col-xs-8 sport-achievement">
+										<span class="distance">0.1KM</span>
+										<span class="time">00:02:26</span>
+									</div>
+								</div>
+								<div class="table main">
+									<div>
+										<div>總排名</div>
+										<div>分組排名</div>
+										<div>性別排名</div>
+										<div>速度/配速</div>
+									</div>
+									<div>
+										<div>592</div>
+										<div>87</div>
+										<div>560</div>
+										<div><span>0.85</span><span>70:50</span></div>
+									</div>
+								</div>
 							</div>
-							<div>
-								<div>00:19:15</div>
-								<div>0.0km</div>
-								<div><span>--</span><span>--</span></div>
-								<div>00:19:15</div>
+							<!--sport-2-->
+   						</div>
+   						<div class="col-md-4">
+    						<!--sport-2-->
+							<div id="sport-2" class="sport-info sport-2">
+								<div class="sport-title row">
+									<div class="col-xs-4">
+										<h6 class="sport-name"><span>單車</span></h6>
+									</div>
+									<div class="col-xs-8 sport-achievement">
+										<span class="distance">40KM</span>
+										<span class="time">01:00:06</span>
+									</div>
+								</div>
+								<div class="table main">
+									<div>
+										<div>總排名</div>
+										<div>分組排名</div>
+										<div>性別排名</div>
+										<div>速度/配速</div>
+									</div>
+									<div>
+										<div>284</div>
+										<div>243</div>
+										<div>243</div>
+										<div><span>--</span><span>--</span></div>
+									</div>
+								</div>
+								<div id="split-2" class="collapse split">
+									<div class="split">
+										<h5>分段名稱</h5>
+										<div class="table sub">
+											<div>
+												<div>時間</div>
+												<div>距離</div>
+												<div>速度/配速</div>
+												<div>累計時間</div>
+											</div>
+											<div>
+												<div>00:19:15</div>
+												<div>0.0km</div>
+												<div><span>--</span><span>--</span></div>
+												<div>00:19:15</div>
+											</div>
+										</div>
+										<div class="table sub">
+											<div>
+												<div>總排名</div>
+												<div>分組排名</div>
+												<div>性別排名</div>
+											</div>
+											<div>
+												<div>123</div>
+												<div>123</div>
+												<div>123</div>
+											</div>
+										</div>
+									</div>
+									<div class="split">
+										<h5>分段名稱</h5>
+										<div class="table sub">
+											<div>
+												<div>時間</div>
+												<div>距離</div>
+												<div>速度/配速</div>
+												<div>累計時間</div>
+											</div>
+											<div>
+												<div>00:19:15</div>
+												<div>0.0km</div>
+												<div><span>--</span><span>--</span></div>
+												<div>00:19:15</div>
+											</div>
+										</div>
+										<div class="table sub">
+											<div>
+												<div>總排名</div>
+												<div>分組排名</div>
+												<div>性別排名</div>
+											</div>
+											<div>
+												<div>123</div>
+												<div>123</div>
+												<div>123</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<button class="table-btn open-close collapsed" data-toggle="collapse" data-target="#split-2"></button>
 							</div>
-						</div>
-						<div class="table sub">
-							<div>
-								<div>總排名</div>
-								<div>分組排名</div>
-								<div>性別排名</div>
-							</div>
-							<div>
-								<div>123</div>
-								<div>123</div>
-								<div>123</div>
-							</div>
-						</div>
-					</div>
-					<div class="split">
-						<h5>分段名稱</h5>
-						<div class="table sub">
-							<div>
-								<div>時間</div>
-								<div>距離</div>
-								<div>速度/配速</div>
-								<div>累計時間</div>
-							</div>
-							<div>
-								<div>00:19:15</div>
-								<div>0.0km</div>
-								<div><span>--</span><span>--</span></div>
-								<div>00:19:15</div>
-							</div>
-						</div>
-						<div class="table sub">
-							<div>
-								<div>總排名</div>
-								<div>分組排名</div>
-								<div>性別排名</div>
-							</div>
-							<div>
-								<div>123</div>
-								<div>123</div>
-								<div>123</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<button class="table-btn open-close" data-toggle="collapse" data-target="#split-1"></button>
-				</div>
-			<!--T1-->
-			<div id="T1" class="sport-info">
-				<div class="sport-title row">
-					<div class="col-xs-6 sport-name">
-						<h6 class="sport-name"><span>T1</span></h6>
-					</div>
-					<div class="col-xs-6 sport-achievement">
-						<span class="distance">0.1KM</span>
-						<span class="time">00:02:26</span>
-					</div>
-				</div>
-				<div class="table main">
-					<div>
-						<div>總排名</div>
-						<div>分組排名</div>
-						<div>性別排名</div>
-						<div>速度/配速</div>
-					</div>
-					<div>
-						<div>592</div>
-						<div>87</div>
-						<div>560</div>
-						<div><span>0.85</span><span>70:50</span></div>
-					</div>
-				</div>
-			</div>
-			<!--sport-2-->
-			<div id="sport-2" class="sport-info sport-2">
-				<div class="sport-title row">
-					<div class="col-xs-6">
-						<h6 class="sport-name"><span>單車</span></h6>
-					</div>
-					<div class="col-xs-6 sport-achievement">
-						<span class="distance">40KM</span>
-						<span class="time">01:00:06</span>
-					</div>
-				</div>
-				<div class="table main">
-					<div>
-						<div>總排名</div>
-						<div>分組排名</div>
-						<div>性別排名</div>
-						<div>速度/配速</div>
-					</div>
-					<div>
-						<div>284</div>
-						<div>243</div>
-						<div>243</div>
-						<div><span>--</span><span>--</span></div>
-					</div>
-				</div>
-				<div id="split-2" class="collapse split">
-					<div class="split">
-						<h5>分段名稱</h5>
-						<div class="table sub">
-							<div>
-								<div>時間</div>
-								<div>距離</div>
-								<div>速度/配速</div>
-								<div>累計時間</div>
-							</div>
-							<div>
-								<div>00:19:15</div>
-								<div>0.0km</div>
-								<div><span>--</span><span>--</span></div>
-								<div>00:19:15</div>
-							</div>
-						</div>
-						<div class="table sub">
-							<div>
-								<div>總排名</div>
-								<div>分組排名</div>
-								<div>性別排名</div>
-							</div>
-							<div>
-								<div>123</div>
-								<div>123</div>
-								<div>123</div>
-							</div>
-						</div>
-					</div>
-					<div class="split">
-						<h5>分段名稱</h5>
-						<div class="table sub">
-							<div>
-								<div>時間</div>
-								<div>距離</div>
-								<div>速度/配速</div>
-								<div>累計時間</div>
-							</div>
-							<div>
-								<div>00:19:15</div>
-								<div>0.0km</div>
-								<div><span>--</span><span>--</span></div>
-								<div>00:19:15</div>
-							</div>
-						</div>
-						<div class="table sub">
-							<div>
-								<div>總排名</div>
-								<div>分組排名</div>
-								<div>性別排名</div>
-							</div>
-							<div>
-								<div>123</div>
-								<div>123</div>
-								<div>123</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<button class="table-btn open-close collapsed" data-toggle="collapse" data-target="#split-2"></button>
-			</div>
-			<!--T2-->
-			<div id="T2" class="sport-info">
-				<div class="sport-title row">
-					<div class="col-xs-6 sport-name">
-						<h6 class="sport-name"><span>T2</span></h6>
-					</div>
-					<div class="col-xs-6 sport-achievement">
-						<span class="distance">0.1KM</span>
-						<span class="time">00:01:39</span>
-					</div>
-				</div>
-				<div class="table main">
-					<div>
-						<div>總排名</div>
-						<div>分組排名</div>
-						<div>性別排名</div>
-						<div>速度/配速</div>
-					</div>
-					<div>
-						<div>592</div>
-						<div>87</div>
-						<div>560</div>
-						<div><span>0.85</span><span>70:50</span></div>
-					</div>
-				</div>
-			</div>
-			<!--sport-3-->
-			<div id="sport-3" class="sport-info sport-3">
-				<div class="sport-title row">
-					<div class="col-xs-6">
-						<h6 class="sport-name"><span>路跑</span></h6>
-					</div>
-					<div class="col-xs-6 sport-achievement">
-						<span class="distance">40KM</span>
-						<span class="time">01:00:06</span>
-					</div>
-				</div>
-				<div class="table main">
-					<div>
-						<div>總排名</div>
-						<div>分組排名</div>
-						<div>性別排名</div>
-						<div>速度/配速</div>
-					</div>
-					<div>
-						<div>284</div>
-						<div>243</div>
-						<div>243</div>
-						<div><span>--</span><span>--</span></div>
-					</div>
-				</div>
-				<div id="split-3" class="collapse split">
-					<div class="split">
-						<h5>分段名稱</h5>
-						<div class="table sub">
-							<div>
-								<div>時間</div>
-								<div>距離</div>
-								<div>速度/配速</div>
-								<div>累計時間</div>
-							</div>
-							<div>
-								<div>00:19:15</div>
-								<div>0.0km</div>
-								<div><span>--</span><span>--</span></div>
-								<div>00:19:15</div>
+							<!--T2-->
+							<div id="T2" class="sport-info">
+								<div class="sport-title row">
+									<div class="col-xs-4 sport-name">
+										<h6 class="sport-name"><span>T2</span></h6>
+									</div>
+									<div class="col-xs-8 sport-achievement">
+										<span class="distance">0.1KM</span>
+										<span class="time">00:01:39</span>
+									</div>
+								</div>
+								<div class="table main">
+									<div>
+										<div>總排名</div>
+										<div>分組排名</div>
+										<div>性別排名</div>
+										<div>速度/配速</div>
+									</div>
+									<div>
+										<div>592</div>
+										<div>87</div>
+										<div>560</div>
+										<div><span>0.85</span><span>70:50</span></div>
+									</div>
+								</div>
 							</div>
 						</div>
-						<div class="table sub">
-							<div>
-								<div>總排名</div>
-								<div>分組排名</div>
-								<div>性別排名</div>
-							</div>
-							<div>
-								<div>123</div>
-								<div>123</div>
-								<div>123</div>
+						<div class="col-md-4">
+							<!--sport-3-->
+							<div id="sport-3" class="sport-info sport-3">
+								<div class="sport-title row">
+									<div class="col-xs-4">
+										<h6 class="sport-name"><span>路跑</span></h6>
+									</div>
+									<div class="col-xs-8 sport-achievement">
+										<span class="distance">40KM</span>
+										<span class="time">01:00:06</span>
+									</div>
+								</div>
+								<div class="table main">
+									<div>
+										<div>總排名</div>
+										<div>分組排名</div>
+										<div>性別排名</div>
+										<div>速度/配速</div>
+									</div>
+									<div>
+										<div>284</div>
+										<div>243</div>
+										<div>243</div>
+										<div><span>--</span><span>--</span></div>
+									</div>
+								</div>
+								<div id="split-3" class="collapse split">
+									<div class="split">
+										<h5>分段名稱</h5>
+										<div class="table sub">
+											<div>
+												<div>時間</div>
+												<div>距離</div>
+												<div>速度/配速</div>
+												<div>累計時間</div>
+											</div>
+											<div>
+												<div>00:19:15</div>
+												<div>0.0km</div>
+												<div><span>--</span><span>--</span></div>
+												<div>00:19:15</div>
+											</div>
+										</div>
+										<div class="table sub">
+											<div>
+												<div>總排名</div>
+												<div>分組排名</div>
+												<div>性別排名</div>
+											</div>
+											<div>
+												<div>123</div>
+												<div>123</div>
+												<div>123</div>
+											</div>
+										</div>
+									</div>
+									<div class="split">
+										<h5>分段名稱</h5>
+										<div class="table sub">
+											<div>
+												<div>時間</div>
+												<div>距離</div>
+												<div>速度/配速</div>
+												<div>累計時間</div>
+											</div>
+											<div>
+												<div>00:19:15</div>
+												<div>0.0km</div>
+												<div><span>--</span><span>--</span></div>
+												<div>00:19:15</div>
+											</div>
+										</div>
+										<div class="table sub">
+											<div>
+												<div>總排名</div>
+												<div>分組排名</div>
+												<div>性別排名</div>
+											</div>
+											<div>
+												<div>123</div>
+												<div>123</div>
+												<div>123</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<button class="table-btn open-close collapsed" data-toggle="collapse" data-target="#split-3"></button>
 							</div>
 						</div>
 					</div>
-					<div class="split">
-						<h5>分段名稱</h5>
-						<div class="table sub">
-							<div>
-								<div>時間</div>
-								<div>距離</div>
-								<div>速度/配速</div>
-								<div>累計時間</div>
-							</div>
-							<div>
-								<div>00:19:15</div>
-								<div>0.0km</div>
-								<div><span>--</span><span>--</span></div>
-								<div>00:19:15</div>
-							</div>
-						</div>
-						<div class="table sub">
-							<div>
-								<div>總排名</div>
-								<div>分組排名</div>
-								<div>性別排名</div>
-							</div>
-							<div>
-								<div>123</div>
-								<div>123</div>
-								<div>123</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<button class="table-btn open-close collapsed" data-toggle="collapse" data-target="#split-3"></button>
-			</div>
-			<div class="btn-custom"><a href="athlete.html">回選手專頁</a></div>
+                	<div class="transcripts-print">
+                 		<div class="btn-custom-sm"><a href="回選手專頁"><span>回選手專頁</span></a></div>
+					</div>	
 		</div>		
 	</div>
-	<div class="top">
-		<a href="#top">TOP</a>
+	<div id="top-btn" class="top">
+		<a href="#top"><i class="fa fa-angle-up" aria-hidden="true"></i></a>
 	</div>
-	<footer>詳情請洽 富邦育樂 <a href="tel:02-89110302"></a>02 8911-0302 ｜ <a href="http://support@bravelog.tw" target="_blank"></a>support@bravelog.tw</footer>
+	
+	<footer>
+		<div class="container">
+			<span>地址：台北市大安區安和路一段27號11F</span>
+			<span>信箱：<a href="mailto:itri454135@itri.org.tw">itri454135@itri.org.tw</a></span>
+			<span>版權所有©2017 台灣鐵人三項有限公司</span>
+		</div>
+	</footer>
 	
 	<!--jQuery--> 
 	<script type="text/javascript" src="js/jquery-2.2.4.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js" ></script>
+	<script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
 	<script type="text/javascript" src="js/script.js" ></script>
 </body>
 </html>

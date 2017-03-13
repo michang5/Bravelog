@@ -254,11 +254,17 @@ ul, li {
 		@include respond-to (only-desktop){
 			position: absolute;
 			width: 120px;
-			top: 15px;
+			top: 5px;
 			right: 15px;
 		}
 	}
-	
+}
+#single-match-results {
+	.btn-custom {
+		@include respond-to (only-desktop){
+			position: static;
+		}
+	}
 }
 .btn-custom-sm {
 	line-height: 20px;
@@ -267,7 +273,7 @@ ul, li {
 	position: relative;
 	display: block;
 	text-align: center;
-	margin: 0 auto;
+	margin: 6px auto;
 //	background: $DarkTurquoise;
 	border: 2px solid $orange;
 	background: white;
@@ -715,6 +721,46 @@ a.card-link .card {
 		width: 40px;
 	}
 }
+.modal-body {
+	padding: 20px;
+}
+.close {
+	position: absolute;
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	opacity: 1;
+	overflow: hidden;
+	display: inline-block;
+	z-index: 9999;
+	cursor: pointer;
+	top: 12px;
+	right: 12px;
+	background: $light-gray;
+	&:hover {
+		@include transparent($dark-gray,.2);
+		&::before, &::after {
+			background: $dark-gray;
+		}
+	}
+	&::before,
+	&::after {
+		content: '';
+		position: absolute;
+		height: 1px;
+		width: 100%;
+		top: 50%;
+		left: 0;
+		margin-top: -1px;
+		background: $dark-gray;
+	}
+	&::before {
+		@include transform(rotate(45deg));
+	}
+	&::after {
+		@include transform(rotate(-45deg));
+	}
+}
 //#section2
 #section2 {
 	margin-top: 40px;
@@ -887,7 +933,9 @@ a.card-link .card {
 			padding-left: 5px;
 		}
 	}
-	
+	#match & {
+		padding-bottom: 0;
+	}
 	@include respond-to (xxs-mobile){
 		h4 {
 			font-size: $l-font;
@@ -994,7 +1042,21 @@ a.card-link .card {
 	}
 }
 .tab-content {
-	padding-top: 20px;	
+	padding-top: 20px;
+	.row {
+		text-align: center;
+		.col-sm-4 {
+			display: inline-block;
+			float: none;
+			vertical-align: top;
+			margin-left: -4px;
+			padding-left: 6px;
+			padding-right: 6px;
+		}
+	}
+	.btn-custom-sm {
+		width: 120px;
+	}
 }
 .select-container {
 	width: 100%;
@@ -1002,12 +1064,26 @@ a.card-link .card {
 }
 .transcripts-print {
 	margin: 20px auto;
-	width: 50%;
-	@include respond-to (normal-mobile){
-		width: 100%;
-	}
+	width: 220px;
+//	@include respond-to (normal-mobile){
+//		width: 100%;
+//	}
+}
+#live-map {
+	width: 100%;
+	min-height: 400px;
+	border: 1px solid $medium-gray;
+	margin: 20px auto;
 }
 
+#match {
+	.info-card {
+		.row {
+			padding-bottom: 10px;
+			border-bottom: 1px solid $medium-gray;
+		}
+	}
+}
 .info-card {
 //	background: $white;
 //	padding: 10px 0 0;
@@ -1015,6 +1091,8 @@ a.card-link .card {
 //	overflow: hidden;
 //	@include card-style;
 //	border-bottom: 1px solid $medium-gray;
+	
+	
 	.col-xs-12 {
 		padding-left: 4px;
 		padding-right: 4px;
@@ -1025,8 +1103,10 @@ a.card-link .card {
 		}
 	}
 	.col-xs-8 {
+		text-align: left;
 		p {
 			line-height: 1.8;
+			
 			span {
 				&:nth-of-type(1):after {
 					content: '\002F';
@@ -1042,6 +1122,7 @@ a.card-link .card {
 		line-height: 1;
 		color: $gray;
 		font-size: $xxl-font;
+		text-align: left;
 	}
 	h4, h5, h6 {
 		margin: 0;
@@ -1126,8 +1207,9 @@ a.card-link .card {
 	}
 	.athlete-info {
 		@include clearfix;
-		margin-top: 10px;
+//		margin-top: 10px;
 		clear: both;
+		margin-bottom: 10px;
 	}
 	#match & {
 		border-radius: 4px;
@@ -1194,10 +1276,11 @@ a.card-link .card {
 		display: inline-block;
 		vertical-align: top;
 		margin: 6px;
-		background: rgba($white,.15);
+		background: rgba($gray,.15);
 		width: 112px;
 		height: 112px;
 		border-radius: 50%;
+		box-shadow: 0 0 0 1px $medium-gray;
 		&.sport-1 {
 			.icon {
 				background: url('../images/sport1.png');
@@ -1228,8 +1311,8 @@ a.card-link .card {
 				background-repeat: no-repeat;
 			}
 			&.distance, &.time {
-				color: $white;
-				@include text-primary-shadow;
+//				color: $white;
+//				@include text-primary-shadow;
 			}
 			&.distance {
 				line-height: $m-font;
@@ -1255,7 +1338,9 @@ a.card-link .card {
 		}
 		&.finished {
 			background: $white;
-			@include box-light-shadow;
+			box-shadow: 0 0 0 3px $rose;
+//			border: 3px solid $rose;
+//			@include box-light-shadow;
 			span {
 				&.icon {
 					background-position: center top;
@@ -1274,6 +1359,7 @@ a.card-link .card {
 		a {
 			padding: 10px 4px 0;
 			display: block;
+			color: $medium-gray;
 		}
 	}
 	@media screen and (max-width: 413px) {
@@ -1331,11 +1417,15 @@ a.card-link .card {
 .achievement {
 	margin-bottom: 20px;
 	text-align: center;
-	@include text-primary-shadow;
-	color: $white;
+//	@include text-primary-shadow;
+	color: $primary-color;
+	padding-top: 20px;
+	> span {
+		font-size: $xxl-font;
+	}
 	.time {
 		font-size: 48px;
-		line-height: $xl-font;
+		line-height: 1;
 	}
 	.total-ranking {
 		font-size: $l-font;
@@ -1349,7 +1439,20 @@ a.card-link .card {
 		}
 	}
 }
-
+.category ~ .achievement {
+	color: $gray;
+}
+#live-sport , #match {
+	.col-md-4 {
+		padding-right: 0;
+	}
+	@include respond-to (only-device){
+		.col-md-4 { 
+			padding-left: 4px;
+			padding-right: 4px;
+		}
+	}
+}
 .sport-info {
 	background: $white;
 	margin-bottom: 20px;
@@ -1357,12 +1460,13 @@ a.card-link .card {
 	padding: 6px 0 0;
 //	border: 1px solid $light-gray;
 	@include card-style;
-	#live-sport & {
+	#live-sport &, #match & {
 		border: 1px solid $medium-gray;
 		box-shadow: none;
 		padding-bottom: 0;
 		font-size: 15px;
 	}
+	
 	.sport-title {
 		padding: 10px 0;
 	}
@@ -1387,7 +1491,14 @@ a.card-link .card {
 	h6.sport-name {
 		font-weight: bold;
 		margin: 0;
+		text-align: left;
 //		line-height: 2;
+	}
+	.col-xs-4 {
+		padding-right: 0;
+	}
+	.col-md-4 {
+		padding-right: 0;
 	}
 	&.sport-1, &.sport-2, &.sport-3 {
 		h6.sport-name {
@@ -1510,12 +1621,10 @@ a.card-link .card {
 		}
 	}
 }
-
 .select-style {
 	margin: 10px auto;
 	width: 50%;
-//	float: right;
-	
+	float: right;
 	position: relative;
 	color: $gray;
 //	&:after {
