@@ -225,6 +225,7 @@ ul, li {
   display: block;
   text-align: center;
   margin: 10px auto;
+  font-weight: bold;
   border-radius: 5px;
   -webkit-backface-visibility: hidden;
   z-index: 1;
@@ -281,12 +282,16 @@ ul, li {
     width: 120px;
     top: 5px;
     right: 15px;
+    font-size: 0.9em;
+  }
+  .card .btn-custom a {
+    font-size: 0.9em;
   }
 }
 
 @media only screen and (min-width: 769px) {
   #single-match-results .btn-custom {
-    position: static;
+    position: relative;
   }
 }
 
@@ -298,6 +303,7 @@ ul, li {
   display: block;
   text-align: center;
   margin: 6px auto;
+  font-weight: bold;
   border: 2px solid #FB6C48;
   background: white;
   border-radius: 5px;
@@ -824,6 +830,10 @@ a.card-link .card {
 #results .athlete {
   border-bottom: 1px solid #ffcf89;
 }
+#results .btn-custom-sm {
+  width: 120px;
+  float: right;
+}
 
 .result-info .sport-info {
   padding-top: 0;
@@ -894,7 +904,7 @@ a.card-link .card {
   padding-left: 5px;
 }
 #match .athlete {
-  padding-bottom: 0;
+  padding-bottom: 10px;
 }
 @media only screen and (max-width: 320px) {
   .athlete h4 {
@@ -996,6 +1006,12 @@ a.card-link .card {
   width: 120px;
 }
 
+#match .athlete .btn-custom-sm {
+  width: 110px;
+  float: right;
+  margin-top: -4px;
+}
+
 .select-container {
   width: 100%;
   height: 60px;
@@ -1013,6 +1029,9 @@ a.card-link .card {
   margin: 20px auto;
 }
 
+#match .row {
+  clear: both;
+}
 #match .info-card .row {
   padding-bottom: 10px;
   border-bottom: 1px solid #ccc;
@@ -1311,8 +1330,20 @@ a.card-link .card {
 .achievement {
   margin-bottom: 20px;
   text-align: center;
+  *zoom: 1;
   color: #ef4130;
   padding-top: 20px;
+}
+.achievement:after, .achievement:before {
+  content: "";
+  display: table;
+}
+.achievement:after {
+  clear: both;
+}
+.achievement .btn-custom-sm {
+  margin: 10px auto;
+  width: 120px;
 }
 .achievement > span {
   font-size: 1.5em;
@@ -1350,6 +1381,7 @@ a.card-link .card {
   margin-bottom: 20px;
   border-radius: 4px;
   padding: 6px 0 0;
+  font-size: 16px;
   background: #fff;
   margin-bottom: 20px;
   padding-bottom: 6px;
@@ -1361,7 +1393,6 @@ a.card-link .card {
   border: 1px solid #ccc;
   box-shadow: none;
   padding-bottom: 0;
-  font-size: 15px;
 }
 .sport-info .sport-title {
   padding: 10px 0;
@@ -1387,8 +1418,14 @@ a.card-link .card {
   margin: 0;
   text-align: left;
 }
+.sport-info h6.sport-name ~ p {
+  text-align: left;
+}
 .sport-info .col-xs-4 {
   padding-right: 0;
+}
+.sport-info .col-xs-8 {
+  padding-left: 0;
 }
 .sport-info .col-md-4 {
   padding-right: 0;
@@ -1447,6 +1484,7 @@ a.card-link .card {
   padding-left: 14px;
   font-size: 1em;
   margin: 5px 0;
+  text-align: left;
 }
 @media screen and (min-width: 1024px) {
   .sport-info .sport-title {
@@ -1462,6 +1500,11 @@ a.card-link .card {
 @media screen and (max-width: 374px) {
   .sport-info .sport-achievement, .sport-info h6.sport-name {
     font-size: 1em;
+  }
+}
+@media only screen and (min-width: 769px) {
+  .sport-info {
+    padding-bottom: 0;
   }
 }
 
@@ -1493,6 +1536,7 @@ a.card-link .card {
   border: 0;
   outline: 0;
   border-top: 1px solid #f1d0cc;
+  font-size: 14px;
   line-height: 30px;
 }
 .table-btn i {
@@ -1511,7 +1555,7 @@ a.card-link .card {
 }
 
 .select-style {
-  margin: 10px auto;
+  margin: 0 auto 10px;
   width: 50%;
   float: right;
   position: relative;
@@ -1523,8 +1567,8 @@ a.card-link .card {
   position: fixed;
   right: -50px;
   bottom: 70px;
-  width: 36px;
-  height: 36px;
+  width: 50px;
+  height: 50px;
   z-index: 9;
   border-radius: 50%;
   box-shadow: 0 0 4px rgba(76, 74, 72, 0.6), 0 5px 15px rgba(76, 74, 72, 0.3);
@@ -1536,8 +1580,8 @@ a.card-link .card {
 #top-btn a {
   display: block;
   color: #fff;
-  font-size: 30px;
-  line-height: 32px;
+  font-size: 36px;
+  line-height: 42px;
   text-align: center;
 }
 #top-btn.fixed {

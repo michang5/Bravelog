@@ -69,6 +69,9 @@
 						<span class="fraction">1245</span>
 					</div>
 				</div>
+				<div class="col-xs-4">
+					<div class="btn-custom-sm"><a href="athlete.html#"><span>前往選手專頁</span></a></div>
+				</div>
 			</div>
 			<!--match info card-->
 			<div class="info-card">
@@ -104,13 +107,13 @@
 					<div class="col-xs-12">
 						<h3>5150 & IRONMAN Taiwan, Penghu</h3>
 					</div>
-					<div class="col-xs-8">
+					<div class="col-xs-8 col-md-10">
 						<h4><span>臺灣</span><span>屏東</span></h4>
 						<p>2016/00/00</p>
 						<p><span>開始時間：00:00</span><span>結束時間：00:00</span></p>
 						<p><span>參賽人數：123</span><span>完賽人數：123</span></p>
 					</div>
-					<div class="col-xs-4">
+					<div class="col-xs-4 col-md-2">
 						<div class="weather-icon"><img src="images/weather_icon1.png" alt="晴時多雲" title="晴時多雲"></div>
 						<h4>22-28°C</h4>
 						<p><span>風速</span><span>6.6m/s</span></p>
@@ -150,6 +153,7 @@
 				<div class="total-ranking">第<span></span>名，共<span></span>人參賽 </div>
 				<div class="ranking">分組排名：第<span>&#45&#32&#45</span>名，共<span>&#45&#32&#45</span>人參賽 </div>
 				<div class="ranking">性別排名：第<span>&#45&#32&#45</span>名，共<span>&#45&#32&#45</span>人參賽 </div>
+				<div class="btn-custom-sm"><a data-toggle="modal" data-target="#achievement-detail"><span>賽事名次詳情</span></a></div>
 			</div>
     		<div class="row">
    						<div class="col-md-4">
@@ -473,11 +477,25 @@
 							</div>
 						</div>
 					</div>
-                	<div class="transcripts-print">
-                 		<div class="btn-custom-sm"><a href="回選手專頁"><span>回選手專頁</span></a></div>
-					</div>	
+			<div class="transcripts-print">
+                 <div class="btn-custom-sm"><a href="#"><span>成績列印</span></a></div>
+			</div>	
 		</div>		
 	</div>
+	
+	<!-- Modal -->
+	<div id="achievement-detail" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div type="button" class="close" data-dismiss="modal"></div>
+				<div class="modal-body">
+					<h4 class="modal-title">賽事名次詳情</h4>
+				</div>
+			</div>
+		</div>
+	</div>
+	
 	<div id="top-btn" class="top">
 		<a href="#top"><i class="fa fa-angle-up" aria-hidden="true"></i></a>
 	</div>
