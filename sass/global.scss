@@ -1087,11 +1087,113 @@ a.card-link .card {
 //		width: 100%;
 //	}
 }
-#live-map {
+
+.live-map {
+	position: relative;
 	width: 100%;
-	min-height: 400px;
+	overflow: hidden;
+	background: url('images/703bike_map.png');
 	border: 1px solid $medium-gray;
-	margin: 20px auto;
+//	margin: 20px auto;
+//	background-size: cover;
+	.dashboard {
+		z-index: 99;
+		position: absolute;
+		top: 8px;
+		left: 8px;
+		padding: 10px;
+		background: rgba($white,.8);
+		width: 220px;
+		height: 80px;
+		font-size: $xl-font;
+		font-weight: 500;
+		box-shadow: 0 0 2px 1px rgba($medium-gray,.8);
+		.sport-icon, .map-info {
+			display: inline-block;
+			vertical-align: top;
+		}
+		.map-info > span {
+			display: block;
+			line-height: 30px;
+			span {
+				padding-right: 4px;
+				&.item, &.time {
+					color: $primary-color;
+				}
+			}
+			.dist {
+				color: $gray;
+			}
+			.turn {
+				background: $DarkTurquoise;
+				color: white;
+				border-radius: 2px;
+				padding: 0 5px;
+				font-size: 14px;
+				display: inline;
+			}
+		}
+	}
+	&#map-sport1-1 {
+		background: url('../images/703swim_map.png');
+		background-size: cover;
+		.sport-icon {
+			width: 60px;
+			height: 60px;
+			margin-right: 5px;
+			display: inline-block;
+			background: url('../images/icon_swim.png') no-repeat;
+			background-size: cover;
+		}
+	}
+	&#map-sport1-2 {
+		background: url('../images/703bike_map.png');
+		background-size: cover;
+		.sport-icon {
+			width: 60px;
+			height: 60px;
+			margin-right: 5px;
+			display: inline-block;
+			background: url('../images/icon_bike.png') no-repeat;
+			background-size: cover;
+		}
+	}
+	&#map-sport1-3 {
+		background: url('../images/703run_map.png');
+		background-size: cover;
+		.sport-icon {
+			width: 60px;
+			height: 60px;
+			margin-right: 5px;
+			display: inline-block;
+			background: url('../images/icon_run.png') no-repeat;
+			background-size: cover;
+		}
+		.dashboard {
+			left: auto;
+			right: 8px;
+			top: auto;
+			bottom: 8px;
+			width: 200px;
+			padding: 10px 8px;
+		}
+	}
+	
+	img {
+		width: 100%;
+	}
+	&
+	.split-mask {
+		position: relative;
+		top: 0;
+		left: 0;
+		z-index: 4;
+//		top:0;
+//		position: absolute;
+//		background: red;
+//		width: 100%;
+//		border: 10px solid red;
+	}
 }
 
 #match {

@@ -1022,11 +1022,104 @@ a.card-link .card {
   width: 220px;
 }
 
-#live-map {
+.live-map {
+  position: relative;
   width: 100%;
-  min-height: 400px;
+  overflow: hidden;
+  background: url("images/703bike_map.png");
   border: 1px solid #ccc;
-  margin: 20px auto;
+}
+.live-map .dashboard {
+  z-index: 99;
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.8);
+  width: 220px;
+  height: 80px;
+  font-size: 1.25em;
+  font-weight: 500;
+  box-shadow: 0 0 2px 1px rgba(204, 204, 204, 0.8);
+}
+.live-map .dashboard .sport-icon, .live-map .dashboard .map-info {
+  display: inline-block;
+  vertical-align: top;
+}
+.live-map .dashboard .map-info > span {
+  display: block;
+  line-height: 30px;
+}
+.live-map .dashboard .map-info > span span {
+  padding-right: 4px;
+}
+.live-map .dashboard .map-info > span span.item, .live-map .dashboard .map-info > span span.time {
+  color: #ef4130;
+}
+.live-map .dashboard .map-info > span .dist {
+  color: #6f6f6f;
+}
+.live-map .dashboard .map-info > span .turn {
+  background: #22c3b8;
+  color: white;
+  border-radius: 2px;
+  padding: 0 5px;
+  font-size: 14px;
+  display: inline;
+}
+.live-map#map-sport1-1 {
+  background: url("../images/703swim_map.png");
+  background-size: cover;
+}
+.live-map#map-sport1-1 .sport-icon {
+  width: 60px;
+  height: 60px;
+  margin-right: 5px;
+  display: inline-block;
+  background: url("../images/icon_swim.png") no-repeat;
+  background-size: cover;
+}
+.live-map#map-sport1-2 {
+  background: url("../images/703bike_map.png");
+  background-size: cover;
+}
+.live-map#map-sport1-2 .sport-icon {
+  width: 60px;
+  height: 60px;
+  margin-right: 5px;
+  display: inline-block;
+  background: url("../images/icon_bike.png") no-repeat;
+  background-size: cover;
+}
+.live-map#map-sport1-3 {
+  background: url("../images/703run_map.png");
+  background-size: cover;
+}
+.live-map#map-sport1-3 .sport-icon {
+  width: 60px;
+  height: 60px;
+  margin-right: 5px;
+  display: inline-block;
+  background: url("../images/icon_run.png") no-repeat;
+  background-size: cover;
+}
+.live-map#map-sport1-3 .dashboard {
+  left: auto;
+  right: 8px;
+  top: auto;
+  bottom: 8px;
+  width: 200px;
+  padding: 10px 8px;
+}
+.live-map img {
+  width: 100%;
+}
+.live-map
+.split-mask {
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 4;
 }
 
 #match .row {
