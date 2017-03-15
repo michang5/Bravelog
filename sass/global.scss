@@ -1096,6 +1096,7 @@ a.card-link .card {
 	border: 1px solid $medium-gray;
 //	margin: 20px auto;
 //	background-size: cover;
+	
 	.dashboard {
 		z-index: 99;
 		position: absolute;
@@ -1103,7 +1104,7 @@ a.card-link .card {
 		left: 8px;
 		padding: 10px;
 		background: rgba($white,.8);
-		width: 220px;
+		width: 200px;
 		height: 80px;
 		font-size: $xl-font;
 		font-weight: 500;
@@ -1138,8 +1139,8 @@ a.card-link .card {
 		background: url('../images/703swim_map.png');
 		background-size: cover;
 		.sport-icon {
-			width: 60px;
-			height: 60px;
+			width: 52px;
+			height: 52px;
 			margin-right: 5px;
 			display: inline-block;
 			background: url('../images/icon_swim.png') no-repeat;
@@ -1150,8 +1151,8 @@ a.card-link .card {
 		background: url('../images/703bike_map.png');
 		background-size: cover;
 		.sport-icon {
-			width: 60px;
-			height: 60px;
+			width: 52px;
+			height: 52px;
 			margin-right: 5px;
 			display: inline-block;
 			background: url('../images/icon_bike.png') no-repeat;
@@ -1162,20 +1163,40 @@ a.card-link .card {
 		background: url('../images/703run_map.png');
 		background-size: cover;
 		.sport-icon {
-			width: 60px;
-			height: 60px;
+			width: 52px;
+			height: 52px;
 			margin-right: 5px;
 			display: inline-block;
 			background: url('../images/icon_run.png') no-repeat;
 			background-size: cover;
 		}
 		.dashboard {
-			left: auto;
 			right: 8px;
-			top: auto;
-			bottom: 8px;
-			width: 200px;
-			padding: 10px 8px;
+			left: auto;
+			
+		}
+		@media screen and (max-width: 567px) {
+			.dashboard {
+//				left: auto;
+//				right: 8px;
+//				top: auto;
+//				bottom: 8px;
+//				width: 200px;
+				padding: 10px 8px;
+			}
+		}
+	}
+	@include respond-to (xxs-mobile){
+		.dashboard {
+			width: 154px;
+			font-size: 14px;
+			padding: 10px 4px;
+		}
+		&#map-sport1-1, &#map-sport1-2, &#map-sport1-3 {
+			.sport-icon {
+				width: 30px;
+				height: 30px;
+			}
 		}
 	}
 	
@@ -1784,7 +1805,7 @@ a.card-link .card {
 	bottom: 70px;
 	width: 50px;
 	height: 50px;
-	z-index: 9;
+	z-index: 101;
 	border-radius: 50%;
 	@include box-dark-shadow;
 	@include transition(color, .5s, ease-in);

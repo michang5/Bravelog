@@ -1036,7 +1036,7 @@ a.card-link .card {
   left: 8px;
   padding: 10px;
   background: rgba(255, 255, 255, 0.8);
-  width: 220px;
+  width: 200px;
   height: 80px;
   font-size: 1.25em;
   font-weight: 500;
@@ -1072,8 +1072,8 @@ a.card-link .card {
   background-size: cover;
 }
 .live-map#map-sport1-1 .sport-icon {
-  width: 60px;
-  height: 60px;
+  width: 52px;
+  height: 52px;
   margin-right: 5px;
   display: inline-block;
   background: url("../images/icon_swim.png") no-repeat;
@@ -1084,8 +1084,8 @@ a.card-link .card {
   background-size: cover;
 }
 .live-map#map-sport1-2 .sport-icon {
-  width: 60px;
-  height: 60px;
+  width: 52px;
+  height: 52px;
   margin-right: 5px;
   display: inline-block;
   background: url("../images/icon_bike.png") no-repeat;
@@ -1096,20 +1096,32 @@ a.card-link .card {
   background-size: cover;
 }
 .live-map#map-sport1-3 .sport-icon {
-  width: 60px;
-  height: 60px;
+  width: 52px;
+  height: 52px;
   margin-right: 5px;
   display: inline-block;
   background: url("../images/icon_run.png") no-repeat;
   background-size: cover;
 }
 .live-map#map-sport1-3 .dashboard {
-  left: auto;
   right: 8px;
-  top: auto;
-  bottom: 8px;
-  width: 200px;
-  padding: 10px 8px;
+  left: auto;
+}
+@media screen and (max-width: 567px) {
+  .live-map#map-sport1-3 .dashboard {
+    padding: 10px 8px;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .live-map .dashboard {
+    width: 154px;
+    font-size: 14px;
+    padding: 10px 4px;
+  }
+  .live-map#map-sport1-1 .sport-icon, .live-map#map-sport1-2 .sport-icon, .live-map#map-sport1-3 .sport-icon {
+    width: 30px;
+    height: 30px;
+  }
 }
 .live-map img {
   width: 100%;
@@ -1662,7 +1674,7 @@ a.card-link .card {
   bottom: 70px;
   width: 50px;
   height: 50px;
-  z-index: 9;
+  z-index: 101;
   border-radius: 50%;
   box-shadow: 0 0 4px rgba(76, 74, 72, 0.6), 0 5px 15px rgba(76, 74, 72, 0.3);
   -moz-transition: color, 0.5s, ease-in;
