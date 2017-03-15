@@ -1135,14 +1135,16 @@ a.card-link .card {
 			}
 		}
 	}
+	.sport-icon {
+		width: 52px;
+		height: 52px;
+		margin-right: 5px;
+		display: inline-block;
+	}
 	&#map-sport1-1 {
 		background: url('../images/703swim_map.png');
 		background-size: cover;
 		.sport-icon {
-			width: 52px;
-			height: 52px;
-			margin-right: 5px;
-			display: inline-block;
 			background: url('../images/icon_swim.png') no-repeat;
 			background-size: cover;
 		}
@@ -1151,10 +1153,6 @@ a.card-link .card {
 		background: url('../images/703bike_map.png');
 		background-size: cover;
 		.sport-icon {
-			width: 52px;
-			height: 52px;
-			margin-right: 5px;
-			display: inline-block;
 			background: url('../images/icon_bike.png') no-repeat;
 			background-size: cover;
 		}
@@ -1163,25 +1161,56 @@ a.card-link .card {
 		background: url('../images/703run_map.png');
 		background-size: cover;
 		.sport-icon {
-			width: 52px;
-			height: 52px;
-			margin-right: 5px;
-			display: inline-block;
 			background: url('../images/icon_run.png') no-repeat;
 			background-size: cover;
 		}
 		.dashboard {
 			right: 8px;
 			left: auto;
-			
 		}
 		@media screen and (max-width: 567px) {
 			.dashboard {
-//				left: auto;
-//				right: 8px;
-//				top: auto;
-//				bottom: 8px;
-//				width: 200px;
+				padding: 10px 8px;
+			}
+		}
+	}
+	&#map-sport2-1 {
+		background: url('../images/5i50swim_map.png');
+		background-size: cover;
+		.sport-icon {
+			background: url('../images/icon_swim.png') no-repeat;
+			background-size: cover;
+		}
+	}
+	&#map-sport2-1-2 {
+		background: url('../images/5i50swim-run_map.png');
+		background-size: cover;
+		.sport-icon {
+			background: url('../images/icon_run.png') no-repeat;
+			background-size: cover;
+		}
+	}
+	&#map-sport2-2 {
+		background: url('../images/5i50bike_map.png');
+		background-size: cover;
+		.sport-icon {
+			background: url('../images/icon_bike.png') no-repeat;
+			background-size: cover;
+		}
+	}
+	&#map-sport2-3 {
+		background: url('../images/5i50run_map.png');
+		background-size: cover;
+		.sport-icon {
+			background: url('../images/icon_run.png') no-repeat;
+			background-size: cover;
+		}
+		.dashboard {
+			right: 8px;
+			left: auto;
+		}
+		@media screen and (max-width: 567px) {
+			.dashboard {
 				padding: 10px 8px;
 			}
 		}
@@ -1875,5 +1904,21 @@ p.results {
 		border: 1px solid $light-gray;
 		display: inline-block;
 		color: $gray;
+	}
+}
+#match-detail {
+	h2 {
+		text-align: center;
+		span {
+			font-size: $xxs-font;
+			display: block;
+		}
+	}
+	h3 {
+		margin: 0;
+		text-align: center;
+	}
+	.tab-container {
+		margin-bottom: 20px;
 	}
 }
