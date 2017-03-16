@@ -1783,6 +1783,8 @@ p.results {
 
 #match-detail h2 {
   text-align: center;
+  line-height: 1.2;
+  margin-bottom: 20px;
 }
 #match-detail h2 span {
   font-size: 0.75em;
