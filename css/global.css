@@ -1068,9 +1068,9 @@ a.card-link .card {
   display: inline;
 }
 .live-map .sport-icon {
-  width: 52px;
-  height: 52px;
-  margin-right: 5px;
+  width: 40px;
+  height: 40px;
+  margin-right: 3px;
   display: inline-block;
 }
 .live-map#map-sport1-1 {
