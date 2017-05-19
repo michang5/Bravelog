@@ -1147,6 +1147,71 @@ a.card-link .card {
     padding: 10px 8px;
   }
 }
+.live-map#map-sport3-1 {
+  background: url("../images/5i50run_map.png");
+  background-size: cover;
+}
+.live-map#map-sport3-1 .sport-icon {
+  background: url("../images/icon_run.png") no-repeat;
+  background-size: cover;
+}
+.live-map#map-sport3-1 .dashboard {
+  right: 8px;
+  left: auto;
+}
+@media screen and (max-width: 567px) {
+  .live-map#map-sport3-1 .dashboard {
+    padding: 10px 8px;
+  }
+}
+.live-map#map-sport4-1 {
+  background: url("../images/DuathlonRun_Map.png");
+  background-size: cover;
+}
+.live-map#map-sport4-1 .sport-icon {
+  background: url("../images/icon_run.png") no-repeat;
+  background-size: cover;
+}
+.live-map#map-sport4-2 {
+  background: url("../images/DuathlonBike_Map.png");
+  background-size: cover;
+}
+.live-map#map-sport4-2 .sport-icon {
+  background: url("../images/icon_bike.png") no-repeat;
+  background-size: cover;
+}
+.live-map#map-sport4-3 {
+  background: url("../images/DuathlonRun2_Map.png");
+  background-size: cover;
+}
+.live-map#map-sport4-3 .sport-icon {
+  background: url("../images/icon_run.png") no-repeat;
+  background-size: cover;
+}
+.live-map#map-sport5-1 {
+  background: url("../images/DuathlonTryTriRun_Map.png");
+  background-size: cover;
+}
+.live-map#map-sport5-1 .sport-icon {
+  background: url("../images/icon_run.png") no-repeat;
+  background-size: cover;
+}
+.live-map#map-sport5-2 {
+  background: url("../images/DuathlonTryTriBike_Map.png");
+  background-size: cover;
+}
+.live-map#map-sport5-2 .sport-icon {
+  background: url("../images/icon_bike.png") no-repeat;
+  background-size: cover;
+}
+.live-map#map-sport5-3 {
+  background: url("../images/DuathlonTryTriRun2_Map.png");
+  background-size: cover;
+}
+.live-map#map-sport5-3 .sport-icon {
+  background: url("../images/icon_run.png") no-repeat;
+  background-size: cover;
+}
 @media only screen and (max-width: 320px) {
   .live-map .dashboard {
     width: 154px;
