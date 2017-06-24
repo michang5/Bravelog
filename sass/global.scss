@@ -1340,6 +1340,54 @@ a.card-link .card {
 			background-size: cover;
 		}
 	}
+//	FulongSwim
+    &#map-sport8-1 {
+		background: url('../images/FulongSwim_Map.png');
+		background-size: cover;
+		.sport-icon {
+			background: url('../images/icon_swim.png') no-repeat;
+			background-size: cover;
+		}
+	}
+	//	FulongBike
+    &#map-sport8-2 {
+		background: url('../images/FulongBike_Map.png');
+		background-size: cover;
+		.sport-icon {
+			background: url('../images/icon_bike.png') no-repeat;
+			background-size: cover;
+		}
+		.dashboard {
+			right: 8px;
+			left: auto;
+		}
+	}
+	//	FulongRun 10k
+    &#map-sport8-3 {
+		background: url('../images/FulongRun10k_Map.png');
+		background-size: cover;
+		.sport-icon {
+			background: url('../images/icon_run.png') no-repeat;
+			background-size: cover;
+		}
+		.dashboard {
+			right: 8px;
+			left: auto;
+		}
+	}
+	//	FulongRun 3k
+    &#map-sport8-4 {
+		background: url('../images/FulongRun3k_Map.png');
+		background-size: cover;
+		.sport-icon {
+			background: url('../images/icon_run.png') no-repeat;
+			background-size: cover;
+		}
+		.dashboard {
+			right: 8px;
+			left: auto;
+		}
+	}
 	@include respond-to (xxs-mobile){
 		.dashboard {
 			width: 154px;
