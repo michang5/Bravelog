@@ -73,8 +73,15 @@ ul, li {
 .btn span {
   padding: 0 5px;
 }
+.btn span.caret {
+  padding: 0;
+}
 .btn.active {
   box-shadow: none;
+}
+
+.btn-default:active:hover, .btn-default:active:focus, .btn-default:active.focus, .btn-default.active:hover, .btn-default.active:focus, .btn-default.active.focus, .open > .btn-default.dropdown-toggle:hover, .open > .btn-default.dropdown-toggle:focus, .open > .btn-default.dropdown-toggle.focus {
+  background: #FFF3E1;
 }
 
 .btn-xs, .btn-group-xs > .btn {
@@ -126,17 +133,6 @@ ul, li {
   background-color: transparent;
   box-shadow: none;
 }
-.open .btn-default.dropdown-toggle {
-  width: 56px;
-  border: 0;
-  color: #fff;
-  background: rgba(255, 148, 115, 0.95);
-}
-.open .btn-default.dropdown-toggle:hover, .open .btn-default.dropdown-toggle:focus, .open .btn-default.dropdown-toggle.focus {
-  border: 0;
-  color: #fff;
-  background: rgba(255, 148, 115, 0.95);
-}
 .btn-default.disabled {
   background-color: transparent;
   border: 0;
@@ -151,7 +147,19 @@ ul, li {
   }
 }
 
-.dropdown-menu {
+.open .navbar-fixed-top .btn-default.dropdown-toggle {
+  width: 56px;
+  border: 0;
+  color: #fff;
+  background: rgba(255, 148, 115, 0.95);
+}
+.open .navbar-fixed-top .btn-default.dropdown-toggle:hover, .open .navbar-fixed-top .btn-default.dropdown-toggle:focus, .open .navbar-fixed-top .btn-default.dropdown-toggle.focus {
+  border: 0;
+  color: #fff;
+  background: rgba(255, 148, 115, 0.95);
+}
+
+.navbar-fixed-top .dropdown-menu {
   min-width: 0;
   border: 0;
   padding: 0;
@@ -162,16 +170,16 @@ ul, li {
   width: 56px;
   text-align: center;
 }
-.dropdown-menu > li > a {
+.navbar-fixed-top .dropdown-menu > li > a {
   color: #fff;
   padding: 6px 20px;
 }
-.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+.navbar-fixed-top .dropdown-menu > li > a:hover, .navbar-fixed-top .dropdown-menu > li > a:focus {
   color: #fff;
   background: rgba(239, 65, 48, 0.8);
 }
 @media only screen and (max-width: 480px) {
-  .dropdown-menu {
+  .navbar-fixed-top .dropdown-menu {
     font-size: 12px;
   }
 }
@@ -443,6 +451,7 @@ footer {
   background: #FFFDFB;
   height: 60px;
   margin-top: -60px;
+  padding-bottom: 120px;
 }
 footer .container {
   border-top: 1px solid #f6f6f6;
@@ -460,10 +469,6 @@ footer span:nth-last-of-type(1) {
   display: block;
 }
 @media only screen and (max-width: 480px) {
-  footer {
-    height: 80px;
-    margin-top: -80px;
-  }
   footer span {
     display: block;
   }
@@ -754,9 +759,98 @@ a.card-link .card {
   transform: rotate(-45deg);
 }
 
-#section2 {
-  margin-top: 40px;
+#ad-section {
+  max-width: 728px;
+  max-height: 120px;
+  margin: 0 auto;
 }
+#ad-section .img-block {
+  width: 100%;
+  text-align: center;
+}
+#ad-section .img-block .close {
+  width: 16px;
+  height: 16px;
+  top: 0;
+  right: 0;
+  padding: 3px;
+  background: #6f6f6f;
+}
+#ad-section .img-block .close::before, #ad-section .img-block .close::after {
+  background: #fff;
+}
+#ad-section .img-block img {
+  width: 100%;
+  bottom: 0 !important;
+  top: auto !important;
+  left: 0;
+  position: absolute;
+}
+
+.ad-section {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.news {
+  padding: 30px;
+  margin-top: 20px;
+}
+.news .news-single {
+  border-radius: 3px;
+  background: rgba(246, 246, 246, 0.8);
+  padding: 10px;
+  box-shadow: 0 3px 4px rgba(111, 111, 111, 0.2);
+  height: 214px;
+  overflow: hidden;
+}
+.news h3 {
+  color: #4f4f4f;
+  margin: 0;
+  font-size: 16px;
+}
+.news h4 {
+  margin: 8px 0 0;
+  line-height: 1.4;
+  color: #6f6f6f;
+}
+.news .news-banner {
+  width: 100%;
+  height: 120px;
+  background-size: cover;
+  background-position: center;
+}
+@media only screen and (max-width: 767px) {
+  .news .news-single {
+    margin-bottom: 16px;
+  }
+}
+
+h4 {
+  font-size: 1em;
+  margin: 0;
+}
+
+.row.same-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+}
+.row.same-height > [class*='col-'] {
+  display: flex;
+  flex-direction: column;
+}
+@media only screen and (max-width: 767px) {
+  .row {
+    display: block;
+  }
+}
+
 #section2 .container h2 {
   font-size: 1.25em;
   text-align: center;
@@ -765,7 +859,7 @@ a.card-link .card {
 }
 @media only screen and (max-width: 480px) {
   #section2 {
-    margin-top: 20px;
+    margin-top: 0;
     margin-bottom: 30px;
   }
 }
@@ -1857,6 +1951,50 @@ a.card-link .card {
   float: right;
   position: relative;
   color: #6f6f6f;
+}
+
+select {
+  -webkit-appearance: none;
+}
+
+.btn-group.bootstrap-select .btn-default {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fff;
+  color: #6f6f6f !important;
+  font-size: 14px;
+}
+.btn-group.bootstrap-select .btn-default span {
+  padding: 0;
+}
+.btn-group.bootstrap-select .btn-default:focus {
+  color: #6f6f6f;
+  background: #FFF3E1;
+}
+.btn-group.bootstrap-select .btn-default:hover {
+  color: #6f6f6f;
+}
+.btn-group.bootstrap-select .btn-default:active:hover, .btn-group.bootstrap-select .btn-default:active:focus {
+  background: #FFF3E1;
+}
+.btn-group.bootstrap-select .btn-default:active.focus {
+  background: #FFF3E1;
+}
+.btn-group.bootstrap-select .btn-default.active {
+  color: #6f6f6f;
+}
+.btn-group.bootstrap-select .btn-default.active:hover, .btn-group.bootstrap-select .btn-default.active:focus {
+  background: #FFF3E1;
+}
+.btn-group.bootstrap-select .btn-default.active.focus {
+  background: #FFF3E1;
+}
+.btn-group.bootstrap-select.open > .btn-default.dropdown-toggle:hover, .btn-group.bootstrap-select.open > .btn-default.dropdown-toggle:focus, .btn-group.bootstrap-select.open > .btn-default.dropdown-toggle.focus {
+  background: #FFF3E1;
+  border: 1px solid #ccc;
+}
+.col-sm-6 .btn-group.bootstrap-select {
+  width: 100% !important;
 }
 
 #top-btn {

@@ -20,8 +20,8 @@
 	<meta name="google-site-verification" content="-MLXb98KIXlOE_dmJ18CK9Ynil6NnPMRct9vU1ZYDpg" />
 	<!--css-->
 	<link href="css/bootstrap.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.11.2/css/bootstrap-select.min.css">
 	<link href="css/global.css" rel="stylesheet">
-	<link href="css/athlete.css" rel="stylesheet">
 	<link href="fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Lora|Roboto:400,500" rel="stylesheet">
 	<!--[if lt IE 9]>
@@ -31,6 +31,7 @@
 	<!--GA-->
 </head>
 <body id="athlete">
+
 	<div id="top" class="wrapper">
 		<header class="navbar-fixed-top">
 			<div class="container">
@@ -98,7 +99,7 @@
 							</div>
 						</div>
 						<div class="athlete-info">
-							<div class="tab-container">   
+							<div class="tab-container">
 								<div class="table-responsive">
 									<table class="table">
 										<thead>
@@ -123,8 +124,8 @@
 										</tbody>
 									</table>
 								</div>
-							</div>    
-					   </div>
+							</div>
+				        </div>
 					</div>
     				<!--live-map-->
     				<div class="live-map" id="map-sport8-4">
@@ -553,13 +554,13 @@
 				<!--history-sport 歷史賽事-->
 				<div id="history-sport" class="tab-pane">
 					<div class="select-container">
-						<div class="form-group select-style">
-							<select class="form-control" id="year">
-								<option>請選擇賽事年份</option>
-								<option>2016</option>
+						<div class="form-group">
+						    <select class="selectpicker" id="year">
+                                <option selected disabled>請選擇賽事年份</option>
+                                <option>2016</option>
 								<option>2015</option>
-								<option>2014</option>
-							</select>
+                                <option>2014</option>
+                            </select>
 						</div>
 					</div>
 					<a class="card-link clearfix" href="match.html">
@@ -608,7 +609,7 @@
 							<div class="btn-custom"><span>觀看成績</span></div>
 						</div>
 					</a>
-					<a class="card-link  clearfix" href="match.html">
+					<a class="card-link clearfix" href="match.html">
 						<div class="card sport-info">
 							<div class="sport-title row">
 								<div class="col-xs-12">
@@ -631,7 +632,7 @@
 							<div class="btn-custom"><span>觀看成績</span></div>
 						</div>
 					</a>
-				</div>    
+				</div>
 			</div>
 		</div>
 	</div>
@@ -660,11 +661,24 @@
 			<span>版權所有©2017 台灣鐵人三項有限公司</span>
 		</div>
 	</footer>
-	
+
+    <section class="ad-section">
+        <div id="ad-section">
+            <div class="img-block">
+                <button type="button" class="close" aria-label="Close" onclick="hide('ad-section')">
+                    </button>
+                <img src="images/ad_banner1.png" alt="ad-A" title="img-responsive" />
+                <img src="images/ad_banner2.png" alt="ad-B" title="img-responsive" />
+                <img src="images/ad_banner3.png" alt="ad-C" title="img-responsive" />
+            </div>
+        </div>
+    </section>	
 	<!--jQuery--> 
 	<script type="text/javascript" src="js/jquery-2.2.4.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js" ></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.11.2/js/bootstrap-select.min.js"></script>
 	<script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
+	<script type="text/javascript" src="https://malsup.github.io/jquery.cycle2.js"></script>
 	<script type="text/javascript" src="js/script.js" ></script>
 </body>
 </html>

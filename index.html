@@ -2,7 +2,7 @@
 <html lang="zh-tw">
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
 	<meta name="description" content="">
 
 	<!--og info-->
@@ -20,8 +20,8 @@
 	<meta name="google-site-verification" content="-MLXb98KIXlOE_dmJ18CK9Ynil6NnPMRct9vU1ZYDpg" />
 	<!--css-->
 	<link href="css/bootstrap.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.11.2/css/bootstrap-select.min.css">
 	<link href="css/global.css" rel="stylesheet">
-	<link href="css/athlete.css" rel="stylesheet">
 	<link href="fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Lora|Roboto:400,500" rel="stylesheet">
 	<!--[if lt IE 9]>
@@ -30,7 +30,7 @@
 	<![endif]-->
 	<!--GA-->
 </head>
-<body id="search">
+<body id="search" >
 	<div id="top" class="wrapper">
 		<header class="navbar-fixed-top">
 			<div class="container">
@@ -109,13 +109,33 @@
 				</a>
 			</div>
 		</div>
+		<div id="section3" class="container news">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="news-single">
+                        <h3>動一動</h3>
+                        <div class="news-banner" style="background-image: url(http://s3-ap-northeast-1.amazonaws.com/don1don/wp-content/uploads/2017/08/15111207/TEAMSKY-3.jpg)">
+                        </div>
+                        <h4>Team Sky環法自行車手怎麼吃──Dr.James Morton的靈丹妙藥</h4> 
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="news-single">
+                        <h3>運動筆記</h3>
+                        <div class="news-banner" style="background-image: url(http://d2p1ovod81kcns.cloudfront.net/750_bab797536450f1ee971ac59c98eddb7b.jpg)">
+                        </div>
+                        <h4>《讓屁股笑起來》屁股不夠力， 原因在腳底？</h4>
+                    </div>
+                </div>
+            </div>
+		</div>
 		<div id="section2">
 			<div class="container">
 				<div class="search-container col-sm-6 col-sm-offset-3">
 					<div class="line"></div>
 					<h2>搜尋過往賽事選手成績</h2>
 					<div class="form-group">
-						<select class="form-control">
+						<select class="selectpicker">
 							<option selected disabled>所有賽事</option>
 							<optgroup label="--2017--">
 								<option>Match 1</option>
@@ -145,11 +165,25 @@
 			<span>版權所有©2017 台灣鐵人三項有限公司</span>
 		</div>
 	</footer>
+    
+	<section class="ad-section">
+	    <div id="ad-section">
+            <div class="img-block">
+               <button type="button" class="close" aria-label="Close" onclick="hide('ad-section')">
+            </button>
+                <img src="images/ad_banner1.png" alt="ad-A" title="img-responsive" />
+                <img src="images/ad_banner2.png" alt="ad-B" title="img-responsive" />
+                <img src="images/ad_banner3.png" alt="ad-C" title="img-responsive" />
+            </div>
+	    </div>
+	</section>
 	
 	<!--jQuery--> 
 	<script type="text/javascript" src="js/jquery-2.2.4.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js" ></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.11.2/js/bootstrap-select.min.js"></script>
 	<script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
+	<script type="text/javascript" src="https://malsup.github.io/jquery.cycle2.js"></script>
 	<script type="text/javascript" src="js/script.js" ></script>
 </body>
 </html>
