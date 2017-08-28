@@ -581,12 +581,15 @@ a.card-link .card {
   text-align: center;
 }
 .top-banner .match-info {
-  margin-top: -32px;
   width: 100%;
   color: #D21F2A;
   height: 32px;
-  padding: 4px 10px;
+  padding: 6px 10px;
   font-weight: bold;
+  background: rgba(255, 255, 255, 0.6);
+  position: relative;
+  top: -32px;
+  text-shadow: 0 0 4px #fff;
 }
 .top-banner .match-info .countdown {
   line-height: 20px;

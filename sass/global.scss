@@ -581,12 +581,16 @@ a.card-link .card {
 		}
 	}
 	.match-info {
-		margin-top: -32px;
+//		margin-top: -32px;
 		width: 100%;
 		color: $red;
 		height: 32px;
-		padding: 4px 10px;
+		padding: 6px 10px;
 		font-weight: bold;
+        background: rgba($white,.6);
+        position: relative;
+        top: -32px;
+        text-shadow: 0 0 4px $white;
 		.countdown {
 			line-height: 20px;
 			width: 65%;
