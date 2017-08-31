@@ -562,6 +562,7 @@ a.card-link .card {
 		width: 100%;
 		z-index: 3;
 		background: $light-gray;
+        margin-top: -42px;
 		h3 {
 			margin: 0;
 			color: $gray;
@@ -584,12 +585,12 @@ a.card-link .card {
 //		margin-top: -32px;
 		width: 100%;
 		color: $red;
-		height: 32px;
-		padding: 6px 10px;
+		height: 42px;
+		padding: 10px;
 		font-weight: bold;
         background: rgba($white,.6);
         position: relative;
-        top: -32px;
+        top: -42px;
         text-shadow: 0 0 4px $white;
 		.countdown {
 			line-height: 20px;
@@ -731,6 +732,7 @@ a.card-link .card {
 	}
 }
 .carousel-control {
+    display: none;
 	opacity: 1;
 	height: 60px;
 	width: 60px;

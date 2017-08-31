@@ -527,5 +527,20 @@
 	<script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
 	<script type="text/javascript" src="https://malsup.github.io/jquery.cycle2.js"></script>
 	<script type="text/javascript" src="js/script.js" ></script>
+    <script>
+        window.onscroll = function() {
+            var target = document.body;
+            var top_btn = document.querySelector('#top-btn');
+            var y = target.scrollTop,
+                offset = 200;
+
+            if (y >= offset) {
+                top_btn.setAttribute('class', 'fixed');
+
+            } else {
+                top_btn.removeAttribute('class');
+            }
+        }
+    </script>
 </body>
 </html>

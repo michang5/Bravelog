@@ -566,6 +566,7 @@ a.card-link .card {
   width: 100%;
   z-index: 3;
   background: #f6f6f6;
+  margin-top: -42px;
 }
 .top-banner .search-container h3 {
   margin: 0;
@@ -583,12 +584,12 @@ a.card-link .card {
 .top-banner .match-info {
   width: 100%;
   color: #D21F2A;
-  height: 32px;
-  padding: 6px 10px;
+  height: 42px;
+  padding: 10px;
   font-weight: bold;
   background: rgba(255, 255, 255, 0.6);
   position: relative;
-  top: -32px;
+  top: -42px;
   text-shadow: 0 0 4px #fff;
 }
 .top-banner .match-info .countdown {
@@ -696,6 +697,7 @@ a.card-link .card {
 }
 
 .carousel-control {
+  display: none;
   opacity: 1;
   height: 60px;
   width: 60px;
