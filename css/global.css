@@ -1414,6 +1414,66 @@ h4 {
     height: 30px;
   }
 }
+.live-map#map-sport9-1 {
+  background: url("../images/MasagoSwim_map.png");
+  background-size: cover;
+}
+.live-map#map-sport9-1 .sport-icon {
+  background: url("../images/icon_swim.png") no-repeat;
+  background-size: cover;
+}
+.live-map#map-sport9-2 {
+  background: url("../images/MasagoBike_map.png");
+  background-size: cover;
+}
+.live-map#map-sport9-2 .sport-icon {
+  background: url("../images/icon_bike.png") no-repeat;
+  background-size: cover;
+}
+.live-map#map-sport9-3 {
+  background: url("../images/MasagoRun_map.png");
+  background-size: cover;
+}
+.live-map#map-sport9-3 .sport-icon {
+  background: url("../images/icon_run.png") no-repeat;
+  background-size: cover;
+}
+.live-map#map-sport9-3 .dashboard {
+  right: 8px;
+  left: auto;
+}
+.live-map#map-sport10-1 {
+  background: url("../images/MasagoDuathlonRun_map.png");
+  background-size: cover;
+}
+.live-map#map-sport10-1 .sport-icon {
+  background: url("../images/icon_run.png") no-repeat;
+  background-size: cover;
+}
+.live-map#map-sport10-1 .dashboard {
+  right: 8px;
+  left: auto;
+}
+.live-map#map-sport10-2 {
+  background: url("../images/MasagoDuathlonBike_map.png");
+  background-size: cover;
+}
+.live-map#map-sport10-2 .sport-icon {
+  background: url("../images/icon_bike.png") no-repeat;
+  background-size: cover;
+}
+.live-map#map-sport10-3 {
+  background: url("../images/MasagoDuathlonRun10k_map.png");
+  background-size: cover;
+}
+.live-map#map-sport10-3 .sport-icon {
+  background: url("../images/icon_run.png") no-repeat;
+  background-size: cover;
+}
+.live-map#map-sport10-3 .dashboard {
+  right: 8px;
+  left: auto;
+}
 .live-map img {
   width: 100%;
 }

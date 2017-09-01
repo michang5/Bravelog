@@ -1464,7 +1464,7 @@ h4 {
 			background-size: cover;
 		}
 	}
-	//	FulongBike
+//	FulongBike
     &#map-sport8-2 {
 		background: url('../images/FulongBike_Map.png');
 		background-size: cover;
@@ -1477,7 +1477,7 @@ h4 {
 			left: auto;
 		}
 	}
-	//	FulongRun 10k
+//	FulongRun 10k
     &#map-sport8-3 {
 		background: url('../images/FulongRun10k_Map.png');
 		background-size: cover;
@@ -1490,7 +1490,7 @@ h4 {
 			left: auto;
 		}
 	}
-	//	FulongRun 3k
+//	FulongRun 3k
     &#map-sport8-4 {
 		background: url('../images/FulongRun3k_Map.png');
 		background-size: cover;
@@ -1516,7 +1516,72 @@ h4 {
 			}
 		}
 	}
-	
+//	MasagoSwim
+    &#map-sport9-1 {
+		background: url('../images/MasagoSwim_map.png');
+		background-size: cover;
+		.sport-icon {
+			background: url('../images/icon_swim.png') no-repeat;
+			background-size: cover;
+		}
+	}
+//	MasagoBike
+    &#map-sport9-2 {
+		background: url('../images/MasagoBike_map.png');
+		background-size: cover;
+		.sport-icon {
+			background: url('../images/icon_bike.png') no-repeat;
+			background-size: cover;
+		}
+	}  
+//	MasagoRun
+    &#map-sport9-3 {
+		background: url('../images/MasagoRun_map.png');
+		background-size: cover;
+		.sport-icon {
+			background: url('../images/icon_run.png') no-repeat;
+			background-size: cover;
+		}
+		.dashboard {
+			right: 8px;
+			left: auto;
+		}
+	}
+//	MasagoDuathlonRun
+    &#map-sport10-1 {
+		background: url('../images/MasagoDuathlonRun_map.png');
+		background-size: cover;
+		.sport-icon {
+			background: url('../images/icon_run.png') no-repeat;
+			background-size: cover;
+		}
+		.dashboard {
+			right: 8px;
+			left: auto;
+		}
+	}
+//	MasagoDuathlonBike
+    &#map-sport10-2 {
+		background: url('../images/MasagoDuathlonBike_map.png');
+		background-size: cover;
+		.sport-icon {
+			background: url('../images/icon_bike.png') no-repeat;
+			background-size: cover;
+		}
+	}
+//	MasagoDuathlonRun10k
+    &#map-sport10-3 {
+		background: url('../images/MasagoDuathlonRun10k_map.png');
+		background-size: cover;
+		.sport-icon {
+			background: url('../images/icon_run.png') no-repeat;
+			background-size: cover;
+		}
+		.dashboard {
+			right: 8px;
+			left: auto;
+		}
+	}    
 	img {
 		width: 100%;
 	}
