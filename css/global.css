@@ -311,16 +311,13 @@ ul, li {
   display: block;
   text-align: center;
   margin: 6px auto;
-  font-weight: bold;
-  border: 2px solid #FB6C48;
-  background: white;
-  border-radius: 5px;
+  background: #FB6C48;
+  border-radius: 14px;
   padding: 4px;
-  box-shadow: 0 2px 0 #ff9473;
 }
 .btn-custom-sm a {
   padding: 2px 4px;
-  color: #FB6C48;
+  color: #fff;
 }
 @media only screen and (max-width: 480px) {
   .btn-custom-sm {
@@ -555,18 +552,48 @@ a.card-link .card {
 }
 
 .top-banner {
-  position: relative;
   padding: 0;
   box-shadow: 0 0 10px rgba(239, 65, 48, 0.2), 0 10px 20px rgba(239, 65, 48, 0.3);
 }
-.top-banner img {
+.top-banner .match-info {
+  text-align: center;
+  position: relative;
+  background: #000;
+}
+.top-banner .countdown, .top-banner .btn-custom {
+  display: inline-block;
+}
+.top-banner .btn-custom {
+  display: inline-block;
+  width: 200px;
+  border-radius: 8px 8px 0 0;
+  margin: 0;
+  font-size: 16px;
+  box-shadow: none;
+}
+.top-banner .countdown {
+  color: #fff;
+  border-radius: 0 0 6px 6px;
+  padding: 6px 16px 10px;
+  line-height: 1.75em;
+}
+.top-banner .countdown span {
+  display: block;
+}
+.top-banner .countdown span:nth-child(2) {
+  font-size: 1.75em;
+}
+.top-banner .item img {
   width: 100%;
+}
+.top-banner .item img ~ .match-info {
+  margin-top: -40px;
+  background: transparent;
 }
 .top-banner .search-container {
   width: 100%;
   z-index: 3;
   background: #f6f6f6;
-  margin-top: -42px;
 }
 .top-banner .search-container h3 {
   margin: 0;
@@ -581,41 +608,6 @@ a.card-link .card {
 .top-banner .search-container .single-match h5 {
   text-align: center;
 }
-.top-banner .match-info {
-  width: 100%;
-  color: #D21F2A;
-  height: 42px;
-  padding: 10px;
-  font-weight: bold;
-  background: rgba(255, 255, 255, 0.6);
-  position: relative;
-  top: -42px;
-  text-shadow: 0 0 4px #fff;
-}
-.top-banner .match-info .countdown {
-  line-height: 20px;
-  width: 65%;
-  display: inline-block;
-}
-.top-banner .match-info .countdown span {
-  font-size: 1.25em;
-}
-.top-banner .match-info .countdown span.live {
-  border-radius: 10px;
-  background: #D21F2A;
-  color: white;
-  padding: 0 10px;
-  margin-right: 4px;
-  font-size: 0.9em;
-}
-.top-banner .match-info .btn-container {
-  width: 80px;
-  float: right;
-  display: inline-block;
-}
-.top-banner .match-info .btn-container .btn-custom-sm {
-  margin-top: -6px;
-}
 @media only screen and (max-width: 768px) {
   .top-banner .search-container h3 {
     font-size: 1.125em;
@@ -624,13 +616,28 @@ a.card-link .card {
     width: 100%;
     padding: 10px 10px 14px;
   }
+  .top-banner .match-info {
+    position: static;
+    background: #000;
+  }
+  .top-banner .countdown {
+    padding: 3px 12px 8px;
+    line-height: 1.5em;
+  }
+  .top-banner .countdown span:nth-of-type(1) {
+    font-size: 0.75em;
+  }
+  .top-banner .item img {
+    margin-top: 0;
+  }
 }
 @media only screen and (max-width: 480px) {
   .top-banner .search-container .single-match {
     width: 100%;
   }
-  .top-banner .match-info .countdown span {
-    font-size: 0.9em;
+  .top-banner .item img ~ .match-info {
+    background: #000;
+    margin-top: -30px;
   }
 }
 @media only screen and (max-width: 320px) {
@@ -2156,4 +2163,14 @@ p.results {
 }
 #match-detail .tab-container {
   margin-bottom: 20px;
+}
+
+.info-map {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.embed-responsive .embed-responsive-item {
+  padding: 10px;
 }
