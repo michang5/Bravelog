@@ -1627,7 +1627,42 @@ h4 {
 			left: auto;
 		}
 	}    
-	img {
+//  PengHuSwim	
+    &#map-sport11-1 {
+		background: url('../images/PenghuSwim_Map.png');
+		background-size: cover;
+		.sport-icon {
+			background: url('../images/icon_swim.png') no-repeat;
+			background-size: cover;
+		}
+	}
+//  PengHuBike
+    &#map-sport12-1 {
+		background: url('../images/PenghuBIke_Map.png');
+		background-size: cover;
+		.sport-icon {
+			background: url('../images/icon_bike.png') no-repeat;
+			background-size: cover;
+		}
+        .dashboard {
+			right: 8px;
+			left: auto;
+            width: 154px;
+            font-size: 14px;
+			padding: 4px;
+            height: auto;
+		}
+	}
+//  PengHuRun
+    &#map-sport13-1 {
+		background: url('../images/PenghuRun_Map.png');
+		background-size: cover;
+		.sport-icon {
+			background: url('../images/icon_run.png') no-repeat;
+			background-size: cover;
+		}
+	}
+    img {
 		width: 100%;
 	}
 	&
