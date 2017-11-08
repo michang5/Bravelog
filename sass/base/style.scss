@@ -1,22 +1,31 @@
 //color
-$primary-color: #ef4130;
+$primary-color: #fb6c48;
 $secondary-color: #ffcf89;
 $thirdary-color: #ff9473;
 
-$orange: #FB6C48;
-$peach: #ffcf89;
-$rose: #ff9473;
+$orange: #fb6c48; //primary color
+$peach: #ffcf89; //secondary color
+$rose: #ff9473; //thirdary
+$pink-peach: #fff6f0; //Header color
 $yellow: #f8c91c;
+
 $DarkTurquoise: #22c3b8;
 $Green: #adcc00;
+
 $white: #fff;
 $light-gray: #f6f6f6;
 $medium-gray: #ccc;
 $gray: #6f6f6f;
 $dark-gray: #4f4f4f;
 $dark: #4C4A48;
-$light-skin: #FFFDFB;
-$skin: #FFF3E1;
+$black: #4C4A48;
+
+$light-skin: #fffdfb; //BG color
+$skin: #FFF3E1; //
+$green: #B4EC51;
+$aqua: #25C3B9;
+
+$orange-red: #ef4130;
 $red: #D21F2A;
 
 //font style
@@ -96,4 +105,12 @@ $xxxxxl-font: 2.5em;
 	border-radius: 4px;
 	overflow: hidden;
 	@include box-light-shadow;
+}
+@mixin lg-card-style {
+	background: $white;
+	margin-bottom: 20px;
+	padding-bottom: 6px;
+	border-radius: 12px;
+//	overflow: hidden;
+	box-shadow: 0 9px 20px rgba($dark,.12);
 }
