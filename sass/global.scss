@@ -4,7 +4,7 @@
 @import 'base/style';
 @import 'base/media';
 @import "compass/utilities/sprites";
-@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700'); 
+//@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700'); 
 //@import 'base/css3-mixins';
 
 /* ------------ base ------------ */
@@ -2823,6 +2823,7 @@ p.results {
     }
 }
 .inner-content {
+    padding: 0;
     .icon {
         img {
             width: 50px;
