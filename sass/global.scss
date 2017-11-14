@@ -147,6 +147,34 @@ ul, li {
     background-color: $gray-orange;
     color: $primary-color;
     border-radius: 32px;
+    &:hover, &:active, &:focus {
+        background-color: $orange;
+        color: $white!important;
+    }
+    a {
+        display: block;
+       &:hover, &:active, &:focus {
+            background-color: $orange;
+            color: $white;
+        } 
+    }
+    .card & {
+//		padding: 6px 10px;
+//		color: $white;
+		width: 96%;
+//		box-shadow: none;
+		clear: both;
+		@include respond-to (only-desktop){
+			position: absolute;
+			width: 120px;
+			top: 15px;
+			right: 15px;
+			font-size: $s-font;
+			a {
+				font-size: $s-font;
+			}
+		}
+	}
 }
 //.navbar-fixed-top .btn-default {
 //    &.dropdown-toggle {
@@ -277,7 +305,6 @@ ul, li {
 	}
 	.card & {
 		padding: 6px 10px;
-		border-radius: 4px;
 		color: $white;
 		width: 220px;
 		box-shadow: none;
@@ -551,7 +578,7 @@ footer {
 	width: 100%;
 	margin: 0;
 	font-size: $s-font;
-	color: $dark;
+	color: $gray;
 	border-bottom: 1px solid $light-gray;
 
 	div {
@@ -614,6 +641,7 @@ a.card-link {
 a.card-link .card {
 	color: $dark-gray;
 	display: block;
+    padding-bottom: 10px;
 }
 
 //////---index search
@@ -1172,7 +1200,7 @@ h4 {
 		padding: 0;
 	}
 	.athlete {
-		border-bottom: 1px solid $peach;
+//		border-bottom: 1px solid $peach;
 	}
 	.btn-custom-sm {
 		width: 120px;
@@ -1181,14 +1209,16 @@ h4 {
 }
 .result-info {
 //	padding-top: 10px;
-//	padding-bottom: 40px;
+	padding-top: 40px;
+    margin-bottom: 50px;
+    border-top: 1px solid $gray-orange;
 	.sport-info {
 		padding-top: 0;
 	}
 	h5 {
-		font-size: $xxl-font;
-		text-align: center;
-		color: $primary-color;
+		font-size: $xl-font;
+		color: $gray;
+        margin-bottom: 3px;
 		&.live {
 			&:after {
 				content: ('live');
@@ -1264,7 +1294,7 @@ h4 {
     .btn {
         position: absolute;
         right: 0;
-        bottom: 0;
+        bottom: 10px;
     }
 	h4 {
 		font-size: $xl-font;
@@ -1305,49 +1335,50 @@ h4 {
 	border-spacing: 0;
 //	margin-left: -1px;
 //	margin-right: -1px;
-	border-bottom: 2px solid $DarkTurquoise;
+//	border-bottom: 2px solid $DarkTurquoise;
+    border: 0;
 	> li {
 		display: table-cell;
-//		width: 33.16%;
-//		display: inline-block;
 		text-align: center;
 		margin: 0;
-//		margin-left: -2px;
 		float: none;
 		font-size: 14px;
 		border-right: 1px solid $light-skin;
-//		margin-left: -1px;
+        overflow: hidden;
 		&.live {
 			position: relative;
-			&:after {
+			&:before {
 				content: ('live');
-				background: $red;
+				background: $orange;
 				color: $white;
-				padding: 0 10px;
-				border-radius: 10px;
-				line-height: 16px;
+				width: 30px;
+                height: 30px;
+                left: 4px;
+                top: 4px;
+                border-radius: 30px;
+                border-right: 1px solid $white;
+				line-height: 30px;
 				font-size: 10px;
 				position: absolute;
-				top: -6px;
-				right: 2px;
+                z-index: 1;
 				display: inline-block;
-				box-shadow: 0 0 0 2px white;
 			}
 		}
-		&:nth-of-type(1) {
-			margin-left: 0;
-		}
 		> a {
-			border-radius: 4px 4px 0 0;
-			line-height: $xl-font;
-			padding: 10px 6px 12px 6px;
+//			border-radius: 4px 4px 0 0;
+			line-height: 39px;
+			padding: 0 6px;
 			box-shadow: inset 0 0 2px rgba(#009086,.6);
-			background: rgba($DarkTurquoise,.2);
-			color: $gray;
+            color: $gray;
+            background: $light-gray;
 			margin: 0;
 			border: 0!important;
+            border-radius: 0;
 			&:hover, &:focus {
-				background: $DarkTurquoise;
+				background-color: $DarkTurquoise;
+                background-image: -webkit-linear-gradient(45deg, $green, $aqua);
+                background-image: -o-linear-gradient(45deg, $green, $aqua);
+                background-image: linear-gradient(45deg, $green, $aqua);
 				color: white;
 				border: 0;
 				box-shadow: none;
@@ -1358,17 +1389,36 @@ h4 {
 			border-right: 1px solid $light-skin;
 			> a {
 				background: $DarkTurquoise;
+                background-image: -webkit-linear-gradient(45deg, $green, $aqua);
+                background-image: -o-linear-gradient(45deg, $green, $aqua);
+                background-image: linear-gradient(45deg, $green, $aqua);
 				color: white;
 				border: 0;
 //				box-shadow: inset 0 -4px 0 $orange;
 				&:hover, &:focus {
 					background: $DarkTurquoise;
-					color: white;
+                    background-image: -webkit-linear-gradient(45deg, $green, $aqua);
+                    background-image: -o-linear-gradient(45deg, $green, $aqua);
+                    background-image: linear-gradient(45deg, $green, $aqua);
+                    color: white;
 				}
 			}
 		}
+        &:nth-of-type(1) {
+			margin-left: 0;
+            width: 42%;
+            > a {
+                border-bottom-left-radius: 30px;
+                border-top-left-radius: 30px;
+                padding-left: 30px;
+            }
+		}
 		&:nth-last-of-type(1) {
 			border-right: 0;
+            > a {
+                border-bottom-right-radius: 30px;
+                border-top-right-radius: 30px;
+            }
 		}
 	}
 	@media screen and (max-width: 590px) {
@@ -1885,7 +1935,7 @@ h4 {
 	.col-xs-8 {
 		text-align: left;
 		p {
-			line-height: 1.8;
+//			line-height: 1.8;
 			
 			span {
 				&:nth-of-type(1):after {
@@ -1956,17 +2006,23 @@ h4 {
 			padding-right: 4px;
 			color: $gray;
 		}
+        .col-xs-8 {
+            p:nth-of-type(1) {
+                margin-bottom: 10px;
+            }
+        }
 		.col-xs-3, .col-xs-4 {
 			padding-left: 4px;
 			padding-right: 10px;
 			color: $gray;
 			text-align: right;
 			h4 {
-				font-size: $xxl-font;
+				font-size: $xl-font;
 				text-align: right;
 				clear: both;
 				line-height: 1.1;
 				font-weight: 400;
+                margin-bottom: 6px;
 			}
 			p {
 				display: -webkit-flex;
@@ -1989,7 +2045,8 @@ h4 {
 		@include clearfix;
 //		margin-top: 10px;
 		clear: both;
-		margin-bottom: 10px;
+		margin-bottom: 20px;
+        margin-top: 10px;
 	}
 	#match & {
 		border-radius: 4px;
@@ -2034,6 +2091,13 @@ h4 {
 				}
 			}
 		}
+        .row {
+            .col-xs-8 {
+                p:nth-of-type(1) {
+                    margin-bottom: 8px;
+                }
+            }
+        }
 	}
 }
 #match .athlete-info {
@@ -2055,11 +2119,12 @@ h4 {
 		display: inline-block;
 		vertical-align: top;
 		margin: 6px;
-		background: rgba($gray,.15);
+		background: #DFDFDF;
+        @include background-image(linear-gradient(220deg,#DFDFDF, #F0F0F0));
 		width: 112px;
 		height: 112px;
 		border-radius: 50%;
-		box-shadow: 0 0 0 1px $medium-gray;
+        overflow: hidden;
 		&.sport-1 {
 			.icon {
 				background: url('../images/sport1.png');
@@ -2095,6 +2160,7 @@ h4 {
 			}
 			&.distance {
 				line-height: $m-font;
+                margin-bottom: 4px;
 			}
 			&.time {
 				font-size: $xxl-font;
@@ -2108,37 +2174,33 @@ h4 {
 				color: $white;
 				padding: 0 10px;
 				border-radius: 10px;
-				line-height: 16px;
+				line-height: 18px;
 				font-size: 10px;
 				position: relative;
-				top: -2px;
+				top: 0;
 				display: inline-block;
+                width: 100%;
 			}
 		}
 		&.finished {
 			background: $white;
-			box-shadow: 0 0 0 3px $rose;
-//			border: 3px solid $rose;
-//			@include box-light-shadow;
+            @include background-image(linear-gradient(220deg,$primary-color, $rose, $secondary-color));
 			span {
 				&.icon {
-					background-position: center top;
 				}
 				&.distance, &.time {
 					text-shadow: none;
 				}
 				&.time {
-					color: $primary-color;
 				}
 				&.distance {
-					color: $gray;
 				}
 			}
 		}
 		a {
 			padding: 10px 4px 0;
 			display: block;
-			color: $medium-gray;
+			color: $white;
 		}
 	}
 	@media screen and (max-width: 413px) {
@@ -2241,26 +2303,22 @@ h4 {
 .sport-info {
 	background: $white;
 	margin-bottom: 20px;
-	border-radius: 4px;
 	padding: 6px 0 0;
 	font-size: 16px;
-//	border: 1px solid $light-gray;
 	@include card-style;
 	#live-sport &, #match & {
-		border: 1px solid $medium-gray;
-		box-shadow: none;
 		padding-bottom: 0;
 	}
 	
 	.sport-title {
-		padding: 10px 0;
+		padding: 14px 0 2px;
 	}
 	p {
 		color: $gray;
 	}
-	.sport-achievement, h6.sport-name {
+	.sport-achievement {
 		color: $gray;
-		font-size: $xl-font;
+		font-size: $l-font;
 	}
 	.sport-achievement {
 		text-align: right;
@@ -2277,7 +2335,8 @@ h4 {
 		font-weight: bold;
 		margin: 0;
 		text-align: left;
-//		line-height: 2;
+        color: $orange;
+        font-size: $m-font;
 		& ~ p {
 			text-align: left;
 		}
@@ -2337,6 +2396,9 @@ h4 {
 	.split {
 		clear: both;
 		border-top: 1px solid $DarkTurquoise;
+        &.collapse {
+            border: 0;
+        }
 		h5 {
 			color: $DarkTurquoise;
 			padding-left: 14px;
@@ -2390,11 +2452,9 @@ h4 {
 	width: 100%;
 	text-align: center;
 	color: $orange;
-//	background-color: transparent;
-	background: $skin;
+	background: #FFF4F1;
 	border: 0;
 	outline: 0;
-	border-top: 1px solid #f1d0cc;
 	font-size: 14px;
 	line-height: 30px;
 	i {
@@ -2403,10 +2463,6 @@ h4 {
 	&:focus {
 		outline: 0;
 	}
-//	&:hover, &:focus {
-//		background: $primary-color;
-//		color: $white;
-//	}
 	&.open-close {
 		&.collapsed:after {
 			font-family: FontAwesome;
@@ -2589,12 +2645,12 @@ p.results {
     }
 }
 //after-match profile account
-.avater {
+.avatar {
     width: 74px;
     height: 74px;
     border-radius: 50%;
     border: 4px solid $white;
-    box-shadow: 0 0 0 3px $primary-color;
+    box-shadow: 0 0 0 3px $rose;
     margin-right: 10px;
     &~h4, &~h5 {
         display: inline-block; 
@@ -2627,6 +2683,10 @@ p.results {
         line-height: 30px;
         text-align: center;
         display: inline-flex;
+        margin-right: 2px;
+        &:nth-last-of-type(1) {
+            margin: 0;
+        }
         a {
             display: block;
 //            padding: 0 20px;
@@ -2642,18 +2702,27 @@ p.results {
         }
         @include respond-to (only-desktop){
             &:nth-of-type(1) {
-                margin-right: 2px;
+                -webkit-flex: 1;
                 flex: 1;
             }
-            &:nth-of-type(2) {
+            &:nth-of-type(2), &:nth-of-type(3) {
+                -webkit-flex: 1;
                 flex: 1;
+                #after-match-dua & {
+                    -webkit-flex: 1;
+                    flex: 1;
+                }
             }
         }
         @include respond-to (only-device){
             &:nth-of-type(1) {
                 width: 150px;
+                #after-match-dua & , #after-match-ranking-dua & {
+                    -webkit-flex: 1;
+                    flex: 1;
+                }
             }
-            &:nth-of-type(2) {
+            &:nth-of-type(2), &:nth-of-type(3) {
                 -webkit-flex: 1;
                 flex: 1;
             }
@@ -2684,10 +2753,19 @@ p.results {
             }
         }
     }
+    hr {
+        background-image: none;
+        border: 0;
+        border-bottom: 1px solid $gray-orange;
+        width: 90%;
+        height: 20px;
+        margin: 0 auto 30px;
+        clear: both;
+    }
     .inner {
         @include clearfix;
         background: $white;
-        padding: 40px 20px 68px;
+        padding: 40px 20px 88px;
         border-radius: 6px;
         margin-top: 10px;
 //        position: relative;
@@ -2708,6 +2786,9 @@ p.results {
                     &.main {
                         font-size: 4em;
                     }
+                    &.small {
+                        font-size: $xxxxxl-font;
+                    }
                 }
                 .all-ranking {
                     font-size: 20px;
@@ -2721,8 +2802,8 @@ p.results {
                 }
             }
         }
-        #after-match-ranking & {
-            padding: 0 0 20px;
+        #after-match-ranking & , #after-match-ranking-dua & {
+            padding: 0 0 30px;
         }
     }
     .certificate-logo {
@@ -2736,6 +2817,33 @@ p.results {
         bottom: 40px;
         right: 15px;
         width: 232px;
+    }
+    @include respond-to (normal-mobile){
+        .inner {
+            padding: 40px 10px 88px;
+            .inner-content {
+                >span {
+                    &.value {
+                        &.small {
+                            font-size: $xxl-font;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @include respond-to (xxs-mobile){
+        .inner {
+            .inner-content {
+                >span {
+                    &.value {
+                        &.small {
+                            font-size: $xl-font;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 .btn-container {
@@ -2797,7 +2905,7 @@ p.results {
 
 .inner .weather-info {
     background: #f1f1f1;
-    widows: 100%;
+    width: 100%;
     margin-bottom: 30px;
 //    position: absolute;
 //    top: 0;

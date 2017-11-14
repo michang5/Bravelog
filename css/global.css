@@ -169,6 +169,33 @@ ul, li {
   color: #fb6c48;
   border-radius: 32px;
 }
+.btn-secondary:hover, .btn-secondary:active, .btn-secondary:focus {
+  background-color: #fb6c48;
+  color: #fff !important;
+}
+.btn-secondary a {
+  display: block;
+}
+.btn-secondary a:hover, .btn-secondary a:active, .btn-secondary a:focus {
+  background-color: #fb6c48;
+  color: #fff;
+}
+.card .btn-secondary {
+  width: 96%;
+  clear: both;
+}
+@media only screen and (min-width: 769px) {
+  .card .btn-secondary {
+    position: absolute;
+    width: 120px;
+    top: 15px;
+    right: 15px;
+    font-size: 0.9em;
+  }
+  .card .btn-secondary a {
+    font-size: 0.9em;
+  }
+}
 
 .btn-sm {
   color: #f6f6f6;
@@ -269,7 +296,6 @@ ul, li {
 }
 .card .btn-custom {
   padding: 6px 10px;
-  border-radius: 4px;
   color: #fff;
   width: 220px;
   box-shadow: none;
@@ -510,7 +536,7 @@ footer span:nth-last-of-type(1) {
   width: 100%;
   margin: 0;
   font-size: 0.9em;
-  color: #4C4A48;
+  color: #6f6f6f;
   border-bottom: 1px solid #f6f6f6;
 }
 .table div {
@@ -565,6 +591,7 @@ a.card-link {
 a.card-link .card {
   color: #4f4f4f;
   display: block;
+  padding-bottom: 10px;
 }
 
 .top-banner {
@@ -911,9 +938,9 @@ h4 {
   background: #fff;
   margin-bottom: 20px;
   padding-bottom: 6px;
-  border-radius: 4px;
+  border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 5px 10px rgba(111, 111, 111, 0.1), 0 5px 20px rgba(111, 111, 111, 0.15);
+  box-shadow: 0 0 2px rgba(76, 74, 72, 0.3);
   box-shadow: 0 0 10px rgba(251, 108, 72, 0.2), 0 10px 20px rgba(251, 108, 72, 0.3);
   text-align: center;
   position: relative;
@@ -1068,21 +1095,23 @@ h4 {
 #results p.results {
   padding: 0;
 }
-#results .athlete {
-  border-bottom: 1px solid #ffcf89;
-}
 #results .btn-custom-sm {
   width: 120px;
   float: right;
 }
 
+.result-info {
+  padding-top: 40px;
+  margin-bottom: 50px;
+  border-top: 1px solid #F8EEEA;
+}
 .result-info .sport-info {
   padding-top: 0;
 }
 .result-info h5 {
-  font-size: 1.5em;
-  text-align: center;
-  color: #fb6c48;
+  font-size: 1.25em;
+  color: #6f6f6f;
+  margin-bottom: 3px;
 }
 .result-info h5.live:after {
   content: "live";
@@ -1142,7 +1171,7 @@ h4 {
 .athlete .btn {
   position: absolute;
   right: 0;
-  bottom: 0;
+  bottom: 10px;
 }
 .athlete h4 {
   font-size: 1.25em;
@@ -1169,7 +1198,7 @@ h4 {
   width: 100%;
   border-collapse: separate;
   border-spacing: 0;
-  border-bottom: 2px solid #22c3b8;
+  border: 0;
 }
 .nav-tabs > li {
   display: table-cell;
@@ -1178,39 +1207,42 @@ h4 {
   float: none;
   font-size: 14px;
   border-right: 1px solid #fffdfb;
+  overflow: hidden;
 }
 .nav-tabs > li.live {
   position: relative;
 }
-.nav-tabs > li.live:after {
+.nav-tabs > li.live:before {
   content: "live";
-  background: #D21F2A;
+  background: #fb6c48;
   color: #fff;
-  padding: 0 10px;
-  border-radius: 10px;
-  line-height: 16px;
+  width: 30px;
+  height: 30px;
+  left: 4px;
+  top: 4px;
+  border-radius: 30px;
+  border-right: 1px solid #fff;
+  line-height: 30px;
   font-size: 10px;
   position: absolute;
-  top: -6px;
-  right: 2px;
+  z-index: 1;
   display: inline-block;
-  box-shadow: 0 0 0 2px white;
-}
-.nav-tabs > li:nth-of-type(1) {
-  margin-left: 0;
 }
 .nav-tabs > li > a {
-  border-radius: 4px 4px 0 0;
-  line-height: 1.25em;
-  padding: 10px 6px 12px 6px;
+  line-height: 39px;
+  padding: 0 6px;
   box-shadow: inset 0 0 2px rgba(0, 144, 134, 0.6);
-  background: rgba(34, 195, 184, 0.2);
   color: #6f6f6f;
+  background: #f6f6f6;
   margin: 0;
   border: 0 !important;
+  border-radius: 0;
 }
 .nav-tabs > li > a:hover, .nav-tabs > li > a:focus {
-  background: #22c3b8;
+  background-color: #22c3b8;
+  background-image: -webkit-linear-gradient(45deg, #B4EC51, #25C3B9);
+  background-image: -o-linear-gradient(45deg, #B4EC51, #25C3B9);
+  background-image: linear-gradient(45deg, #b4ec51, #25c3b9);
   color: white;
   border: 0;
   box-shadow: none;
@@ -1221,15 +1253,34 @@ h4 {
 }
 .nav-tabs > li.active > a {
   background: #22c3b8;
+  background-image: -webkit-linear-gradient(45deg, #B4EC51, #25C3B9);
+  background-image: -o-linear-gradient(45deg, #B4EC51, #25C3B9);
+  background-image: linear-gradient(45deg, #b4ec51, #25c3b9);
   color: white;
   border: 0;
 }
 .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
   background: #22c3b8;
+  background-image: -webkit-linear-gradient(45deg, #B4EC51, #25C3B9);
+  background-image: -o-linear-gradient(45deg, #B4EC51, #25C3B9);
+  background-image: linear-gradient(45deg, #b4ec51, #25c3b9);
   color: white;
+}
+.nav-tabs > li:nth-of-type(1) {
+  margin-left: 0;
+  width: 42%;
+}
+.nav-tabs > li:nth-of-type(1) > a {
+  border-bottom-left-radius: 30px;
+  border-top-left-radius: 30px;
+  padding-left: 30px;
 }
 .nav-tabs > li:nth-last-of-type(1) {
   border-right: 0;
+}
+.nav-tabs > li:nth-last-of-type(1) > a {
+  border-bottom-right-radius: 30px;
+  border-top-right-radius: 30px;
 }
 @media only screen and (max-width: 320px) {
   .nav-tabs > li {
@@ -1685,9 +1736,6 @@ h4 {
 .info-card .col-xs-8 {
   text-align: left;
 }
-.info-card .col-xs-8 p {
-  line-height: 1.8;
-}
 .info-card .col-xs-8 p span:nth-of-type(1):after {
   content: '\002F';
   padding-left: 5px;
@@ -1738,6 +1786,9 @@ h4 {
   padding-right: 4px;
   color: #6f6f6f;
 }
+.info-card .row .col-xs-8 p:nth-of-type(1) {
+  margin-bottom: 10px;
+}
 .info-card .row .col-xs-3, .info-card .row .col-xs-4 {
   padding-left: 4px;
   padding-right: 10px;
@@ -1745,11 +1796,12 @@ h4 {
   text-align: right;
 }
 .info-card .row .col-xs-3 h4, .info-card .row .col-xs-4 h4 {
-  font-size: 1.5em;
+  font-size: 1.25em;
   text-align: right;
   clear: both;
   line-height: 1.1;
   font-weight: 400;
+  margin-bottom: 6px;
 }
 .info-card .row .col-xs-3 p, .info-card .row .col-xs-4 p {
   display: -webkit-flex;
@@ -1767,7 +1819,8 @@ h4 {
 .info-card .athlete-info {
   *zoom: 1;
   clear: both;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  margin-top: 10px;
 }
 .info-card .athlete-info:after, .info-card .athlete-info:before {
   content: "";
@@ -1805,6 +1858,9 @@ h4 {
   .info-card .col-xs-8 p:nth-of-type(1) {
     font-size: 15px;
   }
+  .info-card .row .col-xs-8 p:nth-of-type(1) {
+    margin-bottom: 8px;
+  }
 }
 
 #match .athlete-info .table.main:nth-of-type(2) > div > div, #match .athlete-info .table.main:nth-of-type(3) > div > div {
@@ -1819,11 +1875,16 @@ h4 {
   display: inline-block;
   vertical-align: top;
   margin: 6px;
-  background: rgba(111, 111, 111, 0.15);
+  background: #DFDFDF;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuOTUyNzkiIHkxPSItMC4wMzk2MTQiIHgyPSIwLjA0NzIxIiB5Mj0iMS4wMzk2MTQiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNkZmRmZGYiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmMGYwZjAiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
+  background-size: 100%;
+  background-image: -moz-linear-gradient(230deg, #dfdfdf, #f0f0f0);
+  background-image: -webkit-linear-gradient(230deg, #dfdfdf, #f0f0f0);
+  background-image: linear-gradient(220deg, #dfdfdf, #f0f0f0);
   width: 112px;
   height: 112px;
   border-radius: 50%;
-  box-shadow: 0 0 0 1px #ccc;
+  overflow: hidden;
 }
 .category > div.sport-1 .icon {
   background: url("../images/sport1.png");
@@ -1869,6 +1930,7 @@ h4 {
 }
 .category > div span.distance {
   line-height: 1em;
+  margin-bottom: 4px;
 }
 .category > div span.time {
   font-size: 1.5em;
@@ -1880,32 +1942,28 @@ h4 {
   color: #fff;
   padding: 0 10px;
   border-radius: 10px;
-  line-height: 16px;
+  line-height: 18px;
   font-size: 10px;
   position: relative;
-  top: -2px;
+  top: 0;
   display: inline-block;
+  width: 100%;
 }
 .category > div.finished {
   background: #fff;
-  box-shadow: 0 0 0 3px #ff9473;
-}
-.category > div.finished span.icon {
-  background-position: center top;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuOTUyNzkiIHkxPSItMC4wMzk2MTQiIHgyPSIwLjA0NzIxIiB5Mj0iMS4wMzk2MTQiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNmYjZjNDgiLz48c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iI2ZmOTQ3MyIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmY2Y4OSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -moz-linear-gradient(230deg, #fb6c48, #ff9473, #ffcf89);
+  background-image: -webkit-linear-gradient(230deg, #fb6c48, #ff9473, #ffcf89);
+  background-image: linear-gradient(220deg, #fb6c48, #ff9473, #ffcf89);
 }
 .category > div.finished span.distance, .category > div.finished span.time {
   text-shadow: none;
 }
-.category > div.finished span.time {
-  color: #fb6c48;
-}
-.category > div.finished span.distance {
-  color: #6f6f6f;
-}
 .category > div a {
   padding: 10px 4px 0;
   display: block;
-  color: #ccc;
+  color: #fff;
 }
 @media screen and (max-width: 413px) {
   .category > div {
@@ -2017,30 +2075,27 @@ h4 {
 .sport-info {
   background: #fff;
   margin-bottom: 20px;
-  border-radius: 4px;
   padding: 6px 0 0;
   font-size: 16px;
   background: #fff;
   margin-bottom: 20px;
   padding-bottom: 6px;
-  border-radius: 4px;
+  border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 5px 10px rgba(111, 111, 111, 0.1), 0 5px 20px rgba(111, 111, 111, 0.15);
+  box-shadow: 0 0 2px rgba(76, 74, 72, 0.3);
 }
 #live-sport .sport-info, #match .sport-info {
-  border: 1px solid #ccc;
-  box-shadow: none;
   padding-bottom: 0;
 }
 .sport-info .sport-title {
-  padding: 10px 0;
+  padding: 14px 0 2px;
 }
 .sport-info p {
   color: #6f6f6f;
 }
-.sport-info .sport-achievement, .sport-info h6.sport-name {
+.sport-info .sport-achievement {
   color: #6f6f6f;
-  font-size: 1.25em;
+  font-size: 1.125em;
 }
 .sport-info .sport-achievement {
   text-align: right;
@@ -2055,6 +2110,8 @@ h4 {
   font-weight: bold;
   margin: 0;
   text-align: left;
+  color: #fb6c48;
+  font-size: 1em;
 }
 .sport-info h6.sport-name ~ p {
   text-align: left;
@@ -2117,6 +2174,9 @@ h4 {
   clear: both;
   border-top: 1px solid #22c3b8;
 }
+.sport-info .split.collapse {
+  border: 0;
+}
 .sport-info .split h5 {
   color: #22c3b8;
   padding-left: 14px;
@@ -2170,10 +2230,9 @@ h4 {
   width: 100%;
   text-align: center;
   color: #fb6c48;
-  background: #FFF3E1;
+  background: #FFF4F1;
   border: 0;
   outline: 0;
-  border-top: 1px solid #f1d0cc;
   font-size: 14px;
   line-height: 30px;
 }
@@ -2349,32 +2408,32 @@ p.results {
   padding: 10px;
 }
 
-.avater {
+.avatar {
   width: 74px;
   height: 74px;
   border-radius: 50%;
   border: 4px solid #fff;
-  box-shadow: 0 0 0 3px #fb6c48;
+  box-shadow: 0 0 0 3px #ff9473;
   margin-right: 10px;
 }
-.avater ~ h4, .avater ~ h5 {
+.avatar ~ h4, .avatar ~ h5 {
   display: inline-block;
   font-weight: normal;
 }
-.avater ~ h4 {
+.avatar ~ h4 {
   vertical-align: middle;
   line-height: 1.5em;
 }
-.avater ~ h4 span {
+.avatar ~ h4 span {
   display: block;
 }
-.avater ~ h4 span.name {
+.avatar ~ h4 span.name {
   font-size: 1.125em;
 }
-.avater ~ h4 span.eng-name, .avater ~ h4 span.gender {
+.avatar ~ h4 span.eng-name, .avatar ~ h4 span.gender {
   font-size: 0.8em;
 }
-.avater ~ h4 span.gender:after {
+.avatar ~ h4 span.gender:after {
   content: '';
 }
 
@@ -2387,6 +2446,10 @@ p.results {
   line-height: 30px;
   text-align: center;
   display: inline-flex;
+  margin-right: 2px;
+}
+.after-match-tabs li:nth-last-of-type(1) {
+  margin: 0;
 }
 .after-match-tabs li a {
   display: block;
@@ -2400,10 +2463,15 @@ p.results {
 }
 @media only screen and (min-width: 769px) {
   .after-match-tabs li:nth-of-type(1) {
-    margin-right: 2px;
+    -webkit-flex: 1;
     flex: 1;
   }
-  .after-match-tabs li:nth-of-type(2) {
+  .after-match-tabs li:nth-of-type(2), .after-match-tabs li:nth-of-type(3) {
+    -webkit-flex: 1;
+    flex: 1;
+  }
+  #after-match-dua .after-match-tabs li:nth-of-type(2), #after-match-dua .after-match-tabs li:nth-of-type(3) {
+    -webkit-flex: 1;
     flex: 1;
   }
 }
@@ -2411,7 +2479,11 @@ p.results {
   .after-match-tabs li:nth-of-type(1) {
     width: 150px;
   }
-  .after-match-tabs li:nth-of-type(2) {
+  #after-match-dua .after-match-tabs li:nth-of-type(1), #after-match-ranking-dua .after-match-tabs li:nth-of-type(1) {
+    -webkit-flex: 1;
+    flex: 1;
+  }
+  .after-match-tabs li:nth-of-type(2), .after-match-tabs li:nth-of-type(3) {
     -webkit-flex: 1;
     flex: 1;
   }
@@ -2440,10 +2512,19 @@ p.results {
 .match-card .match-infos span.match-name {
   font-size: 1.125em;
 }
+.match-card hr {
+  background-image: none;
+  border: 0;
+  border-bottom: 1px solid #F8EEEA;
+  width: 90%;
+  height: 20px;
+  margin: 0 auto 30px;
+  clear: both;
+}
 .match-card .inner {
   *zoom: 1;
   background: #fff;
-  padding: 40px 20px 68px;
+  padding: 40px 20px 88px;
   border-radius: 6px;
   margin-top: 10px;
 }
@@ -2474,6 +2555,9 @@ p.results {
 .match-card .inner .inner-content > span.value.main {
   font-size: 4em;
 }
+.match-card .inner .inner-content > span.value.small {
+  font-size: 2.5em;
+}
 .match-card .inner .inner-content > span .all-ranking {
   font-size: 20px;
 }
@@ -2484,8 +2568,8 @@ p.results {
 .match-card .inner .inner-content > span .unit {
   font-size: 16px;
 }
-#after-match-ranking .match-card .inner {
-  padding: 0 0 20px;
+#after-match-ranking .match-card .inner, #after-match-ranking-dua .match-card .inner {
+  padding: 0 0 30px;
 }
 .match-card .certificate-logo {
   position: absolute;
@@ -2498,6 +2582,19 @@ p.results {
   bottom: 40px;
   right: 15px;
   width: 232px;
+}
+@media only screen and (max-width: 480px) {
+  .match-card .inner {
+    padding: 40px 10px 88px;
+  }
+  .match-card .inner .inner-content > span.value.small {
+    font-size: 1.5em;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .match-card .inner .inner-content > span.value.small {
+    font-size: 1.25em;
+  }
 }
 
 .btn-container {
@@ -2557,7 +2654,7 @@ p.results {
 
 .inner .weather-info {
   background: #f1f1f1;
-  widows: 100%;
+  width: 100%;
   margin-bottom: 30px;
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
