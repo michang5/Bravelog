@@ -2303,15 +2303,16 @@ h4 {
 .sport-info {
 	background: $white;
 	margin-bottom: 20px;
-	padding: 6px 0 0;
+//	padding: 6px 0 0;
 	font-size: 16px;
 	@include card-style;
+    padding-bottom: 0;
 	#live-sport &, #match & {
 		padding-bottom: 0;
 	}
 	
 	.sport-title {
-		padding: 14px 0 2px;
+		padding: 6px 0 2px;
 	}
 	p {
 		color: $gray;
@@ -2341,10 +2342,10 @@ h4 {
 			text-align: left;
 		}
 	}
-	.col-xs-4 {
+	.col-xs-4, .col-xs-7 {
 		padding-right: 0;
 	}
-	.col-xs-8 {
+	.col-xs-8, .col-xs-5 {
 		padding-left: 0;
 	}
 	.col-md-4 {
@@ -2717,7 +2718,7 @@ p.results {
         @include respond-to (only-device){
             &:nth-of-type(1) {
                 width: 150px;
-                #after-match-dua & , #after-match-ranking-dua & {
+                #after-match-performance-dua &, #after-match-dua & , #after-match-ranking-dua &, #after-match-ranking-tri & {
                     -webkit-flex: 1;
                     flex: 1;
                 }
@@ -2756,7 +2757,7 @@ p.results {
     hr {
         background-image: none;
         border: 0;
-        border-bottom: 1px solid $gray-orange;
+        border-bottom: 1px solid #ccc;
         width: 90%;
         height: 20px;
         margin: 0 auto 30px;
@@ -2772,7 +2773,46 @@ p.results {
         .inner-content {
             text-align: center;
             color: $gray;
-            >span {
+            h5 {
+                font-size: $xl-font;
+                margin: -6px 0 10px;
+//                color: $orange;
+            }
+            &.allranking {
+                text-align: center;
+                >div {
+                    display: inline-block;
+                    line-height: $xl-font;
+                    vertical-align: top;
+                    img {
+                        width: 90px;
+                    }
+                    >span {
+                        display: block;
+                        line-height: $xl-font;
+                        text-align: left;
+                        &.value {
+                            font-size: 3em;
+                            font-family: 'Roboto Condensed', sans-serif;
+                            font-weight: 700;
+                            margin-bottom: 10px;
+                        }
+                        
+                        &.middle {
+                            font-size: 2.5em;
+                            text-align: left;
+                        }
+                        .all-ranking {
+                            font-size: 20px;
+                            &:before {
+                                content: ('/');
+                                padding: 0 4px;
+                            }
+                        }
+                    }
+                }
+            }
+            > span {
                 display: block;
                 line-height: $xl-font;
                 &.item {
@@ -2789,6 +2829,10 @@ p.results {
                     &.small {
                         font-size: $xxxxxl-font;
                     }
+                    &.middle {
+                        font-size: 2.5em;
+                        text-align: left;
+                    }
                 }
                 .all-ranking {
                     font-size: 20px;
@@ -2801,10 +2845,19 @@ p.results {
                     font-size: 16px;
                 }
             }
+            &.col-xs-4 {
+                #after-match-ranking-dua & , #after-match-ranking-tri & {
+                    text-align: left;
+                }
+            }
         }
-        #after-match-ranking & , #after-match-ranking-dua & {
+        #after-match-ranking & , #after-match-ranking-dua & , #after-match-ranking-tri & {
             padding: 0 0 30px;
         }
+        #after-match-performance-dua & {
+            padding: 20px 0 30px;
+        }
+        
     }
     .certificate-logo {
         position: absolute;
@@ -2936,6 +2989,23 @@ p.results {
         img {
             width: 50px;
             margin-bottom: 5px;
+        }
+    }
+    .icon-single {
+        text-align: right;
+        img {
+            width: 100px;
+            margin-bottom: 5px;
+            margin-top: 10px;
+            margin-right: -20px;
+//            @include respond-to (xxs-mobile){
+//                margin-right: -10px;
+//            }
+        }
+    }
+    .icon-single-lg {
+        img {
+            width: 100px;
         }
     }
 }
