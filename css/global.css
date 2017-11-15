@@ -2088,7 +2088,7 @@ h4 {
   padding-bottom: 0;
 }
 .sport-info .sport-title {
-  padding: 6px 0 2px;
+  padding: 15px 0 2px;
 }
 .sport-info p {
   color: #6f6f6f;
@@ -2479,7 +2479,7 @@ p.results {
   .after-match-tabs li:nth-of-type(1) {
     width: 150px;
   }
-  #after-match-performance-dua .after-match-tabs li:nth-of-type(1), #after-match-dua .after-match-tabs li:nth-of-type(1), #after-match-ranking-dua .after-match-tabs li:nth-of-type(1), #after-match-ranking-tri .after-match-tabs li:nth-of-type(1) {
+  #after-match-performance-dua .after-match-tabs li:nth-of-type(1), #after-match-dua .after-match-tabs li:nth-of-type(1), #after-match-ranking-dua .after-match-tabs li:nth-of-type(1), #after-match-ranking-tri .after-match-tabs li:nth-of-type(1), #after-match-performance-tri .after-match-tabs li:nth-of-type(1), #after-match-tri .after-match-tabs li:nth-of-type(1) {
     -webkit-flex: 1;
     flex: 1;
   }
