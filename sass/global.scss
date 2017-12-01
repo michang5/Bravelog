@@ -99,7 +99,7 @@ ul, li {
 }
 .btn:focus,.btn:active:focus,.btn.active:focus,
 .btn.focus,.btn:active.focus,.btn.active.focus {
-    outline: none;
+//    outline: none;
 }
 .btn-primary {
 	@include background-image(linear-gradient(160deg,$primary-color, $rose, $secondary-color));
