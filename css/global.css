@@ -20,6 +20,7 @@ body {
   font-family: 'Roboto', "source-han-sans-traditional", sans-serif, 'times',"Microsoft JhengHei";
   word-wrap: break-word;
   word-break: normal;
+  padding: 0 !important;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -246,8 +247,12 @@ ul, li {
   display: block;
   text-align: center;
   margin: 10px auto;
+  padding: 6px 16px;
   font-weight: bold;
   border-radius: 50px;
+  color: #fff;
+  border: 0;
+  font-size: 16px;
   -webkit-backface-visibility: hidden;
   z-index: 1;
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuOTUyNzkiIHkxPSItMC4wMzk2MTQiIHgyPSIwLjA0NzIxIiB5Mj0iMS4wMzk2MTQiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNmYjZjNDgiLz48c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iI2ZmOTQ3MyIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmY2Y4OSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
@@ -261,7 +266,6 @@ ul, li {
 .btn-custom a {
   font-size: 1em;
   display: block;
-  padding: 6px 10px;
   border-radius: 50px;
   color: #fff;
 }
@@ -288,6 +292,7 @@ ul, li {
 .btn-custom span {
   position: relative;
   z-index: 3;
+  color: #fff;
 }
 .card .btn-custom {
   padding: 6px 10px;
@@ -346,7 +351,6 @@ ul, li {
 }
 
 .input-group .btn-secondary {
-  height: 40px;
   width: 48px;
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMDQ3MjEiIHkxPSItMC4wMzk2MTQiIHgyPSIwLjk1Mjc5IiB5Mj0iMS4wMzk2MTQiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNmYjZjNDgiLz48c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iI2ZmOTQ3MyIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmY2Y4OSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
   background-size: 100%;
@@ -381,7 +385,7 @@ ul, li {
 
 .wrapper {
   min-height: 100%;
-  padding: 70px 0 100px;
+  padding: 70px 0 170px;
 }
 #search .wrapper {
   padding-top: 50px;
@@ -490,9 +494,7 @@ footer {
   margin-top: 0;
   line-height: 20px;
   background: #fffdfb;
-  height: 60px;
-  margin-top: -60px;
-  padding-bottom: 160px;
+  margin-top: -160px;
 }
 footer .container {
   border-top: 1px solid #f6f6f6;
@@ -761,6 +763,45 @@ a.card-link .card {
 
 .modal-body {
   padding: 20px;
+}
+
+.modal-backdrop {
+  background: #fff;
+}
+.modal-backdrop.in {
+  opacity: .8;
+}
+
+.modal .modal-body {
+  padding: 50px 0;
+}
+.modal button {
+  width: 80%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+.modal h3 {
+  color: #6f6f6f;
+}
+.modal .vertical-alignment-helper {
+  display: table;
+  height: 100%;
+  width: 90%;
+  margin: 0 auto;
+}
+.modal .vertical-align-center {
+  /* To center vertically */
+  display: table-cell;
+  vertical-align: middle;
+}
+.modal .modal-content {
+  /* Bootstrap sets the size of the modal in the modal-dialog class, we need to inherit it */
+  width: inherit;
+  height: inherit;
+  /* To center horizontally */
+  margin: -80px auto 0;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  border: 0;
 }
 
 .close {

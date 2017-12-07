@@ -1,0 +1,206 @@
+.underline {
+  text-decoration: underline;
+  padding: 0 4px;
+}
+
+.input-password {
+  position: relative;
+}
+.input-password .icon-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30px;
+  height: 30px;
+}
+.input-password .icon-wrapper i {
+  line-height: 34px;
+  width: 34px;
+  height: 34px;
+  text-align: left;
+  cursor: pointer;
+}
+
+input[type='password'], input[type='text'] {
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857;
+  color: #555555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+
+.member-form {
+  margin-bottom: 50px;
+}
+.member-form h2 {
+  font-size: 24px;
+}
+.member-form p {
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+.member-form button {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.member-form button.btn-secondary {
+  color: #6f6f6f;
+}
+.member-form button i {
+  color: #fff;
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
+  border-radius: 28px;
+  margin-right: 6px;
+  text-align: center;
+}
+.member-form button i.fa-facebook {
+  background: #3B5998;
+}
+.member-form button i.fa-google {
+  background: #DC4E41;
+}
+.member-form .link a {
+  color: #6f6f6f;
+  text-decoration: underline;
+}
+.member-form .form-group {
+  margin-bottom: 10px;
+}
+.member-form small {
+  color: #6f6f6f;
+  display: inline-block;
+}
+.member-form small.help-block {
+  margin: 2px 0;
+  color: #fb6c48;
+}
+.member-form small.countdown {
+  float: right;
+  margin: 2px 0;
+}
+.member-form .has-error .form-control {
+  border: 1px solid #fb6c48;
+}
+.member-form .has-error .form-control:focus {
+  border: 1px solid #ef4130;
+}
+@media only screen and (max-width: 320px) {
+  .member-form p {
+    font-size: 14px;
+  }
+}
+
+.or-line {
+  position: relative;
+}
+.or-line span {
+  width: 40px;
+  display: inline-block;
+}
+.or-line:before {
+  content: '';
+  display: inline-block;
+  border-bottom: 1px solid #ccc;
+}
+
+.mytextdiv {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 20px 0;
+}
+.mytextdiv .mytexttitle {
+  flex-grow: 0;
+  padding: 0 10px;
+  color: #6f6f6f;
+}
+.mytextdiv .divider {
+  flex-grow: 1;
+  height: 1px;
+  background-color: #6f6f6f;
+}
+
+.text {
+  text-align: center;
+}
+.text a {
+  color: #fb6c48;
+}
+
+form-group.required .control-label:after {
+  color: #d00;
+  content: "*";
+  position: absolute;
+  margin-left: 8px;
+  top: 7px;
+}
+
+.radio {
+  display: inline-block;
+  position: relative;
+  margin: 0 10px;
+  font-size: 16px;
+  line-height: 32px;
+}
+.radio_input {
+  position: absolute;
+  top: 4px;
+  left: 0;
+  width: 36px;
+  height: 20px;
+  opacity: 0;
+  z-index: 0;
+}
+.radio label {
+  padding-left: 30px;
+}
+.radio_label {
+  display: block;
+  padding: 0 0 0 24px;
+  cursor: pointer;
+}
+.radio_label:before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 0;
+  width: 22px;
+  height: 22px;
+  background-color: transparent;
+  border: 3px solid #ccc;
+  border-radius: 14px;
+  z-index: 1;
+  transition: border-color 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.radio_label:after {
+  content: '';
+  position: absolute;
+  top: 9px;
+  left: 5px;
+  width: 12px;
+  height: 12px;
+  background-color: #fb6c48;
+  border-radius: 50%;
+  z-index: 2;
+  transform: scale(0, 0);
+  transition: transform 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.radio_input:checked + .radio_label:before {
+  border-color: #ccc;
+}
+.radio_input:checked + .radio_label:after {
+  transform: scale(1, 1);
+}

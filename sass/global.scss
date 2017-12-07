@@ -22,7 +22,7 @@ body {
 	font-family: 'Roboto', "source-han-sans-traditional", sans-serif, 'times',"Microsoft JhengHei";
 	word-wrap: break-word;
 	word-break: normal;
-    
+    padding: 0!important;
 }
 
 //basic style
@@ -267,8 +267,12 @@ ul, li {
 	display: block;
 	text-align: center;
 	margin: 10px auto;
+    padding: 6px 16px;
 	font-weight: bold;
 	border-radius: 50px;
+    color: $white;
+    border: 0;
+    font-size: 16px;
 	-webkit-backface-visibility: hidden;
 	z-index: 1;
 	@include background-image(linear-gradient(220deg,$primary-color, $rose, $secondary-color));
@@ -277,7 +281,7 @@ ul, li {
 	a {
 		font-size: $m-font;
 		display: block;
-		padding: 6px 10px;
+//		padding: 6px 10px;
 		border-radius: 50px;
 		color: $white;
 	}
@@ -302,6 +306,7 @@ ul, li {
 	span {
 		position: relative;
 		z-index: 3;
+        color: $white;
 	}
 	.card & {
 		padding: 6px 10px;
@@ -366,7 +371,6 @@ ul, li {
 
 .input-group {
 	.btn-secondary {
-		height: 40px;
 		width: 48px;
         @include background-image(linear-gradient(140deg,$primary-color, $rose, $secondary-color));
         position: relative;
@@ -398,7 +402,7 @@ ul, li {
 //basic
 .wrapper {
 	min-height: 100%;
-	padding: 70px 0 100px;
+	padding: 70px 0 170px;
 	#search & {
 		padding-top: 50px;
 	}
@@ -536,9 +540,9 @@ footer {
 	margin-top: 0;
 	line-height: 20px;
 	background: $light-skin;
-	height: 60px;
-	margin-top: -60px;
-    padding-bottom: 160px;
+//	height: 60px;
+	margin-top: -160px;
+//    padding-bottom: 170px;
 //    margin-bottom: 90px;
 	.container {
 		border-top: 1px solid $light-gray;
@@ -888,6 +892,46 @@ a.card-link .card {
 }
 .modal-body {
 	padding: 20px;
+}
+.modal-backdrop {
+    background: $white;
+    &.in {
+        opacity: .8;
+    }
+}
+
+.modal {
+    .modal-body {
+        padding: 50px 0;
+    }
+    button {
+        width: 80%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    h3 {
+        color: $gray;
+    }
+    .vertical-alignment-helper {
+        display:table;
+        height: 100%;
+        width: 90%;
+        margin: 0 auto;
+    }
+    .vertical-align-center {
+        /* To center vertically */
+        display: table-cell;
+        vertical-align: middle;
+    }
+    .modal-content {
+        /* Bootstrap sets the size of the modal in the modal-dialog class, we need to inherit it */
+        width:inherit;
+        height:inherit;
+        /* To center horizontally */
+        margin: -80px auto 0;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        border: 0;
+    }
 }
 .close {
 	position: absolute;

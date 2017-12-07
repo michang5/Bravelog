@@ -1,0 +1,233 @@
+@charset 'utf-8';
+@import 'compass';
+@import 'base/fonts';
+@import 'base/style';
+@import 'base/media';
+@import "compass/utilities/sprites";
+//@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700'); 
+//@import 'base/css3-mixins';
+
+.underline {
+    text-decoration: underline;
+    padding: 0 4px;
+}
+.input-password {
+    position: relative;
+    .icon-wrapper {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 30px;
+        height: 30px;
+        i {
+            line-height: 34px;
+            width: 34px;
+            height: 34px;
+            text-align: left;
+            cursor: pointer;
+        }
+    }
+}
+input[type='password'], input[type='text'] {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857;
+    color: #555555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -webkit-transition: border-color ease-in-out 0.15s,
+    box-shadow ease-in-out 0.15s;
+    -o-transition: border-color ease-in-out 0.15s,
+    box-shadow ease-in-out 0.15s;
+    transition: border-color ease-in-out 0.15s,
+    box-shadow ease-in-out 0.15s;
+}
+.member-form {
+    margin-bottom: 50px;
+    h2 {
+        font-size: 24px;
+    }
+    p {
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
+    button {
+        width: 100%;
+        margin-bottom: 10px;
+//        height: 40px;
+//        line-height: 40px;
+        &.btn-secondary {
+            color: $gray;
+        }
+        i {
+            color: $white;
+            width: 28px;
+            height: 28px;
+            line-height: 28px;
+            border-radius: 28px;
+            margin-right: 6px;
+            text-align: center;
+            &.fa-facebook {
+                background: #3B5998;
+            }
+            &.fa-google {
+                background: #DC4E41;
+            }
+        }
+    }
+    input {
+//        margin-bottom: 10px;
+    }
+    
+    .link {
+        a {
+            color: $gray;
+            text-decoration: underline;
+        }
+        
+    }
+    .form-group {
+        margin-bottom: 10px;
+    }
+    
+    small {
+        color: $gray;
+//        padding: 0 13px;
+        display: inline-block;
+        &.help-block {
+            margin: 2px 0;
+            color: $orange;
+        }
+        &.countdown {
+            float: right;
+            margin: 2px 0;
+        }
+    }
+    .has-error {
+        .form-control {
+            border: 1px solid $orange;
+            &:focus {
+                border: 1px solid $orange-red;
+            }
+        }
+    }
+    @include respond-to (xxs-mobile){
+        p {
+            font-size: 14px;
+        }
+    }
+}
+.or-line {
+    position: relative;
+    span {
+        width: 40px;
+        display: inline-block;
+    }
+    &:before {
+        content: '';
+        display: inline-block;
+        border-bottom: 1px solid $medium-gray;
+    }
+}
+.mytextdiv{
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+    margin: 20px 0;
+    .mytexttitle {
+        flex-grow: 0;
+        padding: 0 10px;
+        color: $gray;
+    }
+    .divider {
+        flex-grow:1;
+        height: 1px;
+        background-color: $gray;
+    }
+}
+.text {
+    text-align: center;
+    a {
+        color: $orange;
+    }
+}
+form-group.required .control-label:after { 
+    color: #d00;
+    content: "*";
+    position: absolute;
+    margin-left: 8px;
+    top:7px;
+}
+// Radio
+.radio {
+    display: inline-block;
+    position: relative;
+    margin: 0 10px;
+    font-size: 16px;
+    line-height: 32px;
+    
+    &_input {
+        position: absolute;
+        top: 4px;
+        left: 0;
+        width: 36px;
+        height: 20px;
+        opacity: 0;
+        z-index: 0;
+    }
+	label {
+		padding-left: 30px;
+	}
+    // Unchecked
+    &_label {
+        display: block;
+        padding: 0 0 0 24px;
+        cursor: pointer;
+        
+        &:before {
+            content: '';
+            position: absolute;
+            top: 4px;
+            left: 0;
+            width: 22px;
+            height: 22px;
+            background-color: transparent;
+            border: 3px solid $medium-gray;
+            border-radius: 14px;
+            z-index: 1;
+            transition: border-color 0.28s cubic-bezier(.4, 0, .2, 1);
+        }
+         
+        &:after {
+            content: '';
+            position: absolute;
+            top: 9px;
+            left: 5px;
+            width: 12px;
+            height: 12px;
+            background-color: $orange;
+            border-radius: 50%;
+            z-index: 2;
+            transform: scale(0, 0);
+            transition: transform 0.28s cubic-bezier(.4, 0, .2, 1);
+        }
+    }
+    
+    // Checked
+    &_input:checked + &_label {
+        &:before {
+            border-color: $medium-gray;
+        }
+        
+        &:after {
+            transform: scale(1, 1);
+        }
+    }
+}
