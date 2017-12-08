@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+	<meta name="description" content="">
+
+	<!--og info-->
+	<meta property="og:title" content="Bravelog"/>
+	<meta property="og:url" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:site_name" content="Bravelog"/>
+	<meta property="og:description" content="">
+
+	<title>Bravelog</title>
+ 
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	
+	<meta name="google-site-verification" content="-MLXb98KIXlOE_dmJ18CK9Ynil6NnPMRct9vU1ZYDpg" />
+	<!--css-->
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.11.2/css/bootstrap-select.min.css">
+	<link href="css/global.css" rel="stylesheet">
+	<link href="css/member.css" rel="stylesheet">
+	<link href="fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lora|Roboto:400,500" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet">
+	<!--[if lt IE 9]>
+		<script type="text/javascript" src="js/html5shiv.min.js"></script>
+		<script type="text/javascript" src="js/respond.min.js"></script>
+	<![endif]-->
+	<!--GA-->
+</head>
+<body>
+    <div id="top" class="wrapper">
+        <header class="navbar-fixed-top">
+			<div class="container">
+				<h2 class="logo"><a href="index.html"><img src="images/logo_bravelog.png" alt="Bravelog"></a></h2>
+				<ul class="right-nav">
+				    <li class="member"><a href="login.html"></a></li>
+					<li class="language dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">中<i class="fa fa-caret-down" aria-hidden="true"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#" target="_blank">EN</a></li>
+                        </ul>
+                    </li>
+				</ul>
+			</div>
+		</header>
+
+        <section class="member-info">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-offset-3 col-sm-6">
+                        <div class="avatar-wrapper">
+                            <img src="images/avatar_default.png" alt="李夏新" class="avatar">
+                            <div class="camera"><i class="fa fa-camera" aria-hidden="true"></i></div>
+                        </div>
+                        <h4><span class="name">李夏新</span>
+                            <span class="eng-name">HSIA-HSIN, LI</span>
+                        </h4>
+                        <div class="row basic-info">
+                            <div class="col-xs-7">
+                                <span class="mail">haiahsinhaiahsin@email.com</span>
+                                <span class="gender">男</span>
+                            </div>
+                            <div class="col-xs-5">
+                                <button class="btn btn-secondary" onclick="location.href='athlete.html'">我的選手專頁</button>
+                            </div>
+                        </div>
+                        <div class="logo-line">
+                            <div class="divider"></div>
+                            <img src="images/logo-small.png" alt="bravelog" class="logo">
+                            <div class="divider"></div>
+                        </div>
+                        <h2 class="text-center">綁定我的運動裝置</h2>
+                        <form>
+                            <div class="form-group">
+                                <select class="selectpicker">
+                                    <option selected disabled>請選擇裝置品牌</option>
+                                    <option>Garmin</option>
+                                    <option>裝置二</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <span>公開裝置資料</span>
+                                <div class="radio">
+                                    <input type="radio" name="sport-device" id="public" class="radio_input" checked>
+                                    <label for="public" class="radio_label">是</label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" name="sport-device" id="private" class="radio_input">
+                                    <label for="private" class="radio_label">否</label>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn-custom"><span>確認綁定</span></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="device-info">
+           <div class="container">
+                <div class="logo-line">
+                    <div class="divider gray"></div>
+                    <img src="images/logo-small-gray.png" alt="bravelog" class="logo">
+                    <div class="divider gray"></div>
+                </div>
+                <h3>目前綁定的裝置</h3>
+                <div class="device-brand">
+                    <div class="row">
+                        <div class="col-xs-3">
+                           <h4>Garmin</h4>
+                        </div>
+                        <div class="col-xs-9">
+                            <div class="btn-container">
+                            <button class="btn btn-secondary" onclick="location.href='#'">重整</button>
+                            <button class="btn btn-secondary" onclick="location.href='#'">不公開</button>
+                            <button class="btn btn-secondary" onclick="location.href='#'">解除綁定</button>
+                        </div>
+                       </div>
+                    </div>
+                    <ul class="device-list">
+                        <li>fēnix® 5S</li>
+                        <li>Forerunner® 935</li>
+                        <li>fēnix® 5X</li>
+                    </ul>
+                </div>
+                <div class="device-brand">
+                    <div class="row">
+                        <div class="col-xs-3">
+                           <h4>Fitbit</h4>
+                        </div>
+                        <div class="col-xs-9">
+                            <div class="btn-container">
+                            <button class="btn btn-secondary" onclick="location.href='#'">重整</button>
+                            <button class="btn btn-secondary" onclick="location.href='#'">不公開</button>
+                            <button class="btn btn-secondary" onclick="location.href='#'">解除綁定</button>
+                        </div>
+                       </div>
+                    </div>
+                    <ul class="device-list">
+                        <li>flex2</li>
+                        <li>Alta</li>
+                        <li>Alta HR</li>
+                    </ul>
+                </div>
+           </div>
+        </section>
+        <section class="device-sorting">
+           <div class="container">
+                <div class="logo-line">
+                    <div class="divider gray"></div>
+                    <img src="images/logo-small-gray.png" alt="bravelog" class="logo">
+                    <div class="divider gray"></div>
+                </div>
+                <h3>目前綁定的裝置</h3>
+                <div class="tab-all">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a data-toggle="tab" href="#swim">游泳</a></li>
+                        <li><a data-toggle="tab" href="#bike">腳踏車</a></li>
+                        <li><a data-toggle="tab" href="#run">路跑</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div id="swim" class="tab-pane in active">
+                            <ul class="sort-list sort-list-1">
+                                <li>
+                                    <img src="images/device_1.png" alt="">
+                                    <span class="device-name">Garmin fēnix® 5XGarmin fēnix® 5X</span>
+                                    <span class="sort-icon"></span>
+                                </li>
+                                <li>
+                                    <img src="images/device_2.png" alt="">
+                                    <span class="device-name">Garmin Forerunner® </span>
+                                    <span class="sort-icon"></span>
+                                </li>
+                                <li>
+                                    <img src="images/device_3.png" alt="">
+                                    <span class="device-name">Garmin Forerunner® </span>
+                                    <span class="sort-icon"></span>
+                                </li>
+                                <li>
+                                    <img src="images/device_4.png" alt="">
+                                    <span class="device-name">itbit flex2</span>
+                                    <span class="sort-icon"></span>
+                                </li>
+                                <li>
+                                    <img src="images/device_5.png" alt="">
+                                    <span class="device-name">Fitbit Alta</span>
+                                    <span class="sort-icon"></span>
+                                </li>
+                                <li>
+                                    <img src="images/device_6.png" alt="">
+                                    <span class="device-name">Fitbit Alta HR</span>
+                                    <span class="sort-icon"></span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="bike" class="tab-pane in">
+                            <ul class="sort-list sort-list-2">
+                                <li>
+                                    <img src="images/device_1.png" alt="">
+                                    <span class="device-name">Garmin fēnix® 5XGarmin fēnix® 5X</span>
+                                    <span class="sort-icon"></span>
+                                </li>
+                                <li>
+                                    <img src="images/device_2.png" alt="">
+                                    <span class="device-name">Garmin Forerunner® </span>
+                                    <span class="sort-icon"></span>
+                                </li>
+                                <li>
+                                    <img src="images/device_3.png" alt="">
+                                    <span class="device-name">Garmin Forerunner® </span>
+                                    <span class="sort-icon"></span>
+                                </li>
+                                <li>
+                                    <img src="images/device_4.png" alt="">
+                                    <span class="device-name">itbit flex2</span>
+                                    <span class="sort-icon"></span>
+                                </li>
+                                <li>
+                                    <img src="images/device_5.png" alt="">
+                                    <span class="device-name">Fitbit Alta</span>
+                                    <span class="sort-icon"></span>
+                                </li>
+                                <li>
+                                    <img src="images/device_6.png" alt="">
+                                    <span class="device-name">Fitbit Alta HR</span>
+                                    <span class="sort-icon"></span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="run" class="tab-pane in">
+                            <ul class="sort-list sort-list-3">
+                                <li>
+                                    <img src="images/device_1.png" alt="">
+                                    <span class="device-name">Garmin fēnix® 5XGarmin fēnix® 5X</span>
+                                    <span class="sort-icon"></span>
+                                </li>
+                                <li>
+                                    <img src="images/device_2.png" alt="">
+                                    <span class="device-name">Garmin Forerunner® </span>
+                                    <span class="sort-icon"></span>
+                                </li>
+                                <li>
+                                    <img src="images/device_3.png" alt="">
+                                    <span class="device-name">Garmin Forerunner® </span>
+                                    <span class="sort-icon"></span>
+                                </li>
+                                <li>
+                                    <img src="images/device_4.png" alt="">
+                                    <span class="device-name">itbit flex2</span>
+                                    <span class="sort-icon"></span>
+                                </li>
+                                <li>
+                                    <img src="images/device_5.png" alt="">
+                                    <span class="device-name">Fitbit Alta</span>
+                                    <span class="sort-icon"></span>
+                                </li>
+                                <li>
+                                    <img src="images/device_6.png" alt="">
+                                    <span class="device-name">Fitbit Alta HR</span>
+                                    <span class="sort-icon"></span>
+                                </li>
+                            </ul>
+                        </div>
+                   </div>
+                </div>
+
+            </div>
+        </section>
+    </div>
+	<footer>
+		<div class="container">
+			<span>地址：台北市大安區安和路一段27號11F</span>
+			<span>信箱：<a href="mailto:itri454135@itri.org.tw">itri454135@itri.org.tw</a></span>
+			<span>版權所有©2017 台灣鐵人三項有限公司</span>
+			<span><a href="/Home/Privacy">Bravelog隱私權政策</a></span>
+		</div>
+	</footer>
+
+	
+	<!--jQuery--> 
+	<script type="text/javascript" src="js/jquery-2.2.4.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery-sortable.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js" ></script>
+	<script type="text/javascript" src="js/script.js" ></script>
+    <script type="text/javascript" src="js/forms.js" ></script>
+    <script>
+        $(function  () {
+          $(".sort-list-1, .sort-list-2, .sort-list-3").sortable();
+        });
+    </script>
+
+</body>
+</html>
