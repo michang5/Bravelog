@@ -122,6 +122,9 @@ input[type='password'], input[type='text'] {
   align-items: center;
   margin: 26px 0;
 }
+#athlete .mytextdiv, #athlete .logo-line {
+  margin: 16px 0;
+}
 .mytextdiv .mytexttitle, .mytextdiv .logo, .logo-line .mytexttitle, .logo-line .logo {
   flex-grow: 0;
   padding: 0 10px;
@@ -418,4 +421,106 @@ form-group.required .control-label:after {
   background-repeat: no-repeat;
   background-position: left bottom;
   vertical-align: middle;
+}
+
+.performance-card {
+  background: #fff;
+  margin-bottom: 20px;
+  padding-bottom: 6px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 2px rgba(76, 74, 72, 0.3);
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.performance-card h3.title {
+  background-color: #F7F7F7;
+  text-align: center;
+  font-weight: normal;
+  color: #4C4A48;
+  font-size: 18px;
+  margin: 0;
+  line-height: 50px;
+}
+.performance-card .row.info {
+  margin: 16px 0;
+  text-align: center;
+}
+.performance-card .row.info span:before {
+  content: "";
+  display: inline-block;
+  width: 36px;
+  height: 27px;
+  background-size: 36px;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  vertical-align: middle;
+}
+.performance-card .row.info span.swim:before {
+  background-image: url("../images/icon_tab_swim.png");
+}
+.performance-card .row.info span.bike:before {
+  background-image: url("../images/icon_tab_bike.png");
+}
+.performance-card .row.info span.run:before {
+  background-image: url("../images/icon_tab_run.png");
+}
+.performance-card .col-xs-6 {
+  text-align: center;
+}
+.performance-card .col-xs-4 {
+  border-right: 1px solid #ccc;
+}
+.performance-card .col-xs-4:nth-last-of-type(1) {
+  border-right: 0;
+}
+
+.form-group[class*='col-'] {
+  padding-left: 0;
+  padding-right: 5px;
+}
+.form-group[class*='col-'] button {
+  margin: 0;
+  height: 32px;
+}
+.form-group[class*='col-']:nth-last-of-type(1) {
+  padding-right: 0;
+}
+.form-group[class*='col-'] .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+  width: auto;
+  width: 100%;
+}
+
+.panel-default > .panel-heading {
+  background-color: #F7F7F7;
+  border: 0;
+}
+
+.panel {
+  border-radius: 0;
+  border: 0;
+  margin-bottom: 0;
+  border-bottom: 1px solid #eee;
+}
+.panel:nth-last-of-type(1) {
+  border-bottom: 0;
+}
+.panel .panel-heading {
+  padding: 0;
+  border-radius: 0;
+}
+.panel h4.panel-title {
+  color: #6f6f6f;
+  text-align: left;
+  margin: 0;
+}
+.panel h4.panel-title a {
+  display: block;
+  padding: 10px 15px;
+}
+.panel h4.panel-title a:hover {
+  background-color: #fff6f0;
+}
+.panel h4.panel-title span {
+  display: inline-block;
 }

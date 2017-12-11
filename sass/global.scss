@@ -1304,7 +1304,7 @@ h4 {
 }
 ///////----------------athlete
 .athlete {
-	width: 96%;
+	width: 92%;
 	margin: 0 auto;
 	margin-bottom: 20px;
 	color: $gray;
@@ -2983,7 +2983,11 @@ p.results {
     margin: 0 .5%;
     display: inline-block;
 }
-
+.width-100 {
+    width: 98%;
+    margin: 16px .5%;
+    display: inline-block;
+}
 .variable-width {
 	margin: 40px auto;
 	width: 90%;
