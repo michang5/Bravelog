@@ -1,0 +1,465 @@
+@charset 'utf-8';
+@import 'compass';
+@import 'base/fonts';
+@import 'base/style';
+@import 'base/media';
+@import "compass/utilities/sprites";
+//@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700'); 
+//@import 'base/css3-mixins';
+
+.live-map {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	background: url('images/703bike_map.png');
+	border: 1px solid $medium-gray;
+//	margin: 20px auto;
+//	background-size: cover;
+	
+	.dashboard {
+		z-index: 99;
+		position: absolute;
+		top: 8px;
+		left: 8px;
+		padding: 10px;
+		background: rgba($white,.8);
+		width: 200px;
+		height: 80px;
+		font-size: $xl-font;
+		font-weight: 500;
+		box-shadow: 0 0 2px 1px rgba($medium-gray,.8);
+		.sport-icon, .map-info {
+			display: inline-block;
+			vertical-align: top;
+		}
+		.map-info > span {
+			display: block;
+			line-height: 30px;
+			span {
+				padding-right: 4px;
+				&.item, &.time {
+					color: $primary-color;
+				}
+			}
+			.dist {
+				color: $gray;
+			}
+			.turn {
+				background: $DarkTurquoise;
+				color: white;
+				border-radius: 2px;
+				padding: 0 5px;
+				font-size: 14px;
+				display: inline;
+			}
+		}
+	}
+	.sport-icon {
+		width: 40px;
+		height: 40px;
+		margin-right: 3px;
+		display: inline-block;
+	}
+	&#map-sport1-1 {
+		background: url('../images/703swim_map.png');
+		background-size: cover;
+		.sport-icon {
+			background: url('../images/icon_swim.png') no-repeat;
+			background-size: cover;
+		}
+	}
+	&#map-sport1-2 {
+		background: url('../images/703bike_map.png');
+		background-size: cover;
+		.sport-icon {
+			background: url('../images/icon_bike.png') no-repeat;
+			background-size: cover;
+		}
+	}
+	&#map-sport1-3 {
+		background: url('../images/703run_map.png');
+		background-size: cover;
+		.sport-icon {
+			background: url('../images/icon_run.png') no-repeat;
+			background-size: cover;
+		}
+		.dashboard {
+			right: 8px;
+			left: auto;
+		}
+		@media screen and (max-width: 567px) {
+			.dashboard {
+				padding: 10px 8px;
+			}
+		}
+	}
+	&#map-sport2-1 {
+		background: url('../images/5i50swim_map.png');
+		background-size: cover;
+		.sport-icon {
+			background: url('../images/icon_swim.png') no-repeat;
+			background-size: cover;
+		}
+	}
+	&#map-sport2-1-2 {
+		background: url('../images/5i50swim-run_map.png');
+		background-size: cover;
+		.sport-icon {
+			background: url('../images/icon_run.png') no-repeat;
+			background-size: cover;
+		}
+	}
+	&#map-sport2-2 {
+		background: url('../images/5i50bike_map.png');
+		background-size: cover;
+		.sport-icon {
+			background: url('../images/icon_bike.png') no-repeat;
+			background-size: cover;
+		}
+	}
+	&#map-sport2-3 {
+		background: url('../images/5i50run_map.png');
+		background-size: cover;
+		.sport-icon {
+			background: url('../images/icon_run.png') no-repeat;
+			background-size: cover;
+		}
+		.dashboard {
+			right: 8px;
+			left: auto;
+		}
+		@media screen and (max-width: 567px) {
+			.dashboard {
+				padding: 10px 8px;
+			}
+		}
+	}
+	&#map-sport3-1 {
+		background: url('../images/5i50run_map.png');
+		background-size: cover;
+		.sport-icon {
+			background: url('../images/icon_run.png') no-repeat;
+			background-size: cover;
+		}
+		.dashboard {
+			right: 8px;
+			left: auto;
+		}
+		@media screen and (max-width: 567px) {
+			.dashboard {
+				padding: 10px 8px;
+			}
+		}
+	}
+//	DuathlonRun
+	&#map-sport4-1 {
+		background: url('../images/DuathlonRun_Map.png');
+		background-size: cover;
+		.sport-icon {
+			background: url('../images/icon_run.png') no-repeat;
+			background-size: cover;
+		}
+	}
+//	DuathlonBike
+	&#map-sport4-2 {
+		background: url('../images/DuathlonBike_Map.png');
+		background-size: cover;
+		.sport-icon {
+			background: url('../images/icon_bike.png') no-repeat;
+			background-size: cover;
+		}
+	}
+//	DuathlonRun2
+	&#map-sport4-3 {
+		background: url('../images/DuathlonRun2_Map.png');
+		background-size: cover;
+		.sport-icon {
+			background: url('../images/icon_run.png') no-repeat;
+			background-size: cover;
+		}
+	}
+//	DuathlonTryTriRun
+	&#map-sport5-1 {
+		background: url('../images/DuathlonTryTriRun_Map.png');
+		background-size: cover;
+		.sport-icon {
+			background: url('../images/icon_run.png') no-repeat;
+			background-size: cover;
+		}
+	}
+//	DuathlonTryTriBike
+	&#map-sport5-2 {
+		background: url('../images/DuathlonTryTriBike_Map.png');
+		background-size: cover;
+		.sport-icon {
+			background: url('../images/icon_bike.png') no-repeat;
+			background-size: cover;
+		}
+	}
+//	DuathlonTryTriRun2
+	&#map-sport5-3 {
+		background: url('../images/DuathlonTryTriRun2_Map.png');
+		background-size: cover;
+		.sport-icon {
+			background: url('../images/icon_run.png') no-repeat;
+			background-size: cover;
+		}
+	}
+//	TriathlonSwin
+    &#map-sport6-1 {
+		background: url('../images/TriathlonSwin_Map.png');
+		background-size: cover;
+		.sport-icon {
+			background: url('../images/icon_swim.png') no-repeat;
+			background-size: cover;
+		}
+	}
+//	TriathlonBike
+    &#map-sport6-2 {
+		background: url('../images/TriathlonBike_Map.png');
+		background-size: cover;
+		.sport-icon {
+			background: url('../images/icon_bike.png') no-repeat;
+			background-size: cover;
+		}
+	}
+//	TriathlonRun
+    &#map-sport6-3 {
+		background: url('../images/TriathlonRun_Map.png');
+		background-size: cover;
+		.sport-icon {
+			background: url('../images/icon_run.png') no-repeat;
+			background-size: cover;
+		}
+	}
+//	TriathlonTryTriSwim
+    &#map-sport7-1 {
+		background: url('../images/TriathlonTryTriSwin_Map.png');
+		background-size: cover;
+		.sport-icon {
+			background: url('../images/icon_swim.png') no-repeat;
+			background-size: cover;
+		}
+	}
+//	TriathlonTryTriBike
+    &#map-sport7-2 {
+		background: url('../images/TriathlonTryTriBike_Map.png');
+		background-size: cover;
+		.sport-icon {
+			background: url('../images/icon_bike.png') no-repeat;
+			background-size: cover;
+		}
+	}
+//	TriathlonTryTriRun
+    &#map-sport7-3 {
+		background: url('../images/TriathlonTryTriRun_Map.png');
+		background-size: cover;
+		.sport-icon {
+			background: url('../images/icon_run.png') no-repeat;
+			background-size: cover;
+		}
+	}
+//	FulongSwim
+    &#map-sport8-1 {
+		background: url('../images/FulongSwim_Map.png');
+		background-size: cover;
+		.sport-icon {
+			background: url('../images/icon_swim.png') no-repeat;
+			background-size: cover;
+		}
+	}
+//	FulongBike
+    &#map-sport8-2 {
+		background: url('../images/FulongBike_Map.png');
+		background-size: cover;
+		.sport-icon {
+			background: url('../images/icon_bike.png') no-repeat;
+			background-size: cover;
+		}
+		.dashboard {
+			right: 8px;
+			left: auto;
+		}
+	}
+//	FulongRun 10k
+    &#map-sport8-3 {
+		background: url('../images/FulongRun10k_Map.png');
+		background-size: cover;
+		.sport-icon {
+			background: url('../images/icon_run.png') no-repeat;
+			background-size: cover;
+		}
+		.dashboard {
+			right: 8px;
+			left: auto;
+		}
+	}
+//	FulongRun 3k
+    &#map-sport8-4 {
+		background: url('../images/FulongRun3k_Map.png');
+		background-size: cover;
+		.sport-icon {
+			background: url('../images/icon_run.png') no-repeat;
+			background-size: cover;
+		}
+		.dashboard {
+			right: 8px;
+			left: auto;
+		}
+	}
+	@include respond-to (xxs-mobile){
+		.dashboard {
+			width: 154px;
+			font-size: 14px;
+			padding: 10px 4px;
+		}
+		&#map-sport1-1, &#map-sport1-2, &#map-sport1-3 {
+			.sport-icon {
+				width: 30px;
+				height: 30px;
+			}
+		}
+	}
+//	MasagoSwim
+    &#map-sport9-1 {
+		background: url('../images/MasagoSwim_map.png');
+		background-size: cover;
+		.sport-icon {
+			background: url('../images/icon_swim.png') no-repeat;
+			background-size: cover;
+		}
+	}
+//	MasagoBike
+    &#map-sport9-2 {
+		background: url('../images/MasagoBike_map.png');
+		background-size: cover;
+		.sport-icon {
+			background: url('../images/icon_bike.png') no-repeat;
+			background-size: cover;
+		}
+	}  
+//	MasagoRun
+    &#map-sport9-3 {
+		background: url('../images/MasagoRun_map.png');
+		background-size: cover;
+		.sport-icon {
+			background: url('../images/icon_run.png') no-repeat;
+			background-size: cover;
+		}
+		.dashboard {
+			right: 8px;
+			left: auto;
+		}
+	}
+//	MasagoDuathlonRun
+    &#map-sport10-1 {
+		background: url('../images/MasagoDuathlonRun_map.png');
+		background-size: cover;
+		.sport-icon {
+			background: url('../images/icon_run.png') no-repeat;
+			background-size: cover;
+		}
+		.dashboard {
+			right: 8px;
+			left: auto;
+		}
+	}
+//	MasagoDuathlonBike
+    &#map-sport10-2 {
+		background: url('../images/MasagoDuathlonBike_map.png');
+		background-size: cover;
+		.sport-icon {
+			background: url('../images/icon_bike.png') no-repeat;
+			background-size: cover;
+		}
+	}
+//	MasagoDuathlonRun10k
+    &#map-sport10-3 {
+		background: url('../images/MasagoDuathlonRun10k_map.png');
+		background-size: cover;
+		.sport-icon {
+			background: url('../images/icon_run.png') no-repeat;
+			background-size: cover;
+		}
+		.dashboard {
+			right: 8px;
+			left: auto;
+		}
+	}    
+//  PengHuSwim	
+    &#map-sport11-1 {
+		background: url('../images/PenghuSwim_Map.png');
+		background-size: cover;
+		.sport-icon {
+			background: url('../images/icon_swim.png') no-repeat;
+			background-size: cover;
+		}
+	}
+//  PengHuBike
+    &#map-sport12-1 {
+		background: url('../images/PenghuBIke_Map.png');
+		background-size: cover;
+		.sport-icon {
+			background: url('../images/icon_bike.png') no-repeat;
+			background-size: cover;
+		}
+        .dashboard {
+			right: 8px;
+			left: auto;
+            width: 154px;
+            font-size: 14px;
+			padding: 4px;
+            height: auto;
+		}
+	}
+//  PengHuRun
+    &#map-sport13-1 {
+		background: url('../images/PenghuRun_Map.png');
+		background-size: cover;
+		.sport-icon {
+			background: url('../images/icon_run.png') no-repeat;
+			background-size: cover;
+		}
+	}
+//  BuyenPavilion211
+    &#map-sport14-1 {
+		background: url('../images/BuyenPavilion211_Map.png');
+		background-size: cover;
+		.sport-icon {
+			background: url('../images/icon_run.png') no-repeat;
+			background-size: cover;
+		}
+        .dashboard {
+			right: 8px;
+			left: auto;
+		}
+	}
+//  BuyenPavilion42195
+    &#map-sport15-1 {
+		background: url('../images/BuyenPavilion42195_Map.png');
+		background-size: cover;
+		.sport-icon {
+			background: url('../images/icon_run.png') no-repeat;
+			background-size: cover;
+		}
+        .dashboard {
+			right: 8px;
+			left: auto;
+		}
+	}
+    img {
+		width: 100%;
+	}
+	&
+	.split-mask {
+		position: relative;
+		top: 0;
+		left: 0;
+		z-index: 4;
+//		top:0;
+//		position: absolute;
+//		background: red;
+//		width: 100%;
+//		border: 10px solid red;
+	}
+}

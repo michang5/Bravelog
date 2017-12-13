@@ -99,13 +99,11 @@ ul, li {
 }
 .btn:focus,.btn:active:focus,.btn.active:focus,
 .btn.focus,.btn:active.focus,.btn.active.focus {
-//    outline: none;
 }
 .btn-primary {
 	@include background-image(linear-gradient(160deg,$primary-color, $rose, $secondary-color));
 	&:hover, &:active, &:focus, &.active, &.dropdown-toggle, &.disabled {
 		border: 0;
-//		background-color: transparent;
 	}
 }
 .btn-default {
@@ -143,7 +141,6 @@ ul, li {
     height: 40px;
     line-height: 32px;
     padding: 0 10px;
-//    min-width: 120px;
     background-color: $gray-orange;
     color: $primary-color;
     border-radius: 32px;
@@ -159,15 +156,12 @@ ul, li {
         } 
     }
     .card & {
-//		padding: 6px 10px;
-//		color: $white;
 		width: 96%;
-//		box-shadow: none;
 		clear: both;
 		@include respond-to (only-desktop){
 			position: absolute;
-			width: 120px;
-			top: 15px;
+			width: 160px;
+			top: 10px;
 			right: 15px;
 			font-size: $s-font;
 			a {
@@ -176,45 +170,6 @@ ul, li {
 		}
 	}
 }
-//.navbar-fixed-top .btn-default {
-//    &.dropdown-toggle {
-//		.open & {
-//			width: 56px;
-//			border: 0;
-//			color: $white;
-//			background: rgba($thirdary-color,.95);
-//			&:hover, &:focus, &.focus {
-//				border: 0;
-//				color: $white;
-//				background: rgba($thirdary-color,.95);
-//			}
-//		}
-//	}
-//}
-//.navbar-fixed-top .dropdown-menu {
-//	min-width: 0;
-//	border: 0;
-//	padding: 0;
-//	background: rgba($thirdary-color,.95);
-//	border-radius: 0 0 4px 4px;
-//	margin: 0;
-//	overflow: hidden;
-//	width: 56px;
-//	text-align: center;
-//	> li {
-//		> a {
-//			color: $white;
-//			padding: 6px 20px;
-//			&:hover, &:focus {
-//				color: $white;
-//				background: rgba($primary-color,.8);
-//			}
-//		}
-//	}
-//	@include respond-to (normal-mobile){
-//		font-size: 12px;
-//	}
-//}
 .btn-sm {
 	color: $light-gray;
 	border-radius: 4px;
@@ -225,7 +180,6 @@ ul, li {
         display: block;
         color: $white;
     }
-//	margin: 0 5px;
 	@include respond-to (xxs-mobile){
 		font-size: $xxs-font;
 		padding: 4px 8px;
@@ -281,7 +235,6 @@ ul, li {
 	a {
 		font-size: $m-font;
 		display: block;
-//		padding: 6px 10px;
 		border-radius: 50px;
 		color: $white;
 	}
@@ -330,7 +283,6 @@ ul, li {
 	.btn-custom {
 		@include respond-to (only-desktop){
 			position: relative;
-//			width: 120px;
 		}
 	}
 }
@@ -342,13 +294,9 @@ ul, li {
 	display: block;
 	text-align: center;
 	margin: 6px auto;
-//	font-weight: bold;
 	background: $orange;
-//	border: 2px solid $orange;
-//	background: white;
 	border-radius: 14px;
 	padding: 4px;
-//	box-shadow: 0 2px 0 $rose;
 	a {
 		padding: 2px 4px;
 		color: $white;
@@ -409,9 +357,6 @@ ul, li {
 	@media screen and (min-width: 1336px) {
 		padding-top: 70px;
 	}
-//	> .container {
-//		padding-bottom: 100px;
-//	}
 }
 header {
 	text-align: center;
@@ -426,7 +371,6 @@ header {
 		line-height: 0;
 		img {
 			width: 160px;
-//			padding: 10px 0;
 		}
 	}
 	.right-nav {
@@ -462,20 +406,11 @@ header {
                 > a { 
                     display: block;
                     color: $primary-color;
-//                    background: none;
-//                    background-position: -50px 0;
                     &:focus, &:active, &:hover {
                         background: $primary-color;
                         color: $white;
-//                        background-position: -50px -60px;
                     }
                 }
-//                a.dropdown-toggle {
-//                   &:focus, &:active, &:hover {
-//                       color: $white;
-//                        background-color: $primary-color;
-//                    }
-//                }
                 .dropdown-menu {
                     width: 50px;
                     min-width: 0;
@@ -517,13 +452,6 @@ header {
             }
         }
 	}
-	@include respond-to (normal-mobile){
-//		h2.logo {
-//			img {
-//				width: 130px;
-//			}
-//		}
-	}
 	@include respond-to (xxs-mobile){
 		h2.logo {
 			img {
@@ -540,10 +468,7 @@ footer {
 	margin-top: 0;
 	line-height: 20px;
 	background: $light-skin;
-//	height: 60px;
 	margin-top: -160px;
-//    padding-bottom: 170px;
-//    margin-bottom: 90px;
 	.container {
 		border-top: 1px solid $light-gray;
 		padding-top: 10px;
@@ -560,8 +485,6 @@ footer {
 		}
 	}
 	@include respond-to (normal-mobile){
-//		margin-top: -80px;
-//        padding-bottom: 40px;
 		span {
 			display: block;
 		}
@@ -638,205 +561,147 @@ footer {
 	}
 }
 
-
 a.card-link {
 	display: block;
 }
 a.card-link .card {
 	color: $dark-gray;
 	display: block;
-    padding-bottom: 10px;
+//    padding-bottom: 10px;
 }
 
 //////---index search
 //#section1
-.top-banner {
-//	position: relative;
-	padding: 0;
-    @include box-primary-shadow;
-    .match-info {
-        text-align: center;
-        position: relative;
-        background: #000;
-    }
-    .countdown, .btn-custom {
-        display: inline-block;
-    }
-    .btn-custom {
-        display: inline-block;
-        width: 200px;
-        border-radius: 8px 8px 0 0;
-        margin: 0;
-        font-size: 16px;
-        box-shadow: none;
-    }
-    .countdown {
-//        background: $rose;
-        color: $white;
-        border-radius: 0 0 6px 6px;
-        padding: 6px 16px 10px;
-        line-height: $xxxl-font;
-        span {
-            display: block;
-            &:nth-child(2) {
-                font-size: $xxxl-font;
-            }
-        }
-    }
-    .item {
-        img {
-            width: 100%;
-            &~.match-info {
-                margin-top: -40px;
-                background: transparent;
-            }
-        }
-    }
-	.search-container {
-		width: 100%;
-		z-index: 3;
-		background: $light-gray;
-//        margin-top: -42px;
-		h3 {
-			margin: 0;
-			color: $gray;
-//			@include text-primary-shadow;
-			text-align: center;
-		}
-		.single-match {
-			width: 60%;
-			margin: 0 auto;
-			padding: 10px;
-			.input-group {
-//				@include box-light-shadow;
-			}
-			h5 {
-				text-align: center;
-			}
-		}
-	}
-//	.match-info {
-//		width: 100%;
-//		color: $red;
-//		padding: 10px;
-//		font-weight: bold;
-//        background: rgba($white,.6);
+//.top-banner {
+//	padding: 0;
+//    @include box-primary-shadow;
+//    .match-info {
+//        text-align: center;
 //        position: relative;
-//		.countdown {
-//			line-height: 20px;
-//			width: 65%;
-//			display: inline-block;
-//			span {
-//				font-size: $xl-font;
-//				&.live {
-//					border-radius: 10px;
-//					background: $red;
-//					color: white;
-//					padding: 0 10px;
-//					margin-right: 4px;
-//					font-size: $s-font;
-//					
-//				}
-////				@include text-light-shadow;
-//			}
+//        background: #000;
+//    }
+//    .countdown, .btn-custom {
+//        display: inline-block;
+//    }
+//    .btn-custom {
+//        display: inline-block;
+//        width: 200px;
+//        border-radius: 8px 8px 0 0;
+//        margin: 0;
+//        font-size: 16px;
+//        box-shadow: none;
+//    }
+//    .countdown {
+//        color: $white;
+//        border-radius: 0 0 6px 6px;
+//        padding: 6px 16px 10px;
+//        line-height: $xxxl-font;
+//        span {
+//            display: block;
+//            &:nth-child(2) {
+//                font-size: $xxxl-font;
+//            }
+//        }
+//    }
+//    .item {
+//        img {
+//            width: 100%;
+//            &~.match-info {
+//                margin-top: -40px;
+//                background: transparent;
+//            }
+//        }
+//    }
+//	.search-container {
+//		width: 100%;
+//		z-index: 3;
+//		background: $light-gray;
+//		h3 {
+//			margin: 0;
+//			color: $gray;
+//			text-align: center;
 //		}
-//		.btn-container {
-//			width: 80px;
-//			float: right; 
-//			display: inline-block;
-//			.btn-custom-sm {
-//				margin: 0;
+//		.single-match {
+//			width: 60%;
+//			margin: 0 auto;
+//			padding: 10px;
+//			.input-group {
+//            }
+//			h5 {
+//				text-align: center;
 //			}
 //		}
 //	}
-	@include respond-to (only-device){
-		.search-container {
-			h3 {
-				font-size: $l-font;
-			}
-			.single-match {
-				width: 100%;
-				padding: 10px 10px 14px;
-			}
-		}
-        .match-info {
-            position: static;
-            background: #000;
-        }
-        .countdown {
-            padding: 3px 12px 8px;
-            line-height: $xxl-font;
-            span {
-                &:nth-of-type(1) {
-                    font-size: $xxs-font;
-                }
-            }
-        }
-        .item {
-            img {
-                margin-top: 0;
-            }
-        }
-	}
-	@media screen and (max-width: 767px) {
-		.match-info {
-//			margin-top: 0;
-			
-			.countdown {
+//	@include respond-to (only-device){
+//		.search-container {
+//			h3 {
+//				font-size: $l-font;
+//			}
+//			.single-match {
 //				width: 100%;
-//				text-align: center;
-			}
-			.btn-container {
-//				position: absolute;
-//				bottom: 100px;
-//				right: 0;
-//				width: 70px;
-//				float: none; 
-//				display: inline-block;
-			}
-		}
-	}
-	@include respond-to (normal-mobile){
-		.search-container {
-			h3 {
-			}
-			.single-match {
-				width: 100%;
-			}
-		}
-        .item {
-            img {
-                &~.match-info {
-                    background: #000;
-                    margin-top: -30px;
-                }
-            }
-        }
-	}
-	@include respond-to (xxs-mobile){
-		.match-info {
-			margin-top: 0;
-			background: #f9f9f9;
-			border-bottom: 1px solid #fff;
-			height: 36px;
-			.btn-container {
-				.btn-custom-sm {
-					margin-top: 0;
-				}
-			}
-		}
-	}
-	@media screen and (min-width: 1336px) {
-		&.container {
-			width: 1336px;
-		}
-	}
-	@media screen and (max-width: 1336px) {
-		&.container {
-			width: 100%;
-		}
-	}
-}
+//				padding: 10px 10px 14px;
+//			}
+//		}
+//        .match-info {
+//            position: static;
+//            background: #000;
+//        }
+//        .countdown {
+//            padding: 3px 12px 8px;
+//            line-height: $xxl-font;
+//            span {
+//                &:nth-of-type(1) {
+//                    font-size: $xxs-font;
+//                }
+//            }
+//        }
+//        .item {
+//            img {
+//                margin-top: 0;
+//            }
+//        }
+//	}
+//	@include respond-to (normal-mobile){
+//		.search-container {
+//			h3 {
+//			}
+//			.single-match {
+//				width: 100%;
+//			}
+//		}
+//        .item {
+//            img {
+//                &~.match-info {
+//                    background: #000;
+//                    margin-top: -30px;
+//                }
+//            }
+//        }
+//	}
+//	@include respond-to (xxs-mobile){
+//		.match-info {
+//			margin-top: 0;
+//			background: #f9f9f9;
+//			border-bottom: 1px solid #fff;
+//			height: 36px;
+//			.btn-container {
+//				.btn-custom-sm {
+//					margin-top: 0;
+//				}
+//			}
+//		}
+//	}
+//	@media screen and (min-width: 1336px) {
+//		&.container {
+//			width: 1336px;
+//		}
+//	}
+//	@media screen and (max-width: 1336px) {
+//		&.container {
+//			width: 100%;
+//		}
+//	}
+//}
 .arrow {
 	width: 60px;
 	height: 60px;
@@ -1258,6 +1123,7 @@ h4 {
     border-top: 1px solid $gray-orange;
 	.sport-info {
 		padding-top: 0;
+        padding-top: 10px;
 	}
 	h5 {
 		font-size: $xl-font;
@@ -1320,21 +1186,7 @@ h4 {
 		padding-right: 0;
         padding-left: 5px;
 		line-height: 30px;
-//		h5 {
-//			margin-top: 5px;
-//			line-height: 1.6;
-//			.fraction {
-//				font-size: $xxl-font;
-//			}
-//		}
 	}
-//	h3 {
-//		color: $primary-color;
-//		border-bottom: 1px solid $rose;
-//		i {
-//			margin-right: 5px;
-//		}
-//	}
     .btn {
         position: absolute;
         right: 0;
@@ -1357,16 +1209,6 @@ h4 {
 		h4 {
 			font-size: $l-font;
 		}
-//		h5 {
-//			font-size: $s-font;
-//		}
-//		.col-xs-4 {
-//			h5 {
-//				.fraction {
-//					font-size: $xl-font;
-//				}
-//			}
-//		}
 	}
 }
 .nav-tabs {
@@ -1377,9 +1219,6 @@ h4 {
 	width: 100%;
 	border-collapse: separate;
 	border-spacing: 0;
-//	margin-left: -1px;
-//	margin-right: -1px;
-//	border-bottom: 2px solid $DarkTurquoise;
     border: 0;
 	> li {
 		display: table-cell;
@@ -1409,7 +1248,6 @@ h4 {
 			}
 		}
 		> a {
-//			border-radius: 4px 4px 0 0;
 			line-height: 39px;
 			padding: 0 6px;
 			box-shadow: inset 0 0 2px rgba(#ccc,.6);
@@ -1465,13 +1303,6 @@ h4 {
             }
 		}
 	}
-	@media screen and (max-width: 590px) {
-//		margin-left: -1px;
-//		margin-right: -1px;
-		> li {
-//			width: 33%;
-		}
-	}
 	@include respond-to (xxs-mobile){
 		> li {
 			font-size: 12px;
@@ -1479,7 +1310,6 @@ h4 {
 	}
 }
 .tab-content {
-	padding-top: 20px;
 	.row {
 		text-align: center;
 		.col-sm-4 {
@@ -1500,7 +1330,6 @@ h4 {
 		width: 110px;
 		float: right;
 		margin-top: -4px;
-//		margin-bottom: 4px;
 	}
 }
 .select-container {
@@ -1510,489 +1339,18 @@ h4 {
 .transcripts-print {
 	margin: 20px auto;
 	width: 220px;
-//	@include respond-to (normal-mobile){
-//		width: 100%;
-//	}
 }
-
-.live-map {
-	position: relative;
-	width: 100%;
-	overflow: hidden;
-	background: url('images/703bike_map.png');
-	border: 1px solid $medium-gray;
-//	margin: 20px auto;
-//	background-size: cover;
-	
-	.dashboard {
-		z-index: 99;
-		position: absolute;
-		top: 8px;
-		left: 8px;
-		padding: 10px;
-		background: rgba($white,.8);
-		width: 200px;
-		height: 80px;
-		font-size: $xl-font;
-		font-weight: 500;
-		box-shadow: 0 0 2px 1px rgba($medium-gray,.8);
-		.sport-icon, .map-info {
-			display: inline-block;
-			vertical-align: top;
-		}
-		.map-info > span {
-			display: block;
-			line-height: 30px;
-			span {
-				padding-right: 4px;
-				&.item, &.time {
-					color: $primary-color;
-				}
-			}
-			.dist {
-				color: $gray;
-			}
-			.turn {
-				background: $DarkTurquoise;
-				color: white;
-				border-radius: 2px;
-				padding: 0 5px;
-				font-size: 14px;
-				display: inline;
-			}
-		}
-	}
-	.sport-icon {
-		width: 40px;
-		height: 40px;
-		margin-right: 3px;
-		display: inline-block;
-	}
-	&#map-sport1-1 {
-		background: url('../images/703swim_map.png');
-		background-size: cover;
-		.sport-icon {
-			background: url('../images/icon_swim.png') no-repeat;
-			background-size: cover;
-		}
-	}
-	&#map-sport1-2 {
-		background: url('../images/703bike_map.png');
-		background-size: cover;
-		.sport-icon {
-			background: url('../images/icon_bike.png') no-repeat;
-			background-size: cover;
-		}
-	}
-	&#map-sport1-3 {
-		background: url('../images/703run_map.png');
-		background-size: cover;
-		.sport-icon {
-			background: url('../images/icon_run.png') no-repeat;
-			background-size: cover;
-		}
-		.dashboard {
-			right: 8px;
-			left: auto;
-		}
-		@media screen and (max-width: 567px) {
-			.dashboard {
-				padding: 10px 8px;
-			}
-		}
-	}
-	&#map-sport2-1 {
-		background: url('../images/5i50swim_map.png');
-		background-size: cover;
-		.sport-icon {
-			background: url('../images/icon_swim.png') no-repeat;
-			background-size: cover;
-		}
-	}
-	&#map-sport2-1-2 {
-		background: url('../images/5i50swim-run_map.png');
-		background-size: cover;
-		.sport-icon {
-			background: url('../images/icon_run.png') no-repeat;
-			background-size: cover;
-		}
-	}
-	&#map-sport2-2 {
-		background: url('../images/5i50bike_map.png');
-		background-size: cover;
-		.sport-icon {
-			background: url('../images/icon_bike.png') no-repeat;
-			background-size: cover;
-		}
-	}
-	&#map-sport2-3 {
-		background: url('../images/5i50run_map.png');
-		background-size: cover;
-		.sport-icon {
-			background: url('../images/icon_run.png') no-repeat;
-			background-size: cover;
-		}
-		.dashboard {
-			right: 8px;
-			left: auto;
-		}
-		@media screen and (max-width: 567px) {
-			.dashboard {
-				padding: 10px 8px;
-			}
-		}
-	}
-	&#map-sport3-1 {
-		background: url('../images/5i50run_map.png');
-		background-size: cover;
-		.sport-icon {
-			background: url('../images/icon_run.png') no-repeat;
-			background-size: cover;
-		}
-		.dashboard {
-			right: 8px;
-			left: auto;
-		}
-		@media screen and (max-width: 567px) {
-			.dashboard {
-				padding: 10px 8px;
-			}
-		}
-	}
-//	DuathlonRun
-	&#map-sport4-1 {
-		background: url('../images/DuathlonRun_Map.png');
-		background-size: cover;
-		.sport-icon {
-			background: url('../images/icon_run.png') no-repeat;
-			background-size: cover;
-		}
-	}
-//	DuathlonBike
-	&#map-sport4-2 {
-		background: url('../images/DuathlonBike_Map.png');
-		background-size: cover;
-		.sport-icon {
-			background: url('../images/icon_bike.png') no-repeat;
-			background-size: cover;
-		}
-	}
-//	DuathlonRun2
-	&#map-sport4-3 {
-		background: url('../images/DuathlonRun2_Map.png');
-		background-size: cover;
-		.sport-icon {
-			background: url('../images/icon_run.png') no-repeat;
-			background-size: cover;
-		}
-	}
-//	DuathlonTryTriRun
-	&#map-sport5-1 {
-		background: url('../images/DuathlonTryTriRun_Map.png');
-		background-size: cover;
-		.sport-icon {
-			background: url('../images/icon_run.png') no-repeat;
-			background-size: cover;
-		}
-	}
-//	DuathlonTryTriBike
-	&#map-sport5-2 {
-		background: url('../images/DuathlonTryTriBike_Map.png');
-		background-size: cover;
-		.sport-icon {
-			background: url('../images/icon_bike.png') no-repeat;
-			background-size: cover;
-		}
-	}
-//	DuathlonTryTriRun2
-	&#map-sport5-3 {
-		background: url('../images/DuathlonTryTriRun2_Map.png');
-		background-size: cover;
-		.sport-icon {
-			background: url('../images/icon_run.png') no-repeat;
-			background-size: cover;
-		}
-	}
-//	TriathlonSwin
-    &#map-sport6-1 {
-		background: url('../images/TriathlonSwin_Map.png');
-		background-size: cover;
-		.sport-icon {
-			background: url('../images/icon_swim.png') no-repeat;
-			background-size: cover;
-		}
-	}
-//	TriathlonBike
-    &#map-sport6-2 {
-		background: url('../images/TriathlonBike_Map.png');
-		background-size: cover;
-		.sport-icon {
-			background: url('../images/icon_bike.png') no-repeat;
-			background-size: cover;
-		}
-	}
-//	TriathlonRun
-    &#map-sport6-3 {
-		background: url('../images/TriathlonRun_Map.png');
-		background-size: cover;
-		.sport-icon {
-			background: url('../images/icon_run.png') no-repeat;
-			background-size: cover;
-		}
-	}
-//	TriathlonTryTriSwim
-    &#map-sport7-1 {
-		background: url('../images/TriathlonTryTriSwin_Map.png');
-		background-size: cover;
-		.sport-icon {
-			background: url('../images/icon_swim.png') no-repeat;
-			background-size: cover;
-		}
-	}
-//	TriathlonTryTriBike
-    &#map-sport7-2 {
-		background: url('../images/TriathlonTryTriBike_Map.png');
-		background-size: cover;
-		.sport-icon {
-			background: url('../images/icon_bike.png') no-repeat;
-			background-size: cover;
-		}
-	}
-//	TriathlonTryTriRun
-    &#map-sport7-3 {
-		background: url('../images/TriathlonTryTriRun_Map.png');
-		background-size: cover;
-		.sport-icon {
-			background: url('../images/icon_run.png') no-repeat;
-			background-size: cover;
-		}
-	}
-//	FulongSwim
-    &#map-sport8-1 {
-		background: url('../images/FulongSwim_Map.png');
-		background-size: cover;
-		.sport-icon {
-			background: url('../images/icon_swim.png') no-repeat;
-			background-size: cover;
-		}
-	}
-//	FulongBike
-    &#map-sport8-2 {
-		background: url('../images/FulongBike_Map.png');
-		background-size: cover;
-		.sport-icon {
-			background: url('../images/icon_bike.png') no-repeat;
-			background-size: cover;
-		}
-		.dashboard {
-			right: 8px;
-			left: auto;
-		}
-	}
-//	FulongRun 10k
-    &#map-sport8-3 {
-		background: url('../images/FulongRun10k_Map.png');
-		background-size: cover;
-		.sport-icon {
-			background: url('../images/icon_run.png') no-repeat;
-			background-size: cover;
-		}
-		.dashboard {
-			right: 8px;
-			left: auto;
-		}
-	}
-//	FulongRun 3k
-    &#map-sport8-4 {
-		background: url('../images/FulongRun3k_Map.png');
-		background-size: cover;
-		.sport-icon {
-			background: url('../images/icon_run.png') no-repeat;
-			background-size: cover;
-		}
-		.dashboard {
-			right: 8px;
-			left: auto;
-		}
-	}
-	@include respond-to (xxs-mobile){
-		.dashboard {
-			width: 154px;
-			font-size: 14px;
-			padding: 10px 4px;
-		}
-		&#map-sport1-1, &#map-sport1-2, &#map-sport1-3 {
-			.sport-icon {
-				width: 30px;
-				height: 30px;
-			}
-		}
-	}
-//	MasagoSwim
-    &#map-sport9-1 {
-		background: url('../images/MasagoSwim_map.png');
-		background-size: cover;
-		.sport-icon {
-			background: url('../images/icon_swim.png') no-repeat;
-			background-size: cover;
-		}
-	}
-//	MasagoBike
-    &#map-sport9-2 {
-		background: url('../images/MasagoBike_map.png');
-		background-size: cover;
-		.sport-icon {
-			background: url('../images/icon_bike.png') no-repeat;
-			background-size: cover;
-		}
-	}  
-//	MasagoRun
-    &#map-sport9-3 {
-		background: url('../images/MasagoRun_map.png');
-		background-size: cover;
-		.sport-icon {
-			background: url('../images/icon_run.png') no-repeat;
-			background-size: cover;
-		}
-		.dashboard {
-			right: 8px;
-			left: auto;
-		}
-	}
-//	MasagoDuathlonRun
-    &#map-sport10-1 {
-		background: url('../images/MasagoDuathlonRun_map.png');
-		background-size: cover;
-		.sport-icon {
-			background: url('../images/icon_run.png') no-repeat;
-			background-size: cover;
-		}
-		.dashboard {
-			right: 8px;
-			left: auto;
-		}
-	}
-//	MasagoDuathlonBike
-    &#map-sport10-2 {
-		background: url('../images/MasagoDuathlonBike_map.png');
-		background-size: cover;
-		.sport-icon {
-			background: url('../images/icon_bike.png') no-repeat;
-			background-size: cover;
-		}
-	}
-//	MasagoDuathlonRun10k
-    &#map-sport10-3 {
-		background: url('../images/MasagoDuathlonRun10k_map.png');
-		background-size: cover;
-		.sport-icon {
-			background: url('../images/icon_run.png') no-repeat;
-			background-size: cover;
-		}
-		.dashboard {
-			right: 8px;
-			left: auto;
-		}
-	}    
-//  PengHuSwim	
-    &#map-sport11-1 {
-		background: url('../images/PenghuSwim_Map.png');
-		background-size: cover;
-		.sport-icon {
-			background: url('../images/icon_swim.png') no-repeat;
-			background-size: cover;
-		}
-	}
-//  PengHuBike
-    &#map-sport12-1 {
-		background: url('../images/PenghuBIke_Map.png');
-		background-size: cover;
-		.sport-icon {
-			background: url('../images/icon_bike.png') no-repeat;
-			background-size: cover;
-		}
-        .dashboard {
-			right: 8px;
-			left: auto;
-            width: 154px;
-            font-size: 14px;
-			padding: 4px;
-            height: auto;
-		}
-	}
-//  PengHuRun
-    &#map-sport13-1 {
-		background: url('../images/PenghuRun_Map.png');
-		background-size: cover;
-		.sport-icon {
-			background: url('../images/icon_run.png') no-repeat;
-			background-size: cover;
-		}
-	}
-//  BuyenPavilion211
-    &#map-sport14-1 {
-		background: url('../images/BuyenPavilion211_Map.png');
-		background-size: cover;
-		.sport-icon {
-			background: url('../images/icon_run.png') no-repeat;
-			background-size: cover;
-		}
-        .dashboard {
-			right: 8px;
-			left: auto;
-		}
-	}
-//  BuyenPavilion42195
-    &#map-sport15-1 {
-		background: url('../images/BuyenPavilion42195_Map.png');
-		background-size: cover;
-		.sport-icon {
-			background: url('../images/icon_run.png') no-repeat;
-			background-size: cover;
-		}
-        .dashboard {
-			right: 8px;
-			left: auto;
-		}
-	}
-    img {
-		width: 100%;
-	}
-	&
-	.split-mask {
-		position: relative;
-		top: 0;
-		left: 0;
-		z-index: 4;
-//		top:0;
-//		position: absolute;
-//		background: red;
-//		width: 100%;
-//		border: 10px solid red;
-	}
-}
-
 #match {
 	.row {
 		clear: both;
 	}
 	.info-card {
 		.row {
-			
 			padding-bottom: 10px;
-			border-bottom: 1px solid $medium-gray;
 		}
 	}
 }
 .info-card {
-//	background: $white;
-//	padding: 10px 0 0;
-//	border-radius: 0 0 4px 4px;
-//	overflow: hidden;
-//	@include card-style;
-//	border-bottom: 1px solid $medium-gray;
-	
-	
 	.col-xs-12 {
 		padding-left: 4px;
 		padding-right: 4px;
@@ -2004,9 +1362,7 @@ h4 {
 	}
 	.col-xs-8 {
 		text-align: left;
-		p {
-//			line-height: 1.8;
-			
+		p {	
 			span {
 				&:nth-of-type(1):after {
 					content: '\002F';
@@ -2039,29 +1395,17 @@ h4 {
 	}
 	h5 {
 		font-size: $xl-font;
-//		color: $primary-color;
 		&.margin {
 			margin-bottom: 10px;
 		}
 	}
 	h6 {
 		font-size: $m-font;
-//		color: $primary-color;
 		margin-top: 5px;
 	}
 	p {
 		line-height: $xxl-font;
 	}
-//	.col-xs-9 p {
-//		span {
-//			&:nth-of-type(1) {
-//				&:after {
-//					content: ('\002F');
-//					padding: 0 5px;
-//				}
-//			}
-//		}
-//	}
 	.weather-icon {
 		width: 36px;
 		height: 32px;
@@ -2113,7 +1457,6 @@ h4 {
 	}
 	.athlete-info {
 		@include clearfix;
-//		margin-top: 10px;
 		clear: both;
 		margin-bottom: 20px;
         margin-top: 10px;
@@ -2142,9 +1485,7 @@ h4 {
 			p {
 				font-size: 12px;
 			}
-			
 		}
-		
 		.col-xs-8 {
 			h4 {
 				font-size: 15px;
@@ -2177,7 +1518,6 @@ h4 {
 				> div {
 					width: 50%;
 				}
-
 			}
 		}
 	}
@@ -2225,8 +1565,6 @@ h4 {
 				background-repeat: no-repeat;
 			}
 			&.distance, &.time {
-//				color: $white;
-//				@include text-primary-shadow;
 			}
 			&.distance {
 				line-height: $m-font;
@@ -2329,11 +1667,9 @@ h4 {
 	margin-bottom: 20px;
 	text-align: center;
 	@include clearfix;
-//	@include text-primary-shadow;
 	color: $primary-color;
 	padding-top: 20px;
 	.btn-custom-sm {
-//		float: none!important;
 		margin: 10px auto;
 		width: 120px;
 	}
@@ -2373,10 +1709,10 @@ h4 {
 .sport-info {
 	background: $white;
 	margin-bottom: 20px;
-//	padding: 6px 0 0;
 	font-size: 16px;
 	@include card-style;
-    padding-bottom: 0;
+    padding-bottom: 10px;
+    border-radius: 20px;
 	#live-sport &, #match & {
 		padding-bottom: 0;
 	}
@@ -2551,14 +1887,6 @@ h4 {
 	float: right;
 	position: relative;
 	color: $gray;
-//	&:after {
-//		font-family: FontAwesome;
-//		content: '\f0d7';
-//		padding: 0 3px;
-//		position: absolute;
-//		right: 5px;
-//		top: 5px;
-//	}
 }
 select {
     -webkit-appearance: none;
@@ -2617,7 +1945,6 @@ select {
 	height: 50px;
 	z-index: 101;
 	border-radius: 50%;
-//	@include box-dark-shadow;
 	@include transition(color, .5s, ease-in);
 	a {
 		display: block;
@@ -3007,8 +2334,6 @@ p.results {
         background: $white;
         padding-top: 10px;
         padding-bottom: 6px;
-//			padding-left: 5%;
-//			padding-right: 5%;
     }
     .slick-prev, .slick-next {
         background: $gray-orange;
@@ -3086,5 +2411,63 @@ p.results {
         img {
             width: 100px;
         }
+    }
+}
+.mytextdiv, .logo-line {
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+    margin: 26px 0;
+    #athlete & {
+        margin: 16px 0 26px;
+    }
+    .mytexttitle, .logo {
+        flex-grow: 0;
+        padding: 0 10px;
+        color: $gray;
+    }
+    .divider {
+        flex-grow:1;
+        height: 1px;
+        background-color: $gray;
+    }
+}
+.logo-line {
+    img.logo {
+        width: 20px;
+        height: 20px;
+        padding: 0;
+        margin: 0 10px;
+    }
+    .divider {
+        background-color: $orange;
+        &.gray {
+            background-color: $medium-gray; 
+        }
+    }
+}
+.live-block {
+    text-align: center;
+    h2 {
+        display: inline-block;
+        &.live {
+//			position: relative;
+			&:after {
+				content: ('Live');
+				background: $red;
+				color: $white;
+				width: 30px;
+                height: 30px;
+                left: 4px;
+                top: -4px;
+                border-radius: 30px;
+                border-right: 1px solid $white;
+				line-height: 30px;
+				font-size: 10px;
+				position: relative;
+                z-index: 1;
+				display: inline-block;
+			}
+		}
     }
 }

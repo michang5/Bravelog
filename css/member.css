@@ -116,39 +116,6 @@ input[type='password'], input[type='text'] {
   border-bottom: 1px solid #ccc;
 }
 
-.mytextdiv, .logo-line {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin: 26px 0;
-}
-#athlete .mytextdiv, #athlete .logo-line {
-  margin: 16px 0;
-}
-.mytextdiv .mytexttitle, .mytextdiv .logo, .logo-line .mytexttitle, .logo-line .logo {
-  flex-grow: 0;
-  padding: 0 10px;
-  color: #6f6f6f;
-}
-.mytextdiv .divider, .logo-line .divider {
-  flex-grow: 1;
-  height: 1px;
-  background-color: #6f6f6f;
-}
-
-.logo-line img.logo {
-  width: 20px;
-  height: 20px;
-  padding: 0;
-  margin: 0 10px;
-}
-.logo-line .divider {
-  background-color: #fb6c48;
-}
-.logo-line .divider.gray {
-  background-color: #ccc;
-}
-
 .text {
   text-align: center;
 }
@@ -434,19 +401,67 @@ form-group.required .control-label:after {
   padding-bottom: 0;
 }
 .performance-card h3.title {
-  background-color: #F7F7F7;
-  text-align: center;
-  font-weight: normal;
   color: #4C4A48;
+  background-color: #f7f7f7;
+  text-align: center;
   font-size: 18px;
   margin: 0;
-  line-height: 50px;
+  padding: 12px 10px;
+  *zoom: 1;
 }
-.performance-card .row.info {
+.performance-card h3.title.main-title {
+  background: #6f6f6f;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjEuMCIgeDI9IjEuMCIgeTI9IjAuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZlZWNlMyIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmZDVjNiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -moz-linear-gradient(45deg, #feece3, #ffd5c6);
+  background-image: -webkit-linear-gradient(45deg, #feece3, #ffd5c6);
+  background-image: linear-gradient(45deg, #feece3, #ffd5c6);
+}
+.performance-card h3.title.total {
+  color: #fff;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjEuMCIgeDI9IjEuMCIgeTI9IjAuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2I0ZWM1MSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzI1YzNiOSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -moz-linear-gradient(45deg, #b4ec51, #25c3b9);
+  background-image: -webkit-linear-gradient(45deg, #b4ec51, #25c3b9);
+  background-image: linear-gradient(45deg, #b4ec51, #25c3b9);
+}
+.performance-card h3.title:after, .performance-card h3.title:before {
+  content: "";
+  display: table;
+}
+.performance-card h3.title:after {
+  clear: both;
+}
+.performance-card h3.title span {
+  display: block;
+}
+.performance-card h3.title span:nth-of-type(1) {
+  line-height: 1.3;
+}
+.performance-card h3.title span:nth-last-of-type(1) {
+  font-size: 16px;
+}
+.performance-card .row.all-info {
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 12px 0;
+  border-bottom: 1px solid #f6f6f6;
+}
+.performance-card .row.all-info span {
+  display: block;
+}
+.performance-card .row.all-info .col-xs-4 {
+  border-right: 1px solid #ccc;
+}
+.performance-card .row.all-info .col-xs-4:nth-last-of-type(1) {
+  border-right: 0;
+}
+.performance-card .row.single-info {
   margin: 16px 0;
   text-align: center;
 }
-.performance-card .row.info span:before {
+.performance-card .row.single-info span:before {
   content: "";
   display: inline-block;
   width: 36px;
@@ -456,23 +471,20 @@ form-group.required .control-label:after {
   background-position: left bottom;
   vertical-align: middle;
 }
-.performance-card .row.info span.swim:before {
+.performance-card .row.single-info span.swim:before {
   background-image: url("../images/icon_tab_swim.png");
 }
-.performance-card .row.info span.bike:before {
+.performance-card .row.single-info span.bike:before {
   background-image: url("../images/icon_tab_bike.png");
 }
-.performance-card .row.info span.run:before {
+.performance-card .row.single-info span.run:before {
   background-image: url("../images/icon_tab_run.png");
+}
+.performance-card .panel-body .row.all-info {
+  padding-bottom: 20px;
 }
 .performance-card .col-xs-6 {
   text-align: center;
-}
-.performance-card .col-xs-4 {
-  border-right: 1px solid #ccc;
-}
-.performance-card .col-xs-4:nth-last-of-type(1) {
-  border-right: 0;
 }
 
 .form-group[class*='col-'] {
@@ -508,6 +520,13 @@ form-group.required .control-label:after {
 .panel .panel-heading {
   padding: 0;
   border-radius: 0;
+  position: relative;
+}
+.panel .panel-heading i {
+  position: absolute;
+  right: 20px;
+  top: 12px;
+  font-size: 22px;
 }
 .panel h4.panel-title {
   color: #6f6f6f;
