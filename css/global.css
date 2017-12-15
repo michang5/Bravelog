@@ -430,12 +430,6 @@ header .right-nav li.member > a {
   background-size: 100px 120px;
   background-image: url(../images/top-icon.png);
 }
-header .right-nav li.member > a {
-  background-position: 0 0;
-}
-header .right-nav li.member > a:focus, header .right-nav li.member > a:active, header .right-nav li.member > a:hover {
-  background-position: 0 -60px;
-}
 header .right-nav li.language > a {
   display: block;
   color: #fb6c48;
@@ -444,7 +438,7 @@ header .right-nav li.language > a:focus, header .right-nav li.language > a:activ
   background: #fb6c48;
   color: #fff;
 }
-header .right-nav li.language .dropdown-menu {
+header .right-nav li.language .dropdown-menu, header .right-nav li.member .dropdown-menu {
   width: 50px;
   min-width: 0;
   margin: 0;
@@ -463,23 +457,29 @@ header .right-nav li.language .dropdown-menu {
   display: block;
   opacity: 0;
 }
-header .right-nav li.language .dropdown-menu > li {
+header .right-nav li.language .dropdown-menu > li, header .right-nav li.member .dropdown-menu > li {
   height: 40px;
 }
-header .right-nav li.language .dropdown-menu > li > a {
+header .right-nav li.language .dropdown-menu > li > a, header .right-nav li.member .dropdown-menu > li > a {
   height: 40px;
   line-height: 40px;
   padding: 0;
   color: #fb6c48;
   background-color: #fff6f0;
 }
-header .right-nav li.language .dropdown-menu > li > a:focus, header .right-nav li.language .dropdown-menu > li > a:active, header .right-nav li.language .dropdown-menu > li > a:hover, header .right-nav li.language .dropdown-menu > li > a.active {
+header .right-nav li.language .dropdown-menu > li > a:focus, header .right-nav li.language .dropdown-menu > li > a:active, header .right-nav li.language .dropdown-menu > li > a:hover, header .right-nav li.language .dropdown-menu > li > a.active, header .right-nav li.member .dropdown-menu > li > a:focus, header .right-nav li.member .dropdown-menu > li > a:active, header .right-nav li.member .dropdown-menu > li > a:hover, header .right-nav li.member .dropdown-menu > li > a.active {
   background-color: #fb6c48;
   color: #fff6f0;
 }
-header .right-nav li.language.open .dropdown-menu {
+header .right-nav li.language.open .dropdown-menu, header .right-nav li.member.open .dropdown-menu {
   max-height: 200px;
   opacity: 1;
+}
+header .right-nav li.member > a {
+  background-position: 0 0;
+}
+header .right-nav li.member > a:focus, header .right-nav li.member > a:active, header .right-nav li.member > a:hover {
+  background-position: 0 -60px;
 }
 @media only screen and (max-width: 320px) {
   header h2.logo img {
@@ -929,6 +929,7 @@ h4 {
   line-height: 1.5em;
   position: relative;
   z-index: 9;
+  box-shadow: 0 10px 10px rgba(76, 74, 72, 0.5), 0 2px 4px rgba(76, 74, 72, 0.5);
 }
 .lg-card .countdown span {
   display: block;
