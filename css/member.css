@@ -72,6 +72,9 @@ input[type='password'], input[type='text'] {
 .member-form button i.fa-google {
   background: #DC4E41;
 }
+.member-form button i.fa-twitter {
+  background: #1da1f2
+}
 .member-form .link a {
   color: #6f6f6f;
   text-decoration: underline;
